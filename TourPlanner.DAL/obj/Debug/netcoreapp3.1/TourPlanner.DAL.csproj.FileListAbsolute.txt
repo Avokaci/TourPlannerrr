@@ -1,0 +1,12 @@
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.csprojAssemblyReference.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.AssemblyInfoInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.AssemblyInfo.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.deps.json
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\netcoreapp3.1\TourPlanner.Models.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\netcoreapp3.1\TourPlanner.Models.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.csproj.CopyComplete
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.pdb

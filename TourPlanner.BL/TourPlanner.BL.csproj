@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TourPlanner.DAL.PostgreSQLServer\TourPlanner.DAL.PostgreSQLServer.csproj" />
+    <ProjectReference Include="..\TourPlanner.DAL\TourPlanner.DAL.csproj" />
+    <ProjectReference Include="..\TourPlanner.Models\TourPlanner.Models.csproj" />
+  </ItemGroup>
+
+</Project>

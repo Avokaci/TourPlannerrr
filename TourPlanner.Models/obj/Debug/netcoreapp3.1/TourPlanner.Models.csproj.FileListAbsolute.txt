@@ -1,0 +1,9 @@
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\bin\Debug\netcoreapp3.1\TourPlanner.Models.deps.json
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\bin\Debug\netcoreapp3.1\TourPlanner.Models.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\bin\Debug\netcoreapp3.1\TourPlanner.Models.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.AssemblyInfoInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.AssemblyInfo.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.csprojAssemblyReference.cache

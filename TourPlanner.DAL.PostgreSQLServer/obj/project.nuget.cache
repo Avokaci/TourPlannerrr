@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PtYclhd8BM2W9cF1xzgCxPBxmbMjirOLkIYjFuDred0iz8eWMCo5+zLbZL2cpaVNOGRczU4vxDxtOA3r1nGVzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.PostgreSQLServer\\TourPlanner.DAL.PostgreSQLServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

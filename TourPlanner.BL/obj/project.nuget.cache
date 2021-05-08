@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qnDv7qkq8F3s6EZrwiwTotmvbx6+KxLLOLO4apjILkOzNO7VNdLrYJLG5/sXaDJpGZ4rWMA4O/CXfmkEA/Gj0g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.BL\\TourPlanner.BL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
