@@ -35,13 +35,13 @@ namespace TourPlanner.BL
             }
         }
 
-        public Tour CreateTour(string name, string description, string from, string to, string routeInformation, double distance)
+        public Tour CreateTour(string name, string description, string from, string to, string routeInformation, int distance)
         {
             ITourDAO tourDAO = DALFactory.CreateTourItemDAO();
             return tourDAO.AddNewItem(name, description, from, to, routeInformation, distance);
         }
 
-        public TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+        public TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
             ILogDAO logDAO = DALFactory.CreateTourLogDAO();

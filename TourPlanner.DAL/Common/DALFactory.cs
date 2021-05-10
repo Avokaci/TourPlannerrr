@@ -42,7 +42,7 @@ namespace TourPlanner.DAL.Common
 
         private static IDatabase CreateDatabase()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["PostgreSQLConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["PostgresSQLConnectionString"].ConnectionString;
             return CreateDatabase(connectionString);
         }
 

@@ -11,9 +11,9 @@ namespace TourPlanner.BL
         IEnumerable<TourLog> GetLogs(Tour item);
         IEnumerable<Tour> Search(string itemName, bool caseSensitive = false);
 
-        Tour CreateTour(string name, string description, string from, string to, string routeInformation, double distance);
+        Tour CreateTour(string name, string description, string from, string to, string routeInformation, int distance);
 
-        TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+        TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories);
     }
 }

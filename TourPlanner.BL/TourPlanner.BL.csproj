@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TourPlanner.DAL.FileServer\TourPlanner.DAL.FileServer.csproj" />
     <ProjectReference Include="..\TourPlanner.DAL.PostgreSQLServer\TourPlanner.DAL.PostgreSQLServer.csproj" />
     <ProjectReference Include="..\TourPlanner.DAL\TourPlanner.DAL.csproj" />
     <ProjectReference Include="..\TourPlanner.Models\TourPlanner.Models.csproj" />

@@ -15,7 +15,7 @@ namespace TourPlanner.UI.ViewModels
         private string from;
         private string to;
         private string description;
-        private double distance;
+        private int distance;
 
         private ITourPlannerFactory tourFactory;
 
@@ -85,7 +85,7 @@ namespace TourPlanner.UI.ViewModels
             }
         }
 
-        public double Distance
+        public int Distance
         {
             get
             {

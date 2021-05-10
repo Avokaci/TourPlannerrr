@@ -28,6 +28,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "TourPlanner.DAL": "1.0.0",
+          "TourPlanner.DAL.FileServer": "1.0.0",
           "TourPlanner.DAL.PostgreSQLServer": "1.0.0",
           "TourPlanner.Models": "1.0.0"
         },
@@ -52,6 +53,22 @@
         },
         "runtime": {
           "bin/placeholder/TourPlanner.DAL.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "TourPlanner.DAL.FileServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "TourPlanner.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TourPlanner.DAL.FileServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.DAL.FileServer.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -144,6 +161,11 @@
       "type": "project",
       "path": "../TourPlanner.DAL/TourPlanner.DAL.csproj",
       "msbuildProject": "../TourPlanner.DAL/TourPlanner.DAL.csproj"
+    },
+    "TourPlanner.DAL.FileServer/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.DAL.FileServer/TourPlanner.DAL.FileServer.csproj",
+      "msbuildProject": "../TourPlanner.DAL.FileServer/TourPlanner.DAL.FileServer.csproj"
     },
     "TourPlanner.DAL.PostgreSQLServer/1.0.0": {
       "type": "project",

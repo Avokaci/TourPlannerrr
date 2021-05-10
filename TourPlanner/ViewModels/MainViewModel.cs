@@ -24,16 +24,18 @@ namespace TourPlanner.UI.ViewModels
         private ITourPlannerFactory tourPlannerFactory;
         public ICommand PopUpAdd => popUpAdd ??= new RelayCommand(OpenAddTourWindow);
         public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
-        public ICommand RandomGenerateLogCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateLog);
+        public ICommand RandomGenerateLogCommand => randomGenerateLogCommand ??= new RelayCommand(RandomGenerateLog);
 
         private void RandomGenerateItem(object commandParameter)
         {
-            Tour generatedItem = tourPlannerFactory.CreateTour("", "", "", "", "", 0);
+            Tour generatedItem = tourPlannerFactory.CreateTour(NameGenerator.GenerateName(6), NameGenerator.GenerateName(6),
+                NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), 0);
             tours.Add(generatedItem);
         }
         private void RandomGenerateLog(object commandParameter)
         {
-            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, "", "", "", 0, 0, 0, 0, 0, 0, 0);
+            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, NameGenerator.GenerateName(6), 
+                NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), 0, 0, 0, 0, 0, 0, 0);
         }
 
         #endregion

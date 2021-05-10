@@ -9,6 +9,7 @@
       "TourPlanner.BL/1.0.0": {
         "dependencies": {
           "TourPlanner.DAL": "1.0.0",
+          "TourPlanner.DAL.FileServer": "1.0.0",
           "TourPlanner.DAL.PostgreSQLServer": "1.0.0",
           "TourPlanner.Models": "1.0.0"
         },
@@ -34,6 +35,14 @@
         },
         "runtime": {
           "TourPlanner.DAL.dll": {}
+        }
+      },
+      "TourPlanner.DAL.FileServer/1.0.0": {
+        "dependencies": {
+          "TourPlanner.DAL": "1.0.0"
+        },
+        "runtime": {
+          "TourPlanner.DAL.FileServer.dll": {}
         }
       },
       "TourPlanner.DAL.PostgreSQLServer/1.0.0": {
@@ -73,6 +82,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "TourPlanner.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.DAL.FileServer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

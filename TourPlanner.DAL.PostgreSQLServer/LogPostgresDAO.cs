@@ -12,10 +12,10 @@ namespace TourPlanner.DAL.PostgreSQLServer
 {
     public class LogPostgresDAO : ILogDAO
     {
-        private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"TourLogs\" WHERE \"id\" = @id;";
-        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"TourLogs\" " +
+        private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"TourLog\" WHERE \"id\" = @id;";
+        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"TourLog\" " +
             "WHERE \"tourId\" = @tourId;";
-        private const string SQL_INSERT_NEW_LOG = "INSERT INTO public.\"TourLogs\"" +
+        private const string SQL_INSERT_NEW_LOG = "INSERT INTO public.\"TourLog\"" +
             "(tourId, date, totalTime, report,  distance,  rating, averageSpeed,  maxSpeed,  minSpeed,  averageStepCount,  burntCalories)" +
             "VALUES(@tourId, @date, @totalTime, @report, @distance, @rating, @averageSpeed,@maxSpeed,@minSpeed,@averageStepCount,@burntCalories);";
 
@@ -31,7 +31,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
             this.database = database;
             this.tourDAO = tourDAO;
         }
-        public TourLog AddNewItemLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+        public TourLog AddNewItemLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
             DbCommand insertCommand = database.CreateCommand(SQL_INSERT_NEW_LOG);
@@ -39,7 +39,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
             database.DefineParameter(insertCommand, "@date", DbType.String, date);
             database.DefineParameter(insertCommand, "@totalTime", DbType.String, totalTime);
             database.DefineParameter(insertCommand, "@report", DbType.String, report);
-            database.DefineParameter(insertCommand, "@distance", DbType.Double, distance.ToString());
+            database.DefineParameter(insertCommand, "@distance", DbType.Int32, distance);
             database.DefineParameter(insertCommand, "@rating", DbType.Int32, rating);
             database.DefineParameter(insertCommand, "@averageSpeed", DbType.Int32, averageSpeed);
             database.DefineParameter(insertCommand, "@maxSpeed", DbType.Int32, maxSpeed);
@@ -49,7 +49,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
-
+        public TourLog AddNewItemLog(TourLog log)
+        {
+            return AddNewItemLog(log.TourLogItem, log.Date, log.TotalTime, log.Report, log.Distance, log.Rating, log.AverageSpeed,
+                log.MaxSpeed, log.MinSpeed, log.AverageStepCount, log.BurntCalories);
+        }
         public TourLog FindById(int id)
         {
             DbCommand findCommand = database.CreateCommand(SQL_FIND_BY_ID);
@@ -62,7 +66,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
         public IEnumerable<TourLog> GetLogsForTour(Tour tourItem)
         {
             DbCommand getLogsCommand = database.CreateCommand(SQL_FIND_BY_TOUR_ID);
-            database.DefineParameter(getLogsCommand, "@tour_id", DbType.Int32, tourItem.Id);
+            database.DefineParameter(getLogsCommand, "@tourId", DbType.Int32, tourItem.Id);
 
             return QueryLogsFromDb(getLogsCommand);
         }
@@ -80,7 +84,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
                         (string)reader["date"],
                         (string)reader["totalTime"],
                         (string)reader["report"],
-                        (double)reader["distance"],
+                        (int)reader["distance"],
                         (int)reader["rating"],
                         (int)reader["averageSpeed"],
                         (int)reader["maxSpeed"],

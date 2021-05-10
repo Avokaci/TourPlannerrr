@@ -1,11 +1,54 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "TourPlanner.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "TourPlanner.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TourPlanner.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.DAL.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "TourPlanner.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/TourPlanner.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.Models.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TourPlanner.DAL/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.DAL/TourPlanner.DAL.csproj",
+      "msbuildProject": "../TourPlanner.DAL/TourPlanner.DAL.csproj"
+    },
+    "TourPlanner.Models/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.Models/TourPlanner.Models.csproj",
+      "msbuildProject": "../TourPlanner.Models/TourPlanner.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "TourPlanner.DAL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\": {}
@@ -32,7 +75,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL\\TourPlanner.DAL.csproj": {
+              "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL\\TourPlanner.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -13,9 +13,9 @@ namespace TourPlanner.DAL.PostgreSQLServer
     public class TourPostgresDAO : ITourDAO
     {
         private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"Tour\" WHERE \"id\" = @id;";
-        private const string SQL_GET_ALL_ITEMS = "SELECT * FROM public.\"Tour\"";
+        private const string SQL_GET_ALL_ITEMS = "SELECT * FROM public.\"Tour\";";
         private const string SQL_INSERT_NEW_ITEM = "INSERT INTO public.\"Tour\"" +
-            "(name, description, from, to, routeInformation, distance) " +
+            "(name, description, \"from\", \"to\", \"routeInformation\", distance) " +
             "VALUES(@name, @description, @from, @to, @routeInformation, @distance) " +
             "RETURNING \"id\";";
 
@@ -30,7 +30,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
         {
             this.database = database;
         }
-        public Tour AddNewItem(string name, string description, string from, string to, string routeInformation, double distance)
+        public Tour AddNewItem(string name, string description, string from, string to, string routeInformation, int distance)
         {
             DbCommand insertCommand = database.CreateCommand(SQL_INSERT_NEW_ITEM);
             database.DefineParameter(insertCommand, "@name", DbType.String, name);
@@ -38,7 +38,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
             database.DefineParameter(insertCommand, "@from", DbType.String, from);
             database.DefineParameter(insertCommand, "@to", DbType.String, to);
             database.DefineParameter(insertCommand, "@routeInformation", DbType.String, routeInformation);
-            database.DefineParameter(insertCommand, "@distance", DbType.Double, distance);
+            database.DefineParameter(insertCommand, "@distance", DbType.Int32, distance);
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
@@ -51,7 +51,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
             database.DefineParameter(insertCommand, "@from", DbType.String, tourReference.From);
             database.DefineParameter(insertCommand, "@to", DbType.String, tourReference.To);
             database.DefineParameter(insertCommand, "@routeInformation", DbType.String, tourReference.RouteInformation);
-            database.DefineParameter(insertCommand, "@distance", DbType.Double, tourReference.Distance);
+            database.DefineParameter(insertCommand, "@distance", DbType.Int32, tourReference.Distance);
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
@@ -83,7 +83,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
                         (string)reader["from"],
                         (string)reader["to"],
                         (string)reader["routeInformation"],
-                        (double)reader["distance"]
+                        (int)reader["distance"]
                         ));
                 }
             }

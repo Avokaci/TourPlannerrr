@@ -7,14 +7,40 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "TourPlanner.DAL.FileServer/1.0.0": {
+        "dependencies": {
+          "TourPlanner.DAL": "1.0.0"
+        },
         "runtime": {
           "TourPlanner.DAL.FileServer.dll": {}
+        }
+      },
+      "TourPlanner.DAL/1.0.0": {
+        "dependencies": {
+          "TourPlanner.Models": "1.0.0"
+        },
+        "runtime": {
+          "TourPlanner.DAL.dll": {}
+        }
+      },
+      "TourPlanner.Models/1.0.0": {
+        "runtime": {
+          "TourPlanner.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
     "TourPlanner.DAL.FileServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

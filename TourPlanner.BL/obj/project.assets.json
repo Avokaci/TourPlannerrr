@@ -39,6 +39,22 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "TourPlanner.DAL.FileServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "TourPlanner.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TourPlanner.DAL.FileServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.DAL.FileServer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "TourPlanner.DAL.PostgreSQLServer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -122,6 +138,11 @@
       "path": "../TourPlanner.DAL/TourPlanner.DAL.csproj",
       "msbuildProject": "../TourPlanner.DAL/TourPlanner.DAL.csproj"
     },
+    "TourPlanner.DAL.FileServer/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.DAL.FileServer/TourPlanner.DAL.FileServer.csproj",
+      "msbuildProject": "../TourPlanner.DAL.FileServer/TourPlanner.DAL.FileServer.csproj"
+    },
     "TourPlanner.DAL.PostgreSQLServer/1.0.0": {
       "type": "project",
       "path": "../TourPlanner.DAL.PostgreSQLServer/TourPlanner.DAL.PostgreSQLServer.csproj",
@@ -136,6 +157,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "TourPlanner.DAL >= 1.0.0",
+      "TourPlanner.DAL.FileServer >= 1.0.0",
       "TourPlanner.DAL.PostgreSQLServer >= 1.0.0",
       "TourPlanner.Models >= 1.0.0"
     ]
@@ -166,6 +188,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.FileServer\\TourPlanner.DAL.FileServer.csproj": {
+              "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.FileServer\\TourPlanner.DAL.FileServer.csproj"
+            },
             "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.PostgreSQLServer\\TourPlanner.DAL.PostgreSQLServer.csproj": {
               "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.PostgreSQLServer\\TourPlanner.DAL.PostgreSQLServer.csproj"
             },
