@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
 using TourPlanner.BL;
+using TourPlanner.DAL.FileServer;
 using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
@@ -114,14 +116,17 @@ namespace TourPlanner.UI.ViewModels
         #region methods
         private void AddTour(object commandParameter)
         {
-            Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, NameGenerator.GenerateName(5), Distance);
-            var window = (Window)commandParameter;
-            name = string.Empty;
-            from = string.Empty;
-            to = string.Empty;
-            description = string.Empty;
-            distance = 0;
-            window.Close();
+            string routeInformation = NameGenerator.GenerateName(6);
+            Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, routeInformation , Distance);
+            FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
+            fa.CreateImage(From, To, routeInformation);
+            //var window = (Window)commandParameter;
+            //name = string.Empty;
+            //from = string.Empty;
+            //to = string.Empty;
+            //description = string.Empty;
+            //distance = 0;
+            //window.Close();
 
         }
         #endregion

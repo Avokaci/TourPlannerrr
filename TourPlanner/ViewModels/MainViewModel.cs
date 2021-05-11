@@ -7,6 +7,7 @@ using System.Linq;
 using TourPlanner.UI.Views;
 using TourPlanner.Models;
 using TourPlanner.BL;
+using TourPlanner.DAL.FileServer;
 
 namespace TourPlanner.UI.ViewModels
 {
@@ -17,6 +18,7 @@ namespace TourPlanner.UI.ViewModels
         private ObservableCollection<TourLog> logs;
         private Tour currentItem;
         private string searchCommand;
+
         private ICommand randomGenerateItemCommand;
         private ICommand randomGenerateLogCommand;
         private ICommand popUpAdd;
@@ -28,9 +30,22 @@ namespace TourPlanner.UI.ViewModels
 
         private void RandomGenerateItem(object commandParameter)
         {
-            Tour generatedItem = tourPlannerFactory.CreateTour(NameGenerator.GenerateName(6), NameGenerator.GenerateName(6),
-                NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), 0);
-            tours.Add(generatedItem);
+            //rand Stuff
+            Array values = Enum.GetValues(typeof(Cities));
+            Random random = new Random();
+            Cities randomCity1 = (Cities)values.GetValue(random.Next(values.Length));
+            Cities randomCity2 = (Cities)values.GetValue(random.Next(values.Length));
+            int distance = random.Next(1, 700);
+            string routeInformation = NameGenerator.GenerateName(6);
+
+            //generate image
+            FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
+            string path = fa.CreateImage(randomCity1.ToString(), randomCity2.ToString(), routeInformation);
+
+            //generate Tour item
+            Tour generatedItem = tourPlannerFactory.CreateTour(NameGenerator.GenerateName(6), NameGenerator.GenerateName(15),
+                randomCity1.ToString(), randomCity2.ToString(), path, distance);
+            tours.Add(generatedItem);            
         }
         private void RandomGenerateLog(object commandParameter)
         {

@@ -15,5 +15,7 @@ namespace TourPlanner.BL
 
         TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories);
+
+
     }
 }

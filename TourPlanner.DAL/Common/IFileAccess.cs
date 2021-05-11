@@ -14,5 +14,6 @@ namespace TourPlanner.DAL.Common
         IEnumerable<FileInfo> SearchFiles(string searchTerm, MediaType searchType);
 
         IEnumerable<FileInfo> GetAllFiles(MediaType searchType);
+        public string CreateImage(string from, string to, string routeInformation);
     }
 }

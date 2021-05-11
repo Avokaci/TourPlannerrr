@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlanner"
         mc:Ignorable="d"
-        Title="TourPlanner" Height="474.447" Width="800">
+        Title="TourPlanner" Height="557" Width="800">
     <Grid>
         <StackPanel>
             <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Tour-Planner" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
@@ -83,8 +83,12 @@
                     <Button Grid.Column="3" Grid.Row="0" Command="{Binding ChangeItem}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">[]</Button>
                 </Grid>
 
-                <ListBox Grid.Column="1" Grid.Row="2" x:Name="listTourItems" ItemsSource="{ Binding MyFilteredItems}" SelectedItem="{Binding CurrentItem}" DisplayMemberPath="Name"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-
+                <ListBox Grid.Column="1" Grid.Row="2" x:Name="listTourItems" 
+                         ItemsSource="{ Binding MyFilteredItems}" 
+                         SelectedItem="{Binding CurrentItem}"
+                         DisplayMemberPath="Name" 
+                         HorizontalAlignment="Stretch" 
+                         VerticalAlignment="Stretch">
                 </ListBox>
                 <GridSplitter Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" />
 
@@ -96,15 +100,12 @@
                         <RowDefinition Height="*" MinHeight="150"/>
                     </Grid.RowDefinitions>
                     <TabControl Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TabItem Header="Route">
-                            <Grid Background="#FFE5E5E5">
-                                <TextBlock Text="{Binding RouteText}"></TextBlock>
-                            </Grid>
+                        <TabItem Header="Route" >
+                            <Image Source="{Binding ElementName=listTourItems, Path=SelectedItem.routeInformation}" />
                         </TabItem>
                         <TabItem Header="Description">
-                            <Grid Background="#FFE5E5E5"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                <TextBlock Text="{Binding DescriptionText}"></TextBlock>
-                            </Grid>
+                            <TextBlock Text="{Binding ElementName=listTourItems, Path=SelectedItem.Description}"
+                                           TextWrapping="WrapWithOverflow"/>
                         </TabItem>
                     </TabControl>
                     <GridSplitter Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" />
@@ -129,7 +130,9 @@
                             <Button Grid.Column="3" Grid.Row="0" Command="{Binding ChangeLog}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">[]</Button>
 
                         </Grid>
-                        <DataGrid Name="dgUsers" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Logs}" SelectedItem="{Binding CurrentLog}">
+                        <DataGrid Name="dgUsers" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="1" 
+                                  ItemsSource="{Binding Logs}" 
+                                  SelectedItem="{Binding CurrentLog}">
                             <DataGrid.Columns>
 
                                 <DataGridTextColumn Header="Date" Width="2*" Binding="{Binding Date}"/>
