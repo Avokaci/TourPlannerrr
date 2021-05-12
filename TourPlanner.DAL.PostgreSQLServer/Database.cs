@@ -66,6 +66,7 @@ namespace TourPlanner.DAL.PostgreSQLServer
 
         public int ExecuteScalar(DbCommand command)
         {
+
             command.Connection = CreateConnection();
             return Convert.ToInt32(command.ExecuteScalar());
         }

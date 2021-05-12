@@ -33,3 +33,9 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netc
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\TourPlanner.DAL.FileServer.pdb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\log4net.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\AddLogWindow.g.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeLogWindow.g.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeTourWindow.g.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\AddLogWindow.baml
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeLogWindow.baml
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeTourWindow.baml

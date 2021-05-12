@@ -22,12 +22,22 @@ namespace TourPlanner.UI.ViewModels
         private ImageSource currentItemImageSource;
         private string searchCommand;
 
+        
+        private ICommand popUpAddTour;
+        private ICommand popUpChangeTour;
+        private ICommand popUpAddLog;
+        private ICommand popUpChangeLog;
         private ICommand randomGenerateItemCommand;
         private ICommand randomGenerateLogCommand;
-        private ICommand popUpAdd;
 
         private ITourPlannerFactory tourPlannerFactory;
-        public ICommand PopUpAdd => popUpAdd ??= new RelayCommand(OpenAddTourWindow);
+        public ICommand PopUpAddTour => popUpAddTour ??= new RelayCommand(OpenAddTourWindow);
+        public ICommand PopUpChangeTour => popUpChangeTour ??= new RelayCommand(OpenChangeTourWindow);
+        public ICommand PopUpAddLog => popUpAddLog ??= new RelayCommand(OpenAddLogWindow);
+        public ICommand PopUpChangeLog => popUpChangeLog ??= new RelayCommand(OpenChangeLogWindow);
+
+
+
         public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
         public ICommand RandomGenerateLogCommand => randomGenerateLogCommand ??= new RelayCommand(RandomGenerateLog);
 
@@ -145,6 +155,24 @@ namespace TourPlanner.UI.ViewModels
         {
             AddTourWindow atw = new AddTourWindow();
             atw.DataContext = new AddTourViewModel();
+            atw.ShowDialog();
+        }
+        private void OpenChangeTourWindow(object commandParameter)
+        {
+            ChangeTourWindow atw = new ChangeTourWindow();
+            atw.DataContext = new ChangeTourViewModel();
+            atw.ShowDialog();
+        }
+        private void OpenAddLogWindow(object commandParameter)
+        {
+            AddLogWindow atw = new AddLogWindow();
+            atw.DataContext = new AddLogViewModel();
+            atw.ShowDialog();
+        }
+        private void OpenChangeLogWindow(object commandParameter)
+        {
+            ChangeLogWindow atw = new ChangeLogWindow();
+            atw.DataContext = new ChangeLogViewModel();
             atw.ShowDialog();
         }
         #endregion

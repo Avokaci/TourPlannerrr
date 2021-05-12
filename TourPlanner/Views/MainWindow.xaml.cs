@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TourPlanner.UI.ViewModels;
 
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 namespace TourPlanner
 {
     /// <summary>

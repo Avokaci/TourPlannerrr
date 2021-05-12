@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\App.xaml
-2346434266
+5-896281717
 
-8748526389
+14-1411373112
 1991954698502
-Views\AddTourWindow.xaml;Views\MainWindow.xaml;
+Views\AddLogWindow.xaml;Views\AddTourWindow.xaml;Views\ChangeLogWindow.xaml;Views\ChangeTourWindow.xaml;Views\MainWindow.xaml;
 
 False
 

@@ -11,6 +11,7 @@ namespace TourPlanner.DAL.FileServer
 {
     public class FileAccess : IFileAccess
     {
+
         private string filePath;
         public FileAccess(string filePath)
         {
@@ -103,24 +104,32 @@ namespace TourPlanner.DAL.FileServer
             string imageFilePath;
             string url = @"https://www.mapquestapi.com/staticmap/v5/map?start=" + from + "&end=" + to + "&size=600,400@2x&key=" + key;
 
-            
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.AutomaticDecompression = DecompressionMethods.GZip;
-
-            using (HttpWebResponse lxResponse = (HttpWebResponse)request.GetResponse())
+            try
             {
-                using (BinaryReader reader = new BinaryReader(lxResponse.GetResponseStream()))
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.AutomaticDecompression = DecompressionMethods.GZip;
+
+                using (HttpWebResponse lxResponse = (HttpWebResponse)request.GetResponse())
                 {
-                    Byte[] lnByte = reader.ReadBytes(1 * 1024 * 1024 * 10);
-                    Random rnd = new Random();
-                    imageFilePath = filePath + routeInformation + ".jpg";
-                    using (FileStream lxFS = new FileStream(imageFilePath, FileMode.Create))
+                    using (BinaryReader reader = new BinaryReader(lxResponse.GetResponseStream()))
                     {
-                        lxFS.Write(lnByte, 0, lnByte.Length);
+                        Byte[] lnByte = reader.ReadBytes(1 * 1024 * 1024 * 10);
+                        Random rnd = new Random();
+                        imageFilePath = filePath + routeInformation + ".jpg";
+                        using (FileStream lxFS = new FileStream(imageFilePath, FileMode.Create))
+                        {
+                            lxFS.Write(lnByte, 0, lnByte.Length);
+                        }
                     }
                 }
+                return imageFilePath;
             }
-            return imageFilePath;
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
     }
 }

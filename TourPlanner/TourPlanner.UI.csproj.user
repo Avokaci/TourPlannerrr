@@ -7,12 +7,30 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AddLogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AddTourWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChangeLogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChangeTourWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\AddLogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AddTourWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangeLogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangeTourWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">
