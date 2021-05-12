@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlanner"
         mc:Ignorable="d"
-        Title="TourPlanner" Height="557" Width="800">
+        Title="TourPlanner" Height="696" Width="800">
     <Grid>
         <StackPanel>
             <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Tour-Planner" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
@@ -55,8 +55,7 @@
             </Grid>
 
             <!-- Tours -->
-            <Grid Height="{Binding ActualHeight, 
-              RelativeSource ={RelativeSource AncestorType = {x:Type Window}}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid Height="579" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="*" MinWidth="100"/>

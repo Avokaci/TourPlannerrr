@@ -11,3 +11,4 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQL
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.csproj.CopyComplete
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.csproj.CoreCompileInputs.cache

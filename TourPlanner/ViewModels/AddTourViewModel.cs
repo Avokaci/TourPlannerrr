@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -18,6 +19,7 @@ namespace TourPlanner.UI.ViewModels
         private string to;
         private string description;
         private int distance;
+        private ObservableCollection<Tour> tours;
 
         private ITourPlannerFactory tourFactory;
 
@@ -103,6 +105,8 @@ namespace TourPlanner.UI.ViewModels
             }
         }
 
+        public ObservableCollection<Tour> Tours { get => tours; set => tours = value; }
+
 
 
         #endregion
@@ -110,24 +114,22 @@ namespace TourPlanner.UI.ViewModels
         public AddTourViewModel()
         {
             this.tourFactory = TourPlannerFactory.GetInstance();
-
+            tours = new ObservableCollection<Tour>();
+            //logs = new ObservableCollection<TourLog>();
+            foreach (Tour item in this.tourFactory.GetTours())
+            {
+                tours.Add(item);
+            }
         }
         #endregion
         #region methods
         private void AddTour(object commandParameter)
         {
-            string routeInformation = NameGenerator.GenerateName(6);
-            Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, routeInformation , Distance);
+            string routeInformation = NameGenerator.GenerateName(6);          
             FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
-            fa.CreateImage(From, To, routeInformation);
-            //var window = (Window)commandParameter;
-            //name = string.Empty;
-            //from = string.Empty;
-            //to = string.Empty;
-            //description = string.Empty;
-            //distance = 0;
-            //window.Close();
-
+            string path = fa.CreateImage(From,To, routeInformation);
+            Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, path, Distance);
+            tours.Add(addedTour);    
         }
         #endregion
     }

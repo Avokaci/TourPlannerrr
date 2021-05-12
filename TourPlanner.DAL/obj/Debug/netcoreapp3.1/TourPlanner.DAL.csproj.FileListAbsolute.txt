@@ -9,3 +9,4 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\bin\Debug\
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.csproj.CopyComplete
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL\obj\Debug\netcoreapp3.1\TourPlanner.DAL.csproj.CoreCompileInputs.cache

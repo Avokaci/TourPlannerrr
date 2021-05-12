@@ -31,3 +31,5 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netc
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.pdb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\TourPlanner.DAL.FileServer.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\TourPlanner.DAL.FileServer.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\log4net.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.csproj.CoreCompileInputs.cache
