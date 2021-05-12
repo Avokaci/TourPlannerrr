@@ -1,7 +1,6 @@
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\obj\Debug\netcoreapp3.1\TourPlanner.BL.csprojAssemblyReference.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\obj\Debug\netcoreapp3.1\TourPlanner.BL.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\obj\Debug\netcoreapp3.1\TourPlanner.BL.AssemblyInfo.cs
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\obj\Debug\netcoreapp3.1\TourPlanner.BL.csproj.CoreCompileInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.BL.deps.json
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.BL.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.BL.pdb

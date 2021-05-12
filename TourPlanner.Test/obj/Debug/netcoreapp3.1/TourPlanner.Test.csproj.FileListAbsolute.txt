@@ -89,7 +89,6 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.csprojAssemblyReference.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.AssemblyInfo.cs
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.csproj.CoreCompileInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.csproj.CopyComplete
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.pdb

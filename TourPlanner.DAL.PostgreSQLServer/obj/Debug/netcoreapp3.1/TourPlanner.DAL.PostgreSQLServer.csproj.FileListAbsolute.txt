@@ -3,7 +3,6 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQL
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.csprojAssemblyReference.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.AssemblyInfo.cs
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.csproj.CoreCompileInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.deps.json
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.pdb

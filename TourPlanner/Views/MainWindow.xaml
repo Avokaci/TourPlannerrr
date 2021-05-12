@@ -101,7 +101,7 @@
                     </Grid.RowDefinitions>
                     <TabControl Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <TabItem Header="Route" >
-                            <Image Source="{Binding ElementName=listTourItems, Path=SelectedItem.routeInformation}" />
+                            <Image Source="{Binding CurrentItemImageSource}" />
                         </TabItem>
                         <TabItem Header="Description">
                             <TextBlock Text="{Binding ElementName=listTourItems, Path=SelectedItem.Description}"
@@ -134,11 +134,16 @@
                                   ItemsSource="{Binding Logs}" 
                                   SelectedItem="{Binding CurrentLog}">
                             <DataGrid.Columns>
-
-                                <DataGridTextColumn Header="Date" Width="2*" Binding="{Binding Date}"/>
-                                <DataGridTextColumn Header="Duration"  Width="2*" Binding="{Binding Duration}"/>
+                                <DataGridTextColumn Header="Date" Width="*" Binding="{Binding Date}"/>
+                                <DataGridTextColumn Header="Duration"  Width="*" Binding="{Binding Duration}"/>
                                 <DataGridTextColumn Header="Distance"  Width="*" Binding="{Binding Distance}"/>
-                                <DataGridTextColumn Header="..."  Width="*" Binding="{Binding AdditionalInfo}"/>
+                                <DataGridTextColumn Header="Report"  Width="*" Binding="{Binding Report}"/>
+                                <DataGridTextColumn Header="Rating"  Width="*" Binding="{Binding Rating}"/>
+                                <DataGridTextColumn Header="Avg. speed"  Width="*" Binding="{Binding AverageSpeed}"/>
+                                <DataGridTextColumn Header="Max. speed"  Width="*" Binding="{Binding MaxSpeed}"/>
+                                <DataGridTextColumn Header="Min. speed"  Width="*" Binding="{Binding MinSpeed}"/>
+                                <DataGridTextColumn Header="Steps"  Width="*" Binding="{Binding AverageStepCount}"/>
+                                <DataGridTextColumn Header="Burnt cal."  Width="*" Binding="{Binding BurntCalories}"/>
 
                             </DataGrid.Columns>
                         </DataGrid>

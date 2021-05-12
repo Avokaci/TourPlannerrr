@@ -10,7 +10,6 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netc
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.g.resources
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.AssemblyInfo.cs
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.csproj.CoreCompileInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.pdb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\TourPlanner.UI.genruntimeconfig.cache

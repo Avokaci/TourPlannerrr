@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "2DDu5kLAfutcV5VWitLwEt5dQyuA+a7iYlE8iIDXwNW+y9VKqjmh0l8VUSYBF1wNERCOIQUnFmyahO9W9C4khQ==",
+  "dgSpecHash": "Qkl9/yTEfBcKAF+ympPMwDHAbKmijPB2TPnrCXaDqam6oy0NUrnnWEYkERVS/Qr30u59vDYKbESB8xYlBfj+ew==",
   "success": true,
   "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner\\TourPlanner.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
-    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

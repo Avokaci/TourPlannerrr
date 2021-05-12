@@ -8,6 +8,8 @@ using TourPlanner.UI.Views;
 using TourPlanner.Models;
 using TourPlanner.BL;
 using TourPlanner.DAL.FileServer;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace TourPlanner.UI.ViewModels
 {
@@ -17,6 +19,7 @@ namespace TourPlanner.UI.ViewModels
         private ObservableCollection<Tour> tours;
         private ObservableCollection<TourLog> logs;
         private Tour currentItem;
+        private ImageSource currentItemImageSource;
         private string searchCommand;
 
         private ICommand randomGenerateItemCommand;
@@ -78,6 +81,28 @@ namespace TourPlanner.UI.ViewModels
                 if ((currentItem != value) && (value != null))
                 {
                     currentItem = value;
+                    BitmapImage image = new BitmapImage();
+                    image.BeginInit();
+                    image.CacheOption = BitmapCacheOption.OnLoad;
+                    image.UriSource = new Uri(currentItem.RouteInformation);
+                    image.EndInit();
+                    CurrentItemImageSource = image;
+                    RaisePropertyChangedEvent(nameof(currentItem));
+                    RaisePropertyChangedEvent(nameof(currentItemImageSource));
+                }
+            }
+        }
+        public ImageSource CurrentItemImageSource
+        {
+            get
+            {
+                return currentItemImageSource;
+            }
+            set
+            {
+                if (currentItemImageSource != value)
+                {
+                    currentItemImageSource = value;
                     RaisePropertyChangedEvent(nameof(currentItem));
                 }
             }
@@ -98,10 +123,7 @@ namespace TourPlanner.UI.ViewModels
                 }
             }
         }
-
-
-
-
+      
         #endregion
 
         #region Constructor
