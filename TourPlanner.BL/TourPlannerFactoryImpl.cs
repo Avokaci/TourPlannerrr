@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using TourPlanner.DAL.Common;
@@ -48,6 +50,56 @@ namespace TourPlanner.BL
             return logDAO.AddNewItemLog(tourLogItem, date, totalTime, report, distance, rating, averageSpeed, maxSpeed, minSpeed, averageStepCount, burntCalories);
         }
 
+        public void Export()
+        {
+            List<ExportObject> exportObjects = new List<ExportObject>();
+            List<TourLog> logs = new List<TourLog>();
+            List<Tour> tours = new List<Tour>();
+            tours = databaseTourItemDAO.GetItems();
 
+            foreach (Tour tour in tours)
+            {
+                ExportObject exportObject = new ExportObject() { Tour = tour };
+                exportObject.TourLogs = new List<TourLog>();
+                if (databaseTourItemDAO.GetLogs(exportObject.Tour.Id).Count != 0)
+                {
+                    foreach (TourLog log in databaseTourItemDAO.GetLogs(exportObject.Tour.Id))
+                    {
+                        if (log != null)
+                        {
+                            exportObject.TourLogs.Add(log);
+                        }
+                    }
+                }
+
+                exportObjects.Add(exportObject);
+            }
+            filesystemTourItemDAO.Export(exportObjects);
+        }
+
+        public void Import(string fileName)
+        {
+            //WIP:make method to delete everything before
+            //DeleteAllToursAndLogs();
+
+            string json = File.ReadAllText(fileName);
+            List<ExportObject> exportObjects = JsonConvert.DeserializeObject<List<ExportObject>>(json);
+
+            foreach (ExportObject exportObject in exportObjects)
+            {
+                CreateTour(exportObject.Tour.Name, exportObject.Tour.From, exportObject.Tour.To, 
+                    exportObject.Tour.Description, exportObject.Tour.RouteInformation,exportObject.Tour.Distance);
+                if (exportObject.TourLogs != null)
+                {
+                    foreach (TourLog logItem in exportObject.TourLogs)
+                    {
+                        CreateTourLog(exportObject.Tour, logItem.Date, logItem.TotalTime, logItem.Report,
+                                      logItem.Distance, logItem.Rating, logItem.AverageSpeed, logItem.MaxSpeed,
+                                      logItem.MinSpeed, logItem.AverageStepCount, logItem.BurntCalories);
+                    }
+                }
+
+            }
+        }
     }
 }

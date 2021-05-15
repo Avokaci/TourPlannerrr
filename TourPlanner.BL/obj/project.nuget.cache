@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hR0Jzw2mznrfBQxskY0kJzRbMDGzxau+sVeWiQbIOQXvosHy9AUCc8tEdEV9peIUB81hIszJgm4jwRtrH8s58A==",
+  "dgSpecHash": "B/ea/umZkyBXT7vHo0Y6Z+Vzqer6uNRVCa4ecQ0ziR9bdswQQJ6q91tXiGADkx3pWNr0tMUrMkB3Vi45DqOceQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.BL\\TourPlanner.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\npgsql\\5.0.4\\npgsql.5.0.4.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",

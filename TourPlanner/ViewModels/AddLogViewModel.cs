@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
 {
     public class AddLogViewModel:BaseViewModel
     {
         #region instances
+        private Tour currentTour;
         private string date;
         private string totalTime;
         private string report;
@@ -17,7 +19,7 @@ namespace TourPlanner.UI.ViewModels
         private int minSpeed;
         private int averageStepCount;
         private int burntCalories;
-
+        
 
         #endregion
 
@@ -169,6 +171,22 @@ namespace TourPlanner.UI.ViewModels
                 {
                     burntCalories = value;
                     RaisePropertyChangedEvent(nameof(burntCalories));
+                }
+            }
+        }
+
+        public Tour CurrentTour 
+        {
+            get 
+            { 
+                return currentTour;
+            }
+            set
+            {
+                if ((currentTour != value) && (value != null))
+                {
+                    currentTour = value;
+                    RaisePropertyChangedEvent(nameof(CurrentTour));
                 }
             }
         }

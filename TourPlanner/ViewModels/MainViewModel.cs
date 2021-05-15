@@ -15,10 +15,12 @@ namespace TourPlanner.UI.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         #region Instances
         private ObservableCollection<Tour> tours;
         private ObservableCollection<TourLog> logs;
         private Tour currentItem;
+        private TourLog currentLog;
         private ImageSource currentItemImageSource;
         private string searchCommand;
 
@@ -29,13 +31,14 @@ namespace TourPlanner.UI.ViewModels
         private ICommand popUpChangeLog;
         private ICommand randomGenerateItemCommand;
         private ICommand randomGenerateLogCommand;
+        private ICommand importCommand;
 
         private ITourPlannerFactory tourPlannerFactory;
         public ICommand PopUpAddTour => popUpAddTour ??= new RelayCommand(OpenAddTourWindow);
         public ICommand PopUpChangeTour => popUpChangeTour ??= new RelayCommand(OpenChangeTourWindow);
         public ICommand PopUpAddLog => popUpAddLog ??= new RelayCommand(OpenAddLogWindow);
         public ICommand PopUpChangeLog => popUpChangeLog ??= new RelayCommand(OpenChangeLogWindow);
-
+        public ICommand ImportCommand => importCommand ??= new RelayCommand(Import);
 
 
         public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
@@ -50,20 +53,29 @@ namespace TourPlanner.UI.ViewModels
             Cities randomCity2 = (Cities)values.GetValue(random.Next(values.Length));
             int distance = random.Next(1, 700);
             string routeInformation = NameGenerator.GenerateName(6);
-
+            string name = NameGenerator.GenerateName(6);
             //generate image
             FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
             string path = fa.CreateImage(randomCity1.ToString(), randomCity2.ToString(), routeInformation);
+            log.Debug("Image for random Tour generated");
 
             //generate Tour item
-            Tour generatedItem = tourPlannerFactory.CreateTour(NameGenerator.GenerateName(6), NameGenerator.GenerateName(15),
+            Tour generatedItem = tourPlannerFactory.CreateTour(name, NameGenerator.GenerateName(15),
                 randomCity1.ToString(), randomCity2.ToString(), path, distance);
-            tours.Add(generatedItem);            
+            tours.Add(generatedItem);
+            log.Debug("Random tour " + name + " succesfully generated and added to list");
+
+
         }
         private void RandomGenerateLog(object commandParameter)
         {
-            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, NameGenerator.GenerateName(6), 
-                NameGenerator.GenerateName(6), NameGenerator.GenerateName(6), 0, 0, 0, 0, 0, 0, 0);
+            Random random = new Random();
+           
+
+            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, DateTime.Now.ToString(), 
+                "00:04:02", NameGenerator.GenerateName(20), random.Next(1, 700), random.Next(1, 5), 
+                random.Next(5, 30), random.Next(1, 30), random.Next(1, 30), random.Next(500, 1000), random.Next(1, 500));
+            //Logs.Add(generatedLog);
         }
 
         #endregion
@@ -99,6 +111,9 @@ namespace TourPlanner.UI.ViewModels
                     CurrentItemImageSource = image;
                     RaisePropertyChangedEvent(nameof(currentItem));
                     RaisePropertyChangedEvent(nameof(currentItemImageSource));
+                    logs.Clear();
+                    FillDataGrid(currentItem);
+
                 }
             }
         }
@@ -133,20 +148,58 @@ namespace TourPlanner.UI.ViewModels
                 }
             }
         }
-      
+
+        public TourLog CurrentLog 
+        {
+            get
+            {
+                return currentLog;
+            }
+            set
+            {
+                if ((currentLog != value) && (value != null))
+                {
+                    currentLog = value;
+                    RaisePropertyChangedEvent(nameof(CurrentLog));
+                }
+            }
+        }
+
         #endregion
 
         #region Constructor
         public MainViewModel()
         {
             this.tourPlannerFactory = TourPlannerFactory.GetInstance();
+            InitListBox();
+            InitDataGrid();
+        }
+
+        private void InitListBox()
+        {
             tours = new ObservableCollection<Tour>();
-            logs = new ObservableCollection<TourLog>();
+            FillListBox();
+        }
+
+        private void FillListBox()
+        {
             foreach (Tour item in this.tourPlannerFactory.GetTours())
             {
                 tours.Add(item);
             }
+        }
 
+        private void InitDataGrid()
+        {
+            logs = new ObservableCollection<TourLog>();
+        }
+
+        private void FillDataGrid(Tour curItem)
+        {
+            foreach (TourLog item in this.tourPlannerFactory.GetLogs(curItem))
+            {
+                logs.Add(item);
+            }
         }
         #endregion
 
@@ -174,6 +227,21 @@ namespace TourPlanner.UI.ViewModels
             ChangeLogWindow atw = new ChangeLogWindow();
             atw.DataContext = new ChangeLogViewModel();
             atw.ShowDialog();
+        }
+        private void Import(object commandParameter)
+        {
+            string filePath;
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+                filePath = openFileDlg.FileName;
+                tourPlannerFactory.Import(filePath);
+            }
+            tours.Clear();
+            FillListBox();
         }
         #endregion
 

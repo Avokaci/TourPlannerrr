@@ -53,7 +53,7 @@ namespace TourPlanner.UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TourPlanner.UI;component/views/addtourwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TourPlanner.UI;V1.0.0.0;component/views/addtourwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\AddTourWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

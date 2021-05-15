@@ -13,9 +13,9 @@ namespace TourPlanner.DAL.PostgreSQLServer
     public class LogPostgresDAO : ILogDAO
     {
         private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"TourLog\" WHERE \"id\" = @id;";
-        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"TourLog\" WHERE \"tourId\" = @tourId;";
+        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"TourLog\" WHERE \"tourid\" = @tourId;";
         private const string SQL_INSERT_NEW_LOG = "INSERT INTO public.\"TourLog\"" +
-            "(tourId, date, totalTime, report,  distance,  rating, averageSpeed,  maxSpeed,  minSpeed,  averageStepCount,  burntCalories)" +
+            "(tourid, date, totaltime, report,  distance,  rating, averagespeed,  maxspeed,  minspeed,  averagestepcount,  burntcalories)" +
             "VALUES(@tourId, @date, @totalTime, @report, @distance, @rating, @averageSpeed,@maxSpeed,@minSpeed,@averageStepCount,@burntCalories);";
 
         private IDatabase database;
