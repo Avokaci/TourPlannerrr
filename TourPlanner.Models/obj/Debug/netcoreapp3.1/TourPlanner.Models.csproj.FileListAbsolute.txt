@@ -6,3 +6,4 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Deb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.pdb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Models\obj\Debug\netcoreapp3.1\TourPlanner.Models.csprojAssemblyReference.cache

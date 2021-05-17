@@ -16,6 +16,7 @@ namespace TourPlanner.UI.ViewModels
     public class MainViewModel : BaseViewModel
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #region Instances
         private ObservableCollection<Tour> tours;
         private ObservableCollection<TourLog> logs;
@@ -44,6 +45,13 @@ namespace TourPlanner.UI.ViewModels
         public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
         public ICommand RandomGenerateLogCommand => randomGenerateLogCommand ??= new RelayCommand(RandomGenerateLog);
 
+        public AddLogViewModel addLogViewModel;
+        public ChangeLogViewModel changeLogViewModel;
+        public AddTourViewModel addTourViewModel;
+        public ChangeTourViewModel changeTourViewModel;
+
+
+
         private void RandomGenerateItem(object commandParameter)
         {
             //rand Stuff
@@ -54,28 +62,60 @@ namespace TourPlanner.UI.ViewModels
             int distance = random.Next(1, 700);
             string routeInformation = NameGenerator.GenerateName(6);
             string name = NameGenerator.GenerateName(6);
-            //generate image
-            FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
-            string path = fa.CreateImage(randomCity1.ToString(), randomCity2.ToString(), routeInformation);
-            log.Debug("Image for random Tour generated");
+            string path ="";
+            try
+            {
+                //generate image
+                FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
+                path = fa.CreateImage(randomCity1.ToString(), randomCity2.ToString(), routeInformation);
+                log.Info("Image for random Tour generated");
+            }
+            catch (Exception ex)
+            {
 
-            //generate Tour item
-            Tour generatedItem = tourPlannerFactory.CreateTour(name, NameGenerator.GenerateName(15),
-                randomCity1.ToString(), randomCity2.ToString(), path, distance);
-            tours.Add(generatedItem);
-            log.Debug("Random tour " + name + " succesfully generated and added to list");
+                log.Error("Could not create Image for random Tour: " + ex.Message);
+            }
 
-
+            try
+            {
+                //generate Tour item
+                Tour generatedItem = tourPlannerFactory.CreateTour(name, NameGenerator.GenerateName(15),
+                    randomCity1.ToString(), randomCity2.ToString(), path, distance);
+                tours.Add(generatedItem);
+                log.Info("Random tour " + name + " succesfully generated and added to list");
+            }
+            catch (Exception ex)
+            {
+                log.Error("Could not create random Tour: " + ex.Message);
+            }
         }
         private void RandomGenerateLog(object commandParameter)
         {
             Random random = new Random();
-           
 
-            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, DateTime.Now.ToString(), 
-                "00:04:02", NameGenerator.GenerateName(20), random.Next(1, 700), random.Next(1, 5), 
-                random.Next(5, 30), random.Next(1, 30), random.Next(1, 30), random.Next(500, 1000), random.Next(1, 500));
-            //Logs.Add(generatedLog);
+            try
+            {
+                TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem,
+                                                                        DateTime.Now.ToString(),
+                                                                        "00:04:02",
+                                                                        NameGenerator.GenerateName(20),
+                                                                        random.Next(1, 700),
+                                                                        random.Next(1, 5),
+                                                                        random.Next(5, 30),
+                                                                        random.Next(1, 30),
+                                                                        random.Next(1, 30),
+                                                                        random.Next(500, 1000),
+                                                                        random.Next(1, 500));
+                log.Info("Random log for Tour " + currentItem.Name + " with id " + currentItem.Id + " generated");
+
+                //Logs.Add(generatedLog);
+            }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not create Random log for Tour " + currentItem.Name + " with id " + currentItem.Id + " " + ex.Message);
+            }
+         
         }
 
         #endregion
@@ -206,42 +246,68 @@ namespace TourPlanner.UI.ViewModels
         #region Methods
         private void OpenAddTourWindow(object commandParameter)
         {
+            this.addTourViewModel = new AddTourViewModel();
             AddTourWindow atw = new AddTourWindow();
-            atw.DataContext = new AddTourViewModel();
+            atw.DataContext = this.addTourViewModel;
             atw.ShowDialog();
+            tours.Clear();
+            FillListBox();
         }
         private void OpenChangeTourWindow(object commandParameter)
         {
+            this.changeTourViewModel = new ChangeTourViewModel();
+            changeTourViewModel.CurrentItem = CurrentItem;
             ChangeTourWindow atw = new ChangeTourWindow();
-            atw.DataContext = new ChangeTourViewModel();
+            atw.DataContext = this.changeTourViewModel;
             atw.ShowDialog();
+            tours.Clear();
+            FillListBox();
         }
         private void OpenAddLogWindow(object commandParameter)
         {
-            AddLogWindow atw = new AddLogWindow();
-            atw.DataContext = new AddLogViewModel();
-            atw.ShowDialog();
+           
+            this.addLogViewModel = new AddLogViewModel();
+            addLogViewModel.CurrentTour = CurrentItem;
+            AddLogWindow view = new AddLogWindow();
+            view.DataContext = this.addLogViewModel;
+            view.ShowDialog();
+            logs.Clear();
+            FillDataGrid(CurrentItem);
+         
         }
         private void OpenChangeLogWindow(object commandParameter)
         {
+            this.changeLogViewModel = new ChangeLogViewModel();
+            //changeLogViewModel.CurrentItem = CurrentItem;
             ChangeLogWindow atw = new ChangeLogWindow();
-            atw.DataContext = new ChangeLogViewModel();
+            atw.DataContext = this.changeLogViewModel;
             atw.ShowDialog();
+            logs.Clear();
+            FillListBox();
         }
         private void Import(object commandParameter)
         {
             string filePath;
-            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
-
-            Nullable<bool> result = openFileDlg.ShowDialog();
-
-            if (result == true)
+            try
             {
-                filePath = openFileDlg.FileName;
-                tourPlannerFactory.Import(filePath);
+                Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+                Nullable<bool> result = openFileDlg.ShowDialog();
+
+                if (result == true)
+                {
+                    filePath = openFileDlg.FileName;
+                    tourPlannerFactory.Import(filePath);
+                }
+                tours.Clear();
+                FillListBox();
             }
-            tours.Clear();
-            FillListBox();
+            catch (Exception ex)
+            {
+
+                log.Error("Could not import from filepath " + ex.Message);
+            }
+           
         }
         #endregion
 

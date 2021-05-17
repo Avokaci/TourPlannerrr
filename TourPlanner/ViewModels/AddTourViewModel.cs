@@ -13,6 +13,8 @@ namespace TourPlanner.UI.ViewModels
 {
     public class AddTourViewModel : BaseViewModel
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #region instances
         private string name;
         private string from;
@@ -125,11 +127,23 @@ namespace TourPlanner.UI.ViewModels
         #region methods
         private void AddTour(object commandParameter)
         {
-            string routeInformation = NameGenerator.GenerateName(6);          
-            FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
-            string path = fa.CreateImage(From,To, routeInformation);
-            Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, path, Distance);
-            tours.Add(addedTour);    
+            try
+            {
+                string routeInformation = NameGenerator.GenerateName(6);
+                FileAccess fa = new FileAccess("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\");
+                string path = fa.CreateImage(From, To, routeInformation);
+                Tour addedTour = tourFactory.CreateTour(Name, Description, From, To, path, Distance);
+                tours.Add(addedTour);
+                log.Info("Tour " + Name + " succesfully added into TourList");
+
+            }
+            catch (Exception ex )
+            {
+
+                log.Error("Could not add tour " + name + " " + ex.Message);
+            }
+          
+            
         }
         #endregion
     }

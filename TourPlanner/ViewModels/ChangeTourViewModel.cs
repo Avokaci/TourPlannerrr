@@ -10,12 +10,16 @@ namespace TourPlanner.UI.ViewModels
 {
     public class ChangeTourViewModel: BaseViewModel
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private string description;
+        private Tour currentItem;
         private ObservableCollection<Tour> tours;
         private ITourPlannerFactory tourFactory;
 
-        private ICommand addCommand;
-        public ICommand AddCommand => addCommand ??= new RelayCommand(ChangeTour);
+
+        private ICommand changeCommand;
+        public ICommand ChangeCommand => changeCommand ??= new RelayCommand(ChangeTour);
 
         #region properties
        
@@ -35,8 +39,23 @@ namespace TourPlanner.UI.ViewModels
                 }
             }
         }
-
+        public Tour CurrentItem
+        {
+            get
+            {
+                return currentItem;
+            }
+            set
+            {
+                if (currentItem != value)
+                {
+                    currentItem = value;
+                    RaisePropertyChangedEvent(nameof(currentItem));
+                }
+            }
+        }
         public ObservableCollection<Tour> Tours { get => tours; set => tours = value; }
+       
         #endregion
 
         #region constructor
@@ -55,7 +74,15 @@ namespace TourPlanner.UI.ViewModels
         #region methods
         private void ChangeTour(object commandParameter)
         {
-           
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not change tour description of tour " + currentItem.Name + " with id" + currentItem.Id + " " + ex.Message);
+            }
         }
         #endregion
     }

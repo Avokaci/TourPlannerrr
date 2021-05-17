@@ -33,7 +33,7 @@
                     <RowDefinition Height="10"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Add a new Tour:"/>
+                <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Change Log:"/>
                 <Label Grid.Column="1" Grid.Row="2" Margin="10">New Date:</Label>
                 <TextBox Grid.Column="2" Grid.Row="2" Margin="10" Text="{Binding Date}"/>
                 <Label Grid.Column="1" Grid.Row="3" Margin="10">New Duration:</Label>

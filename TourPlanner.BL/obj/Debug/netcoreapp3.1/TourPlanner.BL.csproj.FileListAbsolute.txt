@@ -15,3 +15,4 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\n
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.PostgreSQLServer.pdb
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.FileServer.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\bin\Debug\netcoreapp3.1\TourPlanner.DAL.FileServer.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.BL\obj\Debug\netcoreapp3.1\TourPlanner.BL.csproj.CoreCompileInputs.cache

@@ -52,32 +52,32 @@ namespace TourPlanner.BL
 
         public void Export()
         {
-            List<ExportObject> exportObjects = new List<ExportObject>();
-            List<TourLog> logs = new List<TourLog>();
-            List<Tour> tours = new List<Tour>();
-            tours = databaseTourItemDAO.GetItems();
+            //    List<ExportObject> exportObjects = new List<ExportObject>();
+            //    List<TourLog> logs = new List<TourLog>();
+            //    List<Tour> tours = new List<Tour>();
+            //    tours = databaseTourItemDAO.GetItems();
 
-            foreach (Tour tour in tours)
-            {
-                ExportObject exportObject = new ExportObject() { Tour = tour };
-                exportObject.TourLogs = new List<TourLog>();
-                if (databaseTourItemDAO.GetLogs(exportObject.Tour.Id).Count != 0)
-                {
-                    foreach (TourLog log in databaseTourItemDAO.GetLogs(exportObject.Tour.Id))
-                    {
-                        if (log != null)
-                        {
-                            exportObject.TourLogs.Add(log);
-                        }
-                    }
-                }
+            //    foreach (Tour tour in tours)
+            //    {
+            //        ExportObject exportObject = new ExportObject() { Tour = tour };
+            //        exportObject.TourLogs = new List<TourLog>();
+            //        if (databaseTourItemDAO.GetLogs(exportObject.Tour.Id).Count != 0)
+            //        {
+            //            foreach (TourLog log in databaseTourItemDAO.GetLogs(exportObject.Tour.Id))
+            //            {
+            //                if (log != null)
+            //                {
+            //                    exportObject.TourLogs.Add(log);
+            //                }
+            //            }
+            //        }
 
-                exportObjects.Add(exportObject);
-            }
-            filesystemTourItemDAO.Export(exportObjects);
+            //        exportObjects.Add(exportObject);
+            //    }
+            //    filesystemTourItemDAO.Export(exportObjects);
         }
 
-        public void Import(string fileName)
+    public void Import(string fileName)
         {
             //WIP:make method to delete everything before
             //DeleteAllToursAndLogs();

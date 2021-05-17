@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
+using System.Windows.Input;
+using TourPlanner.BL;
 using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
 {
     public class AddLogViewModel:BaseViewModel
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #region instances
         private Tour currentTour;
         private string date;
@@ -19,7 +24,9 @@ namespace TourPlanner.UI.ViewModels
         private int minSpeed;
         private int averageStepCount;
         private int burntCalories;
-        
+        private ITourPlannerFactory tourPlannerFactory;
+        private ICommand addCommand;
+        public ICommand AddCommand => addCommand ??= new RelayCommand(AddLog);
 
         #endregion
 
@@ -193,10 +200,33 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region constructor
+        public AddLogViewModel()
+        {
+            this.tourPlannerFactory = TourPlannerFactory.GetInstance();
+        }
 
         #endregion
 
         #region methods 
+        private void AddLog(object commandParameter)
+        {
+
+            try
+            {
+                TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentTour, Date, TotalTime, Report, Distance, Rating, AverageSpeed, MaxSpeed, MinSpeed, AverageStepCount, BurntCalories);
+                //tours.add(generatedLog)
+                log.Info("Log succesfully added for tour " +currentTour.Name +" with id "  + currentTour.Id + " into tour log list");
+
+            }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not add Log to tour " + currentTour.Name + " " + ex.Message);
+            }
+
+         
+
+        }
 
         #endregion
     }

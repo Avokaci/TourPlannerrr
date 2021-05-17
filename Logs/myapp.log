@@ -1,0 +1,21 @@
+2021-05-17 08:25:44,139 [1] DEBUG TourPlanner.UI.ViewModels.MainViewModel - Image for random Tour generated
+2021-05-17 08:25:44,225 [1] DEBUG TourPlanner.UI.ViewModels.MainViewModel - Random tour Rahily succesfully generated and added to list
+2021-05-17 08:27:02,528 [1] DEBUG TourPlanner.UI.ViewModels.MainViewModel - Image for random Tour generated
+2021-05-17 08:27:02,581 [1] DEBUG TourPlanner.UI.ViewModels.MainViewModel - Random tour Karuwy succesfully generated and added to list
+2021-05-17 13:25:33,027 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Image for random Tour generated
+2021-05-17 13:25:33,133 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random tour ZHujezhy succesfully generated and added to list
+2021-05-17 13:30:38,010 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Image for random Tour generated
+2021-05-17 13:30:38,144 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random tour Haelyzha succesfully generated and added to list
+2021-05-17 13:35:55,976 [1] ERROR TourPlanner.UI.ViewModels.MainViewModel - Could not import from filepath Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+2021-05-17 14:12:28,578 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Haelyzha with id 96 generated
+2021-05-17 14:12:33,090 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Haelyzha with id 96 generated
+2021-05-17 14:12:33,427 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Haelyzha with id 96 generated
+2021-05-17 14:14:33,558 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Buzhishae with id 84 generated
+2021-05-17 14:14:37,405 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Buzhishae with id 84 generated
+2021-05-17 14:15:49,086 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour SHytyne with id 87 generated
+2021-05-17 14:33:45,382 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Image for random Tour generated
+2021-05-17 14:33:45,529 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random tour Bybaelu succesfully generated and added to list
+2021-05-17 14:33:48,032 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Bybaelu with id 99 generated
+2021-05-17 14:33:51,070 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Bybaelu with id 99 generated
+2021-05-17 14:33:51,537 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Bybaelu with id 99 generated
+2021-05-17 14:33:54,785 [1] INFO TourPlanner.UI.ViewModels.MainViewModel - Random log for Tour Tour-3 with id 97 generated

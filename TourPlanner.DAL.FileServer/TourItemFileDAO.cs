@@ -11,6 +11,8 @@ namespace TourPlanner.DAL.FileServer
 {
     public class TourItemFileDAO : ITourDAO
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private IFileAccess fileAccess;
         public TourItemFileDAO()
         {
@@ -38,21 +40,32 @@ namespace TourPlanner.DAL.FileServer
         private IEnumerable<Tour> QuaryTourItemFromFileSystem(IEnumerable<FileInfo>foundFiles)
         {
             List<Tour> foundTourItems = new List<Tour>();
-            foreach (FileInfo file in foundFiles)
+            try
             {
-                string[] fileLines = File.ReadAllLines(file.FullName);
-                foundTourItems.Add(new Tour(
-                    int.Parse(fileLines[0]),
-                    fileLines[1],
-                    fileLines[2],
-                    fileLines[3],
-                    fileLines[4],
-                    fileLines[5],
-                    int.Parse(fileLines[6])
+                foreach (FileInfo file in foundFiles)
+                {
+                    string[] fileLines = File.ReadAllLines(file.FullName);
+                    foundTourItems.Add(new Tour(
+                        int.Parse(fileLines[0]),
+                        fileLines[1],
+                        fileLines[2],
+                        fileLines[3],
+                        fileLines[4],
+                        fileLines[5],
+                        int.Parse(fileLines[6])
 
-                    ));
+                        ));
+
+                }
+                log.Info("Succesfully queried tours from database");
 
             }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not query tours from file system " + ex.Message);
+            }
+
             return foundTourItems;
         }
     }
