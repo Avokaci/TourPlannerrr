@@ -1,0 +1,233 @@
+\hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database}{}\doxysection{Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database Class Reference}
+\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database}\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+
+
+\mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database}{Database}} class, which is responsible for all the interaction with the database. This class is responsible for creating the connection, commands, declare, defines and sets the parameters for a command and executes the commands.  
+
+
+Inheritance diagram for Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a7bcf436c9b051fdddc83bc84ce406616}{Database}} (string \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a52ac5822a16a464933cf0be0de698c4a}{connection\+String}})
+\begin{DoxyCompactList}\small\item\em Constructor for database class, which has the connectionstring as a parameter. \end{DoxyCompactList}\item 
+Db\+Command \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a32a47e2953d51814556b6c6fafce340e}{Create\+Command}} (string generic\+Command\+String)
+\begin{DoxyCompactList}\small\item\em Method that is responsible for the creation of a command. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a145726faed67ee13ea9d00e8f8c48be4}{Declare\+Parameter}} (Db\+Command command, string name, Db\+Type type)
+\begin{DoxyCompactList}\small\item\em Method that is responsible for declaring the parameters of a command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_abee9737ed57d9322f07a4c52726f7f93}{Define\+Parameter}} (Db\+Command command, string name, Db\+Type type, object value)
+\begin{DoxyCompactList}\small\item\em Method that defines parameters of a command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae659dae1fcd554fe47d0efaecf3a5b35}{Set\+Parameter}} (Db\+Command command, string name, object value)
+\begin{DoxyCompactList}\small\item\em Method that sets parameters of a command \end{DoxyCompactList}\item 
+IData\+Reader \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a4fec93c84498ed27d84227f3cec7f760}{Execute\+Reader}} (Db\+Command command)
+\begin{DoxyCompactList}\small\item\em Method that executes a command via Exececute\+Reader command. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a6e084796222983c1d69687b888a55184}{Execute\+Scalar}} (Db\+Command command)
+\begin{DoxyCompactList}\small\item\em Method that executes a command via Execute\+Scalar command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Db\+Connection \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae954c0aef6fa3652716fe93cf225951e}{Create\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Method that creates the connection to the database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a52ac5822a16a464933cf0be0de698c4a}{connection\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database}{Database}} class, which is responsible for all the interaction with the database. This class is responsible for creating the connection, commands, declare, defines and sets the parameters for a command and executes the commands. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a7bcf436c9b051fdddc83bc84ce406616}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a7bcf436c9b051fdddc83bc84ce406616}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!Database@{Database}}
+\index{Database@{Database}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Database (\begin{DoxyParamCaption}\item[{string}]{connection\+String }\end{DoxyParamCaption})}
+
+
+
+Constructor for database class, which has the connectionstring as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+String} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a32a47e2953d51814556b6c6fafce340e}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a32a47e2953d51814556b6c6fafce340e}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!CreateCommand@{CreateCommand}}
+\index{CreateCommand@{CreateCommand}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{CreateCommand()}{CreateCommand()}}
+{\footnotesize\ttfamily Db\+Command Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Create\+Command (\begin{DoxyParamCaption}\item[{string}]{generic\+Command\+String }\end{DoxyParamCaption})}
+
+
+
+Method that is responsible for the creation of a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em generic\+Command\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_abcc881420fa3f32183f74de57c95f0f4}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae954c0aef6fa3652716fe93cf225951e}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae954c0aef6fa3652716fe93cf225951e}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!CreateConnection@{CreateConnection}}
+\index{CreateConnection@{CreateConnection}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{CreateConnection()}{CreateConnection()}}
+{\footnotesize\ttfamily Db\+Connection Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Create\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method that creates the connection to the database 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a145726faed67ee13ea9d00e8f8c48be4}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a145726faed67ee13ea9d00e8f8c48be4}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!DeclareParameter@{DeclareParameter}}
+\index{DeclareParameter@{DeclareParameter}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{DeclareParameter()}{DeclareParameter()}}
+{\footnotesize\ttfamily int Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Declare\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{Db\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Method that is responsible for declaring the parameters of a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_afe5976b43637f3c8a14bb6282cbd4a75}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_abee9737ed57d9322f07a4c52726f7f93}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_abee9737ed57d9322f07a4c52726f7f93}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!DefineParameter@{DefineParameter}}
+\index{DefineParameter@{DefineParameter}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{DefineParameter()}{DefineParameter()}}
+{\footnotesize\ttfamily void Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Define\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{Db\+Type}]{type,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Method that defines parameters of a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em type} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_ad8c28e8c78c8ab157c509319566186ca}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a4fec93c84498ed27d84227f3cec7f760}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a4fec93c84498ed27d84227f3cec7f760}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!ExecuteReader@{ExecuteReader}}
+\index{ExecuteReader@{ExecuteReader}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{ExecuteReader()}{ExecuteReader()}}
+{\footnotesize\ttfamily IData\+Reader Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Execute\+Reader (\begin{DoxyParamCaption}\item[{Db\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+Method that executes a command via Exececute\+Reader command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_a0cdcea70ec386e3bfb60df4d3cc6f18a}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a6e084796222983c1d69687b888a55184}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a6e084796222983c1d69687b888a55184}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!ExecuteScalar@{ExecuteScalar}}
+\index{ExecuteScalar@{ExecuteScalar}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{ExecuteScalar()}{ExecuteScalar()}}
+{\footnotesize\ttfamily int Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Execute\+Scalar (\begin{DoxyParamCaption}\item[{Db\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+Method that executes a command via Execute\+Scalar command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_ac153e8378ba56243543d5af08e99d8e7}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae659dae1fcd554fe47d0efaecf3a5b35}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_ae659dae1fcd554fe47d0efaecf3a5b35}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!SetParameter@{SetParameter}}
+\index{SetParameter@{SetParameter}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{SetParameter()}{SetParameter()}}
+{\footnotesize\ttfamily void Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+Set\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Method that sets parameters of a command 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_tour_planner_1_1_d_a_l_1_1_common_1_1_i_database_a159ddad81465cc5b829ea583f8117042}{Tour\+Planner.\+DAL.\+Common.\+IDatabase}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a52ac5822a16a464933cf0be0de698c4a}\label{class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_database_a52ac5822a16a464933cf0be0de698c4a}} 
+\index{TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}!connectionString@{connectionString}}
+\index{connectionString@{connectionString}!TourPlanner.DAL.PostgreSQLServer.Database@{TourPlanner.DAL.PostgreSQLServer.Database}}
+\doxysubsubsection{\texorpdfstring{connectionString}{connectionString}}
+{\footnotesize\ttfamily string Tour\+Planner.\+DAL.\+Postgre\+SQLServer.\+Database.\+connection\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL.\+Postgre\+SQLServer/\mbox{\hyperlink{_database_8cs}{Database.\+cs}}\end{DoxyCompactItemize}

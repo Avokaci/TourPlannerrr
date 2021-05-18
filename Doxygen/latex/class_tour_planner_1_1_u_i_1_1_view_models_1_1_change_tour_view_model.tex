@@ -1,0 +1,160 @@
+\hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}{}\doxysection{Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model Class Reference}
+\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+
+
+\mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}{Change\+Tour\+View\+Model}} class, that allows for the modification of an existing tour item.  
+
+
+Inheritance diagram for Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a17894a8f696d825e954c5e05355698c6}{Change\+Tour\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}{Change\+Tour\+View\+Model}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ICommand \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0ac8f28360e59dd5dbb12525f3bd3676}{Change\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0691e4fe7603ebd8b4a56148655729c5}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5585d0cca3621cd60ce1b8a05c992797}{Current\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} $>$ \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a61a3ef7161dee554c7d1e68ace374bb8}{Tours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5e64493eb0d6120c293d4cc8ca46802c}{Change\+Tour}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to change the description of a selected tour in the list box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a8ebd852deab9a9897fa7e0808e7415a6}{description}}
+\item 
+\mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad16eb06e3c6a25d0d50ae3fe0dfde2d4}{current\+Item}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} $>$ \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a44784354971d51da0e2f266e785f2002}{tours}}
+\item 
+\mbox{\hyperlink{interface_tour_planner_1_1_b_l_1_1_i_tour_planner_factory}{ITour\+Planner\+Factory}} \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad5c6fb13a2f7f092a48f93661fc2a54f}{tour\+Factory}}
+\item 
+ICommand \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ac29e6f8b7e2a9c33e712b4bcbc5a1e4f}{change\+Command}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly log4net.\+ILog \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a14831a6534161edee47cad471edd3224}{log}} = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}{Change\+Tour\+View\+Model}} class, that allows for the modification of an existing tour item. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a17894a8f696d825e954c5e05355698c6}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a17894a8f696d825e954c5e05355698c6}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!ChangeTourViewModel@{ChangeTourViewModel}}
+\index{ChangeTourViewModel@{ChangeTourViewModel}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{ChangeTourViewModel()}{ChangeTourViewModel()}}
+{\footnotesize\ttfamily Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Change\+Tour\+View\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor of \mbox{\hyperlink{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model}{Change\+Tour\+View\+Model}} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5e64493eb0d6120c293d4cc8ca46802c}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5e64493eb0d6120c293d4cc8ca46802c}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!ChangeTour@{ChangeTour}}
+\index{ChangeTour@{ChangeTour}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{ChangeTour()}{ChangeTour()}}
+{\footnotesize\ttfamily void Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Change\+Tour (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to change the description of a selected tour in the list box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ac29e6f8b7e2a9c33e712b4bcbc5a1e4f}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ac29e6f8b7e2a9c33e712b4bcbc5a1e4f}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!changeCommand@{changeCommand}}
+\index{changeCommand@{changeCommand}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{changeCommand}{changeCommand}}
+{\footnotesize\ttfamily ICommand Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+change\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad16eb06e3c6a25d0d50ae3fe0dfde2d4}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad16eb06e3c6a25d0d50ae3fe0dfde2d4}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{currentItem}{currentItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+current\+Item\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a8ebd852deab9a9897fa7e0808e7415a6}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a8ebd852deab9a9897fa7e0808e7415a6}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!description@{description}}
+\index{description@{description}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily string Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+description\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a14831a6534161edee47cad471edd3224}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a14831a6534161edee47cad471edd3224}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!log@{log}}
+\index{log@{log}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily readonly log4net.\+ILog Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+log = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad5c6fb13a2f7f092a48f93661fc2a54f}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_ad5c6fb13a2f7f092a48f93661fc2a54f}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!tourFactory@{tourFactory}}
+\index{tourFactory@{tourFactory}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{tourFactory}{tourFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_tour_planner_1_1_b_l_1_1_i_tour_planner_factory}{ITour\+Planner\+Factory}} Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+tour\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a44784354971d51da0e2f266e785f2002}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a44784354971d51da0e2f266e785f2002}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!tours@{tours}}
+\index{tours@{tours}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{tours}{tours}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}}$>$ Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+tours\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0ac8f28360e59dd5dbb12525f3bd3676}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0ac8f28360e59dd5dbb12525f3bd3676}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!ChangeCommand@{ChangeCommand}}
+\index{ChangeCommand@{ChangeCommand}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{ChangeCommand}{ChangeCommand}}
+{\footnotesize\ttfamily ICommand Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Change\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5585d0cca3621cd60ce1b8a05c992797}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a5585d0cca3621cd60ce1b8a05c992797}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!CurrentItem@{CurrentItem}}
+\index{CurrentItem@{CurrentItem}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{CurrentItem}{CurrentItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}} Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Current\+Item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0691e4fe7603ebd8b4a56148655729c5}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a0691e4fe7603ebd8b4a56148655729c5}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!Description@{Description}}
+\index{Description@{Description}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a61a3ef7161dee554c7d1e68ace374bb8}\label{class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model_a61a3ef7161dee554c7d1e68ace374bb8}} 
+\index{TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}!Tours@{Tours}}
+\index{Tours@{Tours}!TourPlanner.UI.ViewModels.ChangeTourViewModel@{TourPlanner.UI.ViewModels.ChangeTourViewModel}}
+\doxysubsubsection{\texorpdfstring{Tours}{Tours}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{class_tour_planner_1_1_models_1_1_tour}{Tour}}$>$ Tour\+Planner.\+UI.\+View\+Models.\+Change\+Tour\+View\+Model.\+Tours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner/\+View\+Models/\mbox{\hyperlink{_change_tour_view_model_8cs}{Change\+Tour\+View\+Model.\+cs}}\end{DoxyCompactItemize}
