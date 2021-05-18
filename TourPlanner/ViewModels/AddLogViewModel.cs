@@ -8,6 +8,9 @@ using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
 {
+    /// <summary>
+    /// AddLogViewModel class that is responsible for the creation of tour logs. 
+    /// </summary>
     public class AddLogViewModel:BaseViewModel
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -200,6 +203,9 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region constructor
+        /// <summary>
+        /// Constructor of AddLogViewModel class
+        /// </summary>
         public AddLogViewModel()
         {
             this.tourPlannerFactory = TourPlannerFactory.GetInstance();
@@ -208,6 +214,10 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region methods 
+        /// <summary>
+        /// Method that allows for a log to be added to an existing tour. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void AddLog(object commandParameter)
         {
 

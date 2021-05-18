@@ -10,6 +10,9 @@ using TourPlanner.Models;
 
 namespace TourPlanner.DAL.PostgreSQLServer
 {
+    /// <summary>
+    /// TourPostgresDAO class that is responsible for database interaction regarding tours. 
+    /// </summary>
     public class TourPostgresDAO : ITourDAO
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -23,15 +26,31 @@ namespace TourPlanner.DAL.PostgreSQLServer
 
 
         private IDatabase database;
-
+        /// <summary>
+        /// Constructor of class that takes no arguments. 
+        /// </summary>
         public TourPostgresDAO()
         {
             this.database = DALFactory.GetDatabase();
         }
+        /// <summary>
+        /// Constructor of class that takes database object as a parameter. 
+        /// </summary>
+        /// <param name="database"></param>
         public TourPostgresDAO(IDatabase database)
         {
             this.database = database;
         }
+        /// <summary>
+        /// Method that is responsible for inserting a tour item in the database. 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="routeInformation"></param>
+        /// <param name="distance"></param>
+        /// <returns></returns>
         public Tour AddNewItem(string name, string description, string from, string to, string routeInformation, int distance)
         {
 
@@ -54,7 +73,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
             }
             return FindById(database.ExecuteScalar(insertCommand));
         }
-
+        /// <summary>
+        /// Method that is responsible for creating a copy of a tour in the database. 
+        /// </summary>
+        /// <param name="tourReference"></param>
+        /// <returns></returns>
         public Tour CopyItem(Tour tourReference)
         {
             DbCommand insertCommand = null;
@@ -76,7 +99,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
             }
             return FindById(database.ExecuteScalar(insertCommand));
         }
-
+        /// <summary>
+        /// Method that finds a tour by id from the database. 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Tour FindById(int id)
         {
             DbCommand findCommand = null;
@@ -95,12 +122,20 @@ namespace TourPlanner.DAL.PostgreSQLServer
             }
             return tourList.FirstOrDefault();
         }
-
+        /// <summary>
+        /// Method that returns a list of all the tours in the database. 
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Tour> GetTours()
         {
             DbCommand toursCommand = database.CreateCommand(SQL_GET_ALL_ITEMS);
             return QueryToursFromDatabase(toursCommand);
         }
+        /// <summary>
+        /// Method that adds tours from the database into the local list of tours. 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         private IEnumerable<Tour> QueryToursFromDatabase(DbCommand command)
         {
             List<Tour> tourList = new List<Tour>();

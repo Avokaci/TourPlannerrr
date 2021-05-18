@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 
 namespace TourPlanner.UI.ViewModels
 {
+    /// <summary>
+    /// MainViewModel class which serves as the ViewModel for the MainWindow. It allows for the creation, deletion and modification of tours and logs for the tours. 
+    /// Furthermore it allows for import and export of tours and logs from and into a file. And lets the user generate a report of a tour with its corresponding logs. 
+    /// </summary>
     public class MainViewModel : BaseViewModel
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -51,7 +55,10 @@ namespace TourPlanner.UI.ViewModels
         public ChangeTourViewModel changeTourViewModel;
 
 
-
+        /// <summary>
+        /// Method to generate a random Tour item, via button press on the MainWindow.
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void RandomGenerateItem(object commandParameter)
         {
             //rand Stuff
@@ -89,6 +96,10 @@ namespace TourPlanner.UI.ViewModels
                 log.Error("Could not create random Tour: " + ex.Message);
             }
         }
+        /// <summary>
+        /// Method to generate a random Tour Log , via button press on the MainWindow.
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void RandomGenerateLog(object commandParameter)
         {
             Random random = new Random();
@@ -121,6 +132,7 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region Properties
+
         public IEnumerable<Tour> MyFilteredItems
         {
             get
@@ -208,6 +220,9 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor for MainViewModel class that accesses Singleton instance of the Items. Also initalizes Listbox and Datagrid in MainWindow and fills them.
+        /// </summary>
         public MainViewModel()
         {
             this.tourPlannerFactory = TourPlannerFactory.GetInstance();
@@ -215,12 +230,17 @@ namespace TourPlanner.UI.ViewModels
             InitDataGrid();
         }
 
+        /// <summary>
+        /// Method that initializes the List Box 
+        /// </summary>
         private void InitListBox()
         {
             tours = new ObservableCollection<Tour>();
             FillListBox();
         }
-
+        /// <summary>
+        /// Method that fills the listbox with the corresponding tour data.
+        /// </summary>
         private void FillListBox()
         {
             foreach (Tour item in this.tourPlannerFactory.GetTours())
@@ -228,12 +248,16 @@ namespace TourPlanner.UI.ViewModels
                 tours.Add(item);
             }
         }
-
+        /// <summary>
+        /// Method that initializes the Data Grid
+        /// </summary>
         private void InitDataGrid()
         {
             logs = new ObservableCollection<TourLog>();
         }
-
+        /// <summary>
+        /// Method that fills the data grid with the corresponding tour log data.
+        /// </summary>
         private void FillDataGrid(Tour curItem)
         {
             foreach (TourLog item in this.tourPlannerFactory.GetLogs(curItem))
@@ -244,6 +268,10 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Method that opens a new window to add tours. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void OpenAddTourWindow(object commandParameter)
         {
             this.addTourViewModel = new AddTourViewModel();
@@ -253,6 +281,10 @@ namespace TourPlanner.UI.ViewModels
             tours.Clear();
             FillListBox();
         }
+        /// <summary>
+        /// Method that opens a new window to change an existing tour. Gets the selected tour in the listbox as a parameter 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void OpenChangeTourWindow(object commandParameter)
         {
             this.changeTourViewModel = new ChangeTourViewModel();
@@ -263,6 +295,10 @@ namespace TourPlanner.UI.ViewModels
             tours.Clear();
             FillListBox();
         }
+        /// <summary>
+        /// Method that opens a new window to add a log to an existing tour. Gets the selected tour in the listbox as a parameter 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void OpenAddLogWindow(object commandParameter)
         {
            
@@ -275,6 +311,10 @@ namespace TourPlanner.UI.ViewModels
             FillDataGrid(CurrentItem);
          
         }
+         /// <summary>
+        /// Method that opens a new window to change an existing log. Gets the selected Log in the listbox as a parameter 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void OpenChangeLogWindow(object commandParameter)
         {
             this.changeLogViewModel = new ChangeLogViewModel();
@@ -285,6 +325,10 @@ namespace TourPlanner.UI.ViewModels
             logs.Clear();
             FillListBox();
         }
+        /// <summary>
+        /// Method to import tours and their corresponding tour logs from a file. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void Import(object commandParameter)
         {
             string filePath;

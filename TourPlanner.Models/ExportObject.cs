@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TourPlanner.Models
 {
+    /// <summary>
+    /// Class that defines the structure of an exported item. A tour consists of a list of tourlogs (multiple tourlogs)
+    /// </summary>
     public class ExportObject
     {
         private Tour tour;

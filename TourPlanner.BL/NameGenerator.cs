@@ -4,8 +4,16 @@ using System.Text;
 
 namespace TourPlanner.BL
 {
+    /// <summary>
+    /// NameGenerator class that was created for testing purposes, in order to create a random tour item and random tourlog. 
+    /// </summary>
     public class NameGenerator
     {
+        /// <summary>
+        /// Method to generate a string consisting of consonants and vowels. 
+        /// </summary>
+        /// <param name="len"></param>
+        /// <returns></returns>
         public static string GenerateName(int len)
         {
             Random r = new Random();

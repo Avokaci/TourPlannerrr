@@ -7,6 +7,10 @@ using TourPlanner.DAL.DAO;
 
 namespace TourPlanner.DAL.Common
 {
+    /// <summary>
+    /// DALFactory class that is responsible for how the objects, in this case tour and tourlogs should be treated e.g. save them in database or in filesystem. 
+    /// Information as how to handle the objects are retrieved from the Config file. 
+    /// </summary>
     public class DALFactory
     {
         private static string assemblyName;
@@ -15,6 +19,9 @@ namespace TourPlanner.DAL.Common
         private static IFileAccess fileAccess;
         private static bool useFileSystem;
 
+        /// <summary>
+        /// Constructor or DALFactory class that decides how to handle the objects based on the configuration in the Settings file. 
+        /// </summary>
         static DALFactory()
         {
             useFileSystem = bool.Parse(ConfigurationManager.AppSettings["useFileSystem"]);
@@ -29,7 +36,10 @@ namespace TourPlanner.DAL.Common
             }
             AssemblyObject = Assembly.Load(assemblyName);
         }
-
+        /// <summary>
+        /// Singleton of Database
+        /// </summary>
+        /// <returns></returns>
         public static IDatabase GetDatabase()
         {
             if (database == null)
@@ -39,13 +49,20 @@ namespace TourPlanner.DAL.Common
 
             return database;
         }
-
+        /// <summary>
+        /// Method that creates the Database connection with the connectionString provided in the Config file. 
+        /// </summary>
+        /// <returns></returns>
         private static IDatabase CreateDatabase()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["PostgresSQLConnectionString"].ConnectionString;
             return CreateDatabase(connectionString);
         }
-
+        /// <summary>
+        /// Method that creates the Database connection with the connectionString provided as parameter. 
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <returns></returns>
         private static IDatabase CreateDatabase(string connectionString)
         {
             string databaseClassName = assemblyName + ".Database";
@@ -53,7 +70,10 @@ namespace TourPlanner.DAL.Common
 
             return Activator.CreateInstance(dbClass, new object[] { connectionString }) as IDatabase;
         }
-
+        /// <summary>
+        /// Method that creates a tour item according to chosen handling method. 
+        /// </summary>
+        /// <returns></returns>
         public static ITourDAO CreateTourItemDAO()
         {
             string className = assemblyName + ".TourPostgresDAO";
@@ -65,6 +85,10 @@ namespace TourPlanner.DAL.Common
 
             return Activator.CreateInstance(tourType) as ITourDAO;
         }
+        /// <summary>
+        /// Method that creates a tour log according to chosen handling method. 
+        /// </summary>
+        /// <returns></returns>
         public static ILogDAO CreateTourLogDAO()
         {
             string className = assemblyName + ".LogPostgresDAO";
@@ -76,7 +100,10 @@ namespace TourPlanner.DAL.Common
 
             return Activator.CreateInstance(logType) as ILogDAO;
         }
-
+        /// <summary>
+        /// Singleton of Filesystem access. 
+        /// </summary>
+        /// <returns></returns>
         public static IFileAccess GetFileAccess()
         {
             if (fileAccess == null)
@@ -87,12 +114,20 @@ namespace TourPlanner.DAL.Common
             return fileAccess;
         }
 
+        /// <summary>
+        /// Method that sets the start folder file path from the connectionString provided in the Config file
+        /// </summary>
+        /// <returns></returns>
         private static IFileAccess CreateFileAccess()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["StartFolderFilePath"].ConnectionString;
             return CreateFileAccess(connectionString);
         }
-
+        /// <summary>
+        /// Method that sets the start folder file path from the connectionString provided as a parameter
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <returns></returns>
         private static IFileAccess CreateFileAccess(string connectionString)
         {
             string fileClassName = assemblyName + ".FileAccess";

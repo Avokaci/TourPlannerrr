@@ -11,6 +11,9 @@ using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
 {
+    /// <summary>
+    /// AddTourViewModel class that is responsible for the creation of tours. 
+    /// </summary>
     public class AddTourViewModel : BaseViewModel
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -113,6 +116,9 @@ namespace TourPlanner.UI.ViewModels
 
         #endregion
         #region constructor
+        /// <summary>
+        /// Constructor of AddTourViewModel class. 
+        /// </summary>
         public AddTourViewModel()
         {
             this.tourFactory = TourPlannerFactory.GetInstance();
@@ -125,6 +131,10 @@ namespace TourPlanner.UI.ViewModels
         }
         #endregion
         #region methods
+        /// <summary>
+        /// Method to add and generate a tour, which also includes the generation of the route from the tour. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void AddTour(object commandParameter)
         {
             try

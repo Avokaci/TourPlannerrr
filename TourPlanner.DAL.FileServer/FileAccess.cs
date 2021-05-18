@@ -9,23 +9,53 @@ using TourPlanner.Models;
 
 namespace TourPlanner.DAL.FileServer
 {
+    /// <summary>
+    /// FileAccess class, which is responsible for all the interaction with the filesystem. The purpose of this class is to get file infos, get the full path of a file
+    /// where a object is saved in the filesystem, creating a new tour file, creating a new log file, getting all files, searching in the filesystem for a specific file,
+    /// getting a file text and creating a image for a tour via integration of the mapquest API. 
+    /// </summary>
     public class FileAccess : IFileAccess
     {
 
         private string filePath;
+        /// <summary>
+        /// Constructor of the FileAccess class which takes a filePath as a parameter. 
+        /// </summary>
+        /// <param name="filePath"></param>
         public FileAccess(string filePath)
         {
             this.filePath = filePath;
         }
+        /// <summary>
+        /// Method to get the file infos of a specific file. 
+        /// </summary>
+        /// <param name="startFolder"></param>
+        /// <param name="searchType"></param>
+        /// <returns></returns>
         private IEnumerable<FileInfo> GetFileInfos(string startFolder,MediaType searchType)
         {
             DirectoryInfo dir = new DirectoryInfo(startFolder);
             return dir.GetFiles("*" + searchType.ToString() + ".txt", SearchOption.AllDirectories);
         }
+        /// <summary>
+        /// Method that returns the fullpath of a file by its filename.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         private string GetFullPath(string fileName)
         {
             return Path.Combine(filePath, fileName);
         }
+        /// <summary>
+        /// Method that creates a new tour file in the filesystem. 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="routeInformation"></param>
+        /// <param name="distance"></param>
+        /// <returns></returns>
         public int CreateNewTourFile(string name, string description, string from, string to, string routeInformation, int distance)
         {
             int id = Guid.NewGuid().GetHashCode();
@@ -44,6 +74,21 @@ namespace TourPlanner.DAL.FileServer
             }
             return id;
         }
+        /// <summary>
+        /// Method that creates a new tour log file in the filesystem. 
+        /// </summary>
+        /// <param name="tourLogItem"></param>
+        /// <param name="date"></param>
+        /// <param name="totalTime"></param>
+        /// <param name="report"></param>
+        /// <param name="distance"></param>
+        /// <param name="rating"></param>
+        /// <param name="averageSpeed"></param>
+        /// <param name="maxSpeed"></param>
+        /// <param name="minSpeed"></param>
+        /// <param name="averageStepCount"></param>
+        /// <param name="burntCalories"></param>
+        /// <returns></returns>
         public int CreateNewLogFile(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating, int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
             int id = Guid.NewGuid().GetHashCode();
@@ -70,12 +115,22 @@ namespace TourPlanner.DAL.FileServer
         }
 
        
-
+        /// <summary>
+        /// Method that retrieves all the all files in the filesystem. 
+        /// </summary>
+        /// <param name="searchType"></param>
+        /// <returns></returns>
         public IEnumerable<FileInfo> GetAllFiles(MediaType searchType)
         {
             return GetFileInfos(filePath, searchType);
         }
 
+        /// <summary>
+        /// Method that allows for searching for a specific searchterm and searchtype
+        /// </summary>
+        /// <param name="searchTerm"></param>
+        /// <param name="searchType"></param>
+        /// <returns></returns>
         public IEnumerable<FileInfo> SearchFiles(string searchTerm, MediaType searchType)
         {
             IEnumerable<FileInfo> fileList = GetFileInfos(filePath, searchType);
@@ -87,6 +142,11 @@ namespace TourPlanner.DAL.FileServer
             return queryMatchingFiles;
                 
         }
+        /// <summary>
+        /// Method that gets the text content of a file. 
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         private string GetFileText(FileInfo file)
         {
             using StreamReader reader = file.OpenText();
@@ -97,7 +157,13 @@ namespace TourPlanner.DAL.FileServer
             }
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Method that is responsible for creating an image from the provided start and end location via integration of the MapQuest API. 
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="routeInformation"></param>
+        /// <returns></returns>
         public string CreateImage(string from, string to, string routeInformation)
         {
             string key = "tTz9lIg7C5SWXJsGlSgT6yRST3mjerGR";

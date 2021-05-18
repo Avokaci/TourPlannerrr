@@ -2,6 +2,9 @@ using System;
 
 namespace TourPlanner.Models
 {
+    /// <summary>
+    /// Tour item class. Includes class attributes, constructor and access modifiers. 
+    /// </summary>
     public class Tour
     {
         private int id;
@@ -12,6 +15,16 @@ namespace TourPlanner.Models
         private string routeInformation;
         private int distance;
 
+        /// <summary>
+        /// Constructor of class which intantiates a Tour item. 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="routeInformation"></param>
+        /// <param name="distance"></param>
         public Tour(int id, string name, string description, string from, string to, string routeInformation, int distance)
         {
             this.id = id;

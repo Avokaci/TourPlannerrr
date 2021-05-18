@@ -8,6 +8,9 @@ using TourPlanner.Models;
 
 namespace TourPlanner.UI.ViewModels
 {
+    /// <summary>
+    /// ChangeTourViewModel class, that allows for the modification of an existing tour item. 
+    /// </summary>
     public class ChangeTourViewModel: BaseViewModel
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -59,6 +62,9 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region constructor
+        /// <summary>
+        /// Constructor of ChangeTourViewModel class. 
+        /// </summary>
         public ChangeTourViewModel()
         {
             this.tourFactory = TourPlannerFactory.GetInstance();
@@ -72,6 +78,10 @@ namespace TourPlanner.UI.ViewModels
         #endregion
 
         #region methods
+        /// <summary>
+        /// Method to change the description of a selected tour in the list box. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private void ChangeTour(object commandParameter)
         {
             try

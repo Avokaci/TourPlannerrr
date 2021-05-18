@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TourPlanner.BL
 {
+    /// <summary>
+    /// TourPlannerFactory class that serves as a Singleton to only have a single instance of a class. 
+    /// </summary>
     public static class TourPlannerFactory
     {
         private static ITourPlannerFactory instance;

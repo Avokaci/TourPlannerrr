@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TourPlanner.Models
 {
+    /// <summary>
+    /// TourLog item class. Includes class attributes, constructor and access modifiers. 
+    /// </summary>
     public class TourLog
     {
         private int id;
@@ -20,6 +23,21 @@ namespace TourPlanner.Models
         private int averageStepCount;
         private int burntCalories;
 
+        /// <summary>
+        /// Constructor of class which intantiates a TourLog item. 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="tourLogItem"></param>
+        /// <param name="date"></param>
+        /// <param name="totalTime"></param>
+        /// <param name="report"></param>
+        /// <param name="distance"></param>
+        /// <param name="rating"></param>
+        /// <param name="averageSpeed"></param>
+        /// <param name="maxSpeed"></param>
+        /// <param name="minSpeed"></param>
+        /// <param name="averageStepCount"></param>
+        /// <param name="burntCalories"></param>
         public TourLog(int id, Tour tourLogItem, string date, string totalTime, string report, int distance,
             int rating, int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {

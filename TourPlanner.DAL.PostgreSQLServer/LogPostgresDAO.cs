@@ -10,6 +10,9 @@ using TourPlanner.Models;
 
 namespace TourPlanner.DAL.PostgreSQLServer
 {
+    /// <summary>
+    /// LogPostgresDAO class that is responsible for database interaction regarding tour logs. 
+    /// </summary>
     public class LogPostgresDAO : ILogDAO
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -22,16 +25,39 @@ namespace TourPlanner.DAL.PostgreSQLServer
 
         private IDatabase database;
         private DAO.ITourDAO tourDAO;
+        /// <summary>
+        /// Constructor of class that takes no arguments. 
+        /// </summary>
         public LogPostgresDAO()
         {
             this.database = DALFactory.GetDatabase();
             this.tourDAO = DALFactory.CreateTourItemDAO();
         }
+        /// <summary>
+        /// Constructor of class that takes database object as a parameter. 
+        /// </summary>
+        /// <param name="database"></param>
+        /// <param name="tourDAO"></param>
         public LogPostgresDAO(IDatabase database, DAO.ITourDAO tourDAO)
         {
             this.database = database;
             this.tourDAO = tourDAO;
         }
+        /// <summary>
+        /// Method that is responsible for inserting a tour log item into the database. 
+        /// </summary>
+        /// <param name="tourLogItem"></param>
+        /// <param name="date"></param>
+        /// <param name="totalTime"></param>
+        /// <param name="report"></param>
+        /// <param name="distance"></param>
+        /// <param name="rating"></param>
+        /// <param name="averageSpeed"></param>
+        /// <param name="maxSpeed"></param>
+        /// <param name="minSpeed"></param>
+        /// <param name="averageStepCount"></param>
+        /// <param name="burntCalories"></param>
+        /// <returns></returns>
         public TourLog AddNewItemLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
@@ -61,11 +87,21 @@ namespace TourPlanner.DAL.PostgreSQLServer
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
+        /// <summary>
+        /// Method that adds a new tour log with a tourlog item as parameter. 
+        /// </summary>
+        /// <param name="log"></param>
+        /// <returns></returns>
         public TourLog AddNewItemLog(TourLog log)
         {
             return AddNewItemLog(log.TourLogItem, log.Date, log.TotalTime, log.Report, log.Distance, log.Rating, log.AverageSpeed,
                 log.MaxSpeed, log.MinSpeed, log.AverageStepCount, log.BurntCalories);
         }
+        /// <summary>
+        /// Method that finds a tour log by id from the database. 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public TourLog FindById(int id)
         {
             DbCommand findCommand = null;
@@ -84,7 +120,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
             }
             return logList.FirstOrDefault();
         }
-
+        /// <summary>
+        /// Method that gets all logs for a tour from the database
+        /// </summary>
+        /// <param name="tourItem"></param>
+        /// <returns></returns>
         public IEnumerable<TourLog> GetLogsForTour(Tour tourItem)
         {
             DbCommand getLogsCommand = null;
@@ -101,6 +141,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
             }
             return QueryLogsFromDb(getLogsCommand);
         }
+        /// <summary>
+        /// Method that adds tour logs from the database into the local list of tour logs. 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
 
         private IEnumerable<TourLog> QueryLogsFromDb(DbCommand command)
         {
