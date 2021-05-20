@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U+yq5M2iMdf2swSNn4UtDLGt9Vl+8+ZOwTqDMtk8u2HD6OwUmh/DywjW/yCjxkfuJTwaTVafzRQ46a91R2U1gA==",
+  "dgSpecHash": "sorHYY8zKD6LxWAWu1mqSrl7ON47ef6HvZs63EqjypYJcuZx+0FVoYJ/5mP/3lTcgt9rC1wU8ieBsm3FxWjCFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.Test\\TourPlanner.Test.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,9 @@
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\questpdf\\2021.5.2\\questpdf.2021.5.2.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
@@ -41,6 +43,7 @@
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.reflection.emit\\4.0.1\\system.reflection.emit.4.0.1.nupkg.sha512",

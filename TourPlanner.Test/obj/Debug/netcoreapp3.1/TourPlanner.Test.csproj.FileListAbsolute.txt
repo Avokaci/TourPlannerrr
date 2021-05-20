@@ -98,4 +98,3 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\obj\Debug\netcoreapp3.1\TourPlanner.Test.csproj.CoreCompileInputs.cache

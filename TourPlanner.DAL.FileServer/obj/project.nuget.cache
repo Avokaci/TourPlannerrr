@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "kJa8HpGNRpMwF65vwe6lNGsR4+23Fw9S/91+R4A6m0jCRb1eLFCFIrq3cvzGoT6W5gDuGtVFstdOEQZzeGPM9A==",
+  "dgSpecHash": "rN0I1pku61pS5G3eA0l4EkpV/qyGOKTDe1PRsyIDdYZxFks5//tTEfU0qETHq7aZDTFYAI8JOEK+CWASX+CwUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\TourPlanner.DAL.FileServer\\TourPlanner.DAL.FileServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\questpdf\\2021.5.2\\questpdf.2021.5.2.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",

@@ -9,6 +9,7 @@
       "TourPlanner.BL/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
+          "QuestPDF": "2021.5.2",
           "TourPlanner.DAL": "1.0.0",
           "TourPlanner.DAL.FileServer": "1.0.0",
           "TourPlanner.DAL.PostgreSQLServer": "1.0.0",
@@ -50,12 +51,57 @@
           }
         }
       },
+      "QuestPDF/2021.5.2": {
+        "dependencies": {
+          "SkiaSharp": "2.80.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/QuestPDF.dll": {
+            "assemblyVersion": "2021.5.2.0",
+            "fileVersion": "2021.5.2.0"
+          }
+        }
+      },
+      "SkiaSharp/2.80.2": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.80.0.0",
+            "fileVersion": "2.80.2.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/4.5.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.5.0",
           "System.Security.Permissions": "4.5.0"
         }
       },
+      "System.Memory/4.5.3": {},
       "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
       "System.Security.AccessControl/4.5.0": {
         "dependencies": {
@@ -76,6 +122,7 @@
       },
       "TourPlanner.DAL/1.0.0": {
         "dependencies": {
+          "QuestPDF": "2021.5.2",
           "TourPlanner.Models": "1.0.0",
           "log4net": "2.0.12"
         },
@@ -85,6 +132,7 @@
       },
       "TourPlanner.DAL.FileServer/1.0.0": {
         "dependencies": {
+          "QuestPDF": "2021.5.2",
           "TourPlanner.DAL": "1.0.0",
           "log4net": "2.0.12"
         },
@@ -95,6 +143,7 @@
       "TourPlanner.DAL.PostgreSQLServer/1.0.0": {
         "dependencies": {
           "Npgsql": "5.0.4",
+          "QuestPDF": "2021.5.2",
           "TourPlanner.DAL": "1.0.0",
           "log4net": "2.0.12"
         },
@@ -104,6 +153,7 @@
       },
       "TourPlanner.Models/1.0.0": {
         "dependencies": {
+          "QuestPDF": "2021.5.2",
           "log4net": "2.0.12"
         },
         "runtime": {
@@ -146,12 +196,33 @@
       "path": "npgsql/5.0.4",
       "hashPath": "npgsql.5.0.4.nupkg.sha512"
     },
+    "QuestPDF/2021.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cbFKU9p0rmGKfqoDhiFSUtoHurDEECdfSBSEa6LtUcbeT55Lhh9/2mr9Tn9AyrgssCgbQNLY/bl7HgMxo0gVBQ==",
+      "path": "questpdf/2021.5.2",
+      "hashPath": "questpdf.2021.5.2.nupkg.sha512"
+    },
+    "SkiaSharp/2.80.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D25rzdCwh+3L+XyXqpNa+H/yiLJbE3/R3K/XexwHyQjGdzZvSufFW3oqf3En7hhqSIsxsJ8f5NEZ0J5W5wlGBg==",
+      "path": "skiasharp/2.80.2",
+      "hashPath": "skiasharp.2.80.2.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
       "path": "system.configuration.configurationmanager/4.5.0",
       "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/4.6.0": {
       "type": "package",

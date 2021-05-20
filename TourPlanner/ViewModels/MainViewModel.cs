@@ -10,6 +10,9 @@ using TourPlanner.BL;
 using TourPlanner.DAL.FileServer;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using TourPlanner.BL.QuestPDF;
+using System.Diagnostics;
+using QuestPDF.Fluent;
 
 namespace TourPlanner.UI.ViewModels
 {
@@ -37,6 +40,7 @@ namespace TourPlanner.UI.ViewModels
         private ICommand randomGenerateItemCommand;
         private ICommand randomGenerateLogCommand;
         private ICommand importCommand;
+        private ICommand generateReportCommand;
 
         private ITourPlannerFactory tourPlannerFactory;
         public ICommand PopUpAddTour => popUpAddTour ??= new RelayCommand(OpenAddTourWindow);
@@ -44,6 +48,7 @@ namespace TourPlanner.UI.ViewModels
         public ICommand PopUpAddLog => popUpAddLog ??= new RelayCommand(OpenAddLogWindow);
         public ICommand PopUpChangeLog => popUpChangeLog ??= new RelayCommand(OpenChangeLogWindow);
         public ICommand ImportCommand => importCommand ??= new RelayCommand(Import);
+        public ICommand GenerateReportCommand => generateReportCommand ??= new RelayCommand(GenerateReport);
 
 
         public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
@@ -352,6 +357,27 @@ namespace TourPlanner.UI.ViewModels
                 log.Error("Could not import from filepath " + ex.Message);
             }
            
+        }
+        /// <summary>
+        /// Method to generate a pdf report of an existing tour with its image and tour logs. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
+        public void GenerateReport(object commandParameter)
+        {
+            try
+            {
+                string filePath = "TourReport_" + currentItem.Name + ".pdf";
+                var document = new TourReport(CurrentItem);
+                document.GeneratePdf(filePath);
+
+                Process.Start("explorer.exe", filePath);
+            }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not generate Tour Report " + ex.Message);
+            }
+
         }
         #endregion
 

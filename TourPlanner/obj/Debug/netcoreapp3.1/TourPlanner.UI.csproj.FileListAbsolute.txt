@@ -40,3 +40,9 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netc
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeLogWindow.baml
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\obj\Debug\netcoreapp3.1\Views\ChangeTourWindow.baml
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\QuestPDF.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\SkiaSharp.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\libSkiaSharp.dll

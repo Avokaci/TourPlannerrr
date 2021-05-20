@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="TourPlanner" Height="696" Width="918">
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
             <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Tour-Planner" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <!-- Navbar-->
             <Grid>
@@ -19,6 +23,7 @@
                     <ColumnDefinition Width="40" />
                     <ColumnDefinition Width="60" />
                     <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="60" />
                     <ColumnDefinition Width="60" />
                     <ColumnDefinition Width="40" />
@@ -35,9 +40,11 @@
                         Command="{Binding ExportCommand}"/>
                 <Button Grid.Column="6" Content="Import"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                         Command="{Binding ImportCommand}"/>
-                <Button Grid.Column="7" Content="RandItem"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                <Button Grid.Column="7" Content="Generate Report"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Command="{Binding GenerateReportCommand}"/>
+                <Button Grid.Column="8" Content="RandItem"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                         Command="{Binding RandomGenerateItemCommand}"/>
-                <Button Grid.Column="8" Content="RandLog"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                <Button Grid.Column="9" Content="RandLog"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                         Command="{Binding RandomGenerateLogCommand}" 
                         IsEnabled="{Binding ElementName=listTourItems,Path=SelectedItems.Count}"/>
             </Grid>
