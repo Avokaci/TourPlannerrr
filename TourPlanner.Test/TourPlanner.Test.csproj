@@ -14,4 +14,10 @@
     <PackageReference Include="QuestPDF" Version="2021.5.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TourPlanner.BL\TourPlanner.BL.csproj" />
+    <ProjectReference Include="..\TourPlanner.Models\TourPlanner.Models.csproj" />
+    <ProjectReference Include="..\TourPlanner\TourPlanner.UI.csproj" />
+  </ItemGroup>
+
 </Project>
