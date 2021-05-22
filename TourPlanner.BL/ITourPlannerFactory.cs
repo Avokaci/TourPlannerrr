@@ -58,15 +58,25 @@ namespace TourPlanner.BL
         TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, int distance, int rating,
             int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories);
         /// <summary>
+        /// Method that allows for export of one tour with its tour logs into a file. 
+        /// </summary>
+        /// <param name="tour"></param>
+        public void Export(Tour tour);
+        /// <summary>
         /// Method that allows for export of all the tours with their tour logs into a file. 
         /// </summary>
-        public void Export();
+        /// <param name="tour"></param>
+        public void ExportWithLogs(Tour tour);
+        /// <summary>
+        /// Method that allows for import of one tour with its tour logs from a file. 
+        /// </summary>
+        /// <param name="fileName"></param>
+        public void Import(string fileName);
         /// <summary>
         /// Method that allows for import of all the tour with their tour logs from a file. 
         /// </summary>
         /// <param name="fileName"></param>
-        public void Import(string fileName);
-
+        public void ImportWithLogs(string fileName);
 
     }
 }

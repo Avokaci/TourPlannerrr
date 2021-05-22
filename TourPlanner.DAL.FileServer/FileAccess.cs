@@ -16,6 +16,7 @@ namespace TourPlanner.DAL.FileServer
     /// </summary>
     public class FileAccess : IFileAccess
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private string filePath;
         /// <summary>
@@ -190,9 +191,10 @@ namespace TourPlanner.DAL.FileServer
                 }
                 return imageFilePath;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
+                log.Error("Image could not be generated " + ex.Message);
                 throw;
             }
            

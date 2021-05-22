@@ -85,7 +85,7 @@ namespace TourPlanner.DAL.FileServer
                         ));
 
                 }
-                log.Info("Succesfully queried tours from database");
+                log.Info("Succesfully queried tours from filesystem");
 
             }
             catch (Exception ex)

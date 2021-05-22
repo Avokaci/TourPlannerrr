@@ -92,20 +92,42 @@ namespace TourPlanner.BL
         /// <summary>
         /// Method that allows for export of all the tours with their tour logs into a file. 
         /// </summary>
-        public void Export()
+        public void Export(Tour tour)
+        {       
+        
+            tour.RouteInformation = null;
+            string path = Path.Join("C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\ExportedObjects", tour.Name + ".json");
+            string json = JsonConvert.SerializeObject(tour);
+
+            File.WriteAllTextAsync(path, json);
+        }
+        public void ExportWithLogs(Tour tour)
         {
-           
+
+          //WIP
+        }
+        /// <summary>
+        /// Method that allows to import an exported tour. 
+        /// </summary>
+        /// <param name="fileName"></param>
+        public void Import(string fileName)
+        {
+            //WIP:make method to delete everything before
+            string json = File.ReadAllText(fileName);
+            Tour exportedTour = JsonConvert.DeserializeObject<Tour>(json);
+            CreateTour(exportedTour.Name, exportedTour.From, exportedTour.To,
+                    exportedTour.Description, exportedTour.RouteInformation, exportedTour.Distance);
         }
 
         /// <summary>
         /// Method that allows for import of all the tour with their tour logs from a file. 
         /// </summary>
         /// <param name="fileName"></param>
-        public void Import(string fileName)
+        public void ImportWithLogs(string fileName)
         {
+            //Sadly is not working :(
             //WIP:make method to delete everything before
-            //DeleteAllToursAndLogs();
-
+            
             string json = File.ReadAllText(fileName);
             List<ExportObject> exportObjects = JsonConvert.DeserializeObject<List<ExportObject>>(json);
 
@@ -125,5 +147,6 @@ namespace TourPlanner.BL
 
             }
         }
+       
     }
 }

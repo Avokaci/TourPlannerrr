@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using TourPlanner.BL.QuestPDF;
 using System.Diagnostics;
 using QuestPDF.Fluent;
+using System.Windows;
 
 namespace TourPlanner.UI.ViewModels
 {
@@ -40,6 +41,8 @@ namespace TourPlanner.UI.ViewModels
         private ICommand randomGenerateItemCommand;
         private ICommand randomGenerateLogCommand;
         private ICommand importCommand;
+        private ICommand exportCommand;
+
         private ICommand generateReportCommand;
 
         private ITourPlannerFactory tourPlannerFactory;
@@ -48,6 +51,8 @@ namespace TourPlanner.UI.ViewModels
         public ICommand PopUpAddLog => popUpAddLog ??= new RelayCommand(OpenAddLogWindow);
         public ICommand PopUpChangeLog => popUpChangeLog ??= new RelayCommand(OpenChangeLogWindow);
         public ICommand ImportCommand => importCommand ??= new RelayCommand(Import);
+        public ICommand ExportCommand => exportCommand ??= new RelayCommand(Export);
+
         public ICommand GenerateReportCommand => generateReportCommand ??= new RelayCommand(GenerateReport);
 
 
@@ -331,6 +336,23 @@ namespace TourPlanner.UI.ViewModels
             FillListBox();
         }
         /// <summary>
+        /// Method to exports tours and their corresponding tour logs from a file. 
+        /// </summary>
+        /// <param name="commandParameter"></param>
+        private void Export(object commandParameter)
+        {
+            try
+            {
+                tourPlannerFactory.Export(CurrentItem);
+                MessageBox.Show("Export success!");
+            }
+            catch (Exception ex)
+            {
+
+                log.Error("Could not export tour " + ex.Message);
+            }
+        }
+        /// <summary>
         /// Method to import tours and their corresponding tour logs from a file. 
         /// </summary>
         /// <param name="commandParameter"></param>
@@ -350,6 +372,8 @@ namespace TourPlanner.UI.ViewModels
                 }
                 tours.Clear();
                 FillListBox();
+                MessageBox.Show("Import success!");
+
             }
             catch (Exception ex)
             {

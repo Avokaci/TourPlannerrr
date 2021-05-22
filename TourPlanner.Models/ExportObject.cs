@@ -11,7 +11,19 @@ namespace TourPlanner.Models
     {
         private Tour tour;
         private List<TourLog> tourLogs;
+
+        public ExportObject()
+        {
+
+        }
+        public ExportObject(Tour tour, List<TourLog> tourLogs)
+        {
+            this.tour = tour;
+            this.tourLogs = tourLogs;
+        }
+
         public Tour Tour { get => tour; set => tour = value; }
         public List<TourLog> TourLogs { get => tourLogs; set => tourLogs = value; }
+      
     }
 }
