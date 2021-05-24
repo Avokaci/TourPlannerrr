@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using TourPlanner.BL;
+using TourPlanner.BL.QuestPDF;
 using TourPlanner.DAL.Common;
 using TourPlanner.DAL.FileServer;
 using TourPlanner.Models;
@@ -51,7 +52,7 @@ namespace TourPlanner.Test
 
         }
         [Test]
-        public void TourReportCreationSuccess()
+        public void TourReportCreationWihtoutLogsSuccess()
         {
             Tour tour = new Tour(3, "Tour-1", "this is tour 1", "Graz", "Wien", "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\Nyjisha.jpg", 350);
             string filePath = "TourReport_" + tour.Name + ".pdf";
@@ -60,6 +61,25 @@ namespace TourPlanner.Test
             //Process.Start("explorer.exe", filePath);
             string filelocation = @"C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug\netcoreapp3.1\TourReport_Tour-1.pdf";
             Assert.IsTrue(File.Exists(filelocation));
+        }
+        [Test]
+        public void TourReportCreationSuccess()
+        {
+            Tour tour = new Tour(3, "Tour-1", "this is tour 1", "Graz", "Wien", "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerrr\\Pictures\\Nyjisha.jpg", 350);
+            string filePath = "TourReport_" + tour.Name + ".pdf";
+            var document = new TourReport(tour);
+            document.GeneratePdf(filePath);        
+            string filelocation = @"C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\TourPlanner.Test\bin\Debug\netcoreapp3.1\TourReport_Tour-1.pdf";
+            Assert.IsTrue(File.Exists(filelocation));
+            //WIP: Database Connection?
+        }
+        [Test]
+        public void TourReportCreationImagePathInvalidFailure()
+        {
+            Tour tour = new Tour(3, "Tour-1", "this is tour 1", "Graz", "Wien", "x", 350);
+            string filePath = "TourReport_" + tour.Name + ".pdf";
+            var document = new TourReportMOCK(tour);
+            Assert.Throws<System.IO.FileNotFoundException>(() => document.GeneratePdf(filePath));
         }
         [Test]
         public void CreateNewTourFileSuccess()
@@ -172,16 +192,8 @@ namespace TourPlanner.Test
             tourPlannerFactory.ImportWithLogs(@"C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerrr\ExportedObjects\Tour-31.json");
         }
        
-        [Test]
-        public void y()
-        {
-         
-        }
-        [Test]
-        public void z()
-        {
-          
-        }
+      
+       
     }
 
 }

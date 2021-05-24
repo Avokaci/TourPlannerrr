@@ -90,7 +90,7 @@ namespace TourPlanner.BL
             return logDAO.AddNewItemLog(tourLogItem, date, totalTime, report, distance, rating, averageSpeed, maxSpeed, minSpeed, averageStepCount, burntCalories);
         }
         /// <summary>
-        /// Method that allows for export of all the tours with their tour logs into a file. 
+        /// Method that allows to export a tour into a file. 
         /// </summary>
         public void Export(Tour tour)
         {       
@@ -101,9 +101,12 @@ namespace TourPlanner.BL
 
             File.WriteAllTextAsync(path, json);
         }
+        /// <summary>
+        /// Method to export a tour with its logs into a file
+        /// </summary>
+        /// <param name="tour"></param>
         public void ExportWithLogs(Tour tour)
         {
-
           //WIP
         }
         /// <summary>
