@@ -1,0 +1,217 @@
+\hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{}\doxysection{DALFactory}
+\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}\index{DALFactory@{DALFactory}}
+
+
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{DALFactory}} class that is responsible for how the objects, in this case tour and tourlogs should be treated e.\+g. save them in database or in filesystem. Information as how to handle the objects are retrieved from the Config file.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{ITour\+DAO}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a3f56e806a891c811f4274d953a324d3e}{Create\+Tour\+Item\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Method that creates a tour item according to chosen handling method. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO}{ILog\+DAO}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9034f6f163f076811a6ef5d05ee63ed1}{Create\+Tour\+Log\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Method that creates a tour log according to chosen handling method. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9aec7a2032523cba0e3a36cdcf3c4d96}{Get\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Singleton of Database \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a989e3d456ac279de8882ceac4ab02fe5}{Get\+File\+Access}} ()
+\begin{DoxyCompactList}\small\item\em Singleton of Filesystem access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_acfad2a02c30ef124cca0575baaa522e4}{DALFactory}} ()
+\begin{DoxyCompactList}\small\item\em Constructor or \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{DALFactory}} class that decides how to handle the objects based on the configuration in the Settings file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a58a0f5e08132c0362e6d5a9225cfe7e9}{Create\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Method that creates the Database connection with the connection\+String provided in the Config file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0c538790dce631297fb21f14c93f1268}{Create\+Database}} (string connection\+String)
+\begin{DoxyCompactList}\small\item\em Method that creates the Database connection with the connection\+String provided as parameter. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a6b95d8a185cef96b5e24d6c44eb35216}{Create\+File\+Access}} ()
+\begin{DoxyCompactList}\small\item\em Method that sets the start folder file path from the connection\+String provided in the Config file \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5291fccf2c291a18b7987b07ff1d531a}{Create\+File\+Access}} (string connection\+String)
+\begin{DoxyCompactList}\small\item\em Method that sets the start folder file path from the connection\+String provided as a parameter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a03a54be1da23db5acb7abe5af8bb331e}{assembly\+Name}}
+\item 
+static Assembly \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_ac2b5619515c94fe06dc4754d836b39a5}{Assembly\+Object}}
+\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a685db1d325acdf02357c3f66dd61ab0d}{database}}
+\item 
+static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0bc27c58dd17ea6d4910f1d490f7802b}{file\+Access}}
+\item 
+static bool \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5507d2c4de600ac19e549a5e3d05a66e}{use\+File\+System}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{DALFactory}} class that is responsible for how the objects, in this case tour and tourlogs should be treated e.\+g. save them in database or in filesystem. Information as how to handle the objects are retrieved from the Config file. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_acfad2a02c30ef124cca0575baaa522e4}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_acfad2a02c30ef124cca0575baaa522e4}} 
+\index{DALFactory@{DALFactory}!DALFactory@{DALFactory}}
+\index{DALFactory@{DALFactory}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{DALFactory()}{DALFactory()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{DALFactory}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Constructor or \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory}{DALFactory}} class that decides how to handle the objects based on the configuration in the Settings file. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a58a0f5e08132c0362e6d5a9225cfe7e9}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a58a0f5e08132c0362e6d5a9225cfe7e9}} 
+\index{DALFactory@{DALFactory}!CreateDatabase@{CreateDatabase}}
+\index{CreateDatabase@{CreateDatabase}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateDatabase()}{CreateDatabase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} Create\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Method that creates the Database connection with the connection\+String provided in the Config file. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0c538790dce631297fb21f14c93f1268}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0c538790dce631297fb21f14c93f1268}} 
+\index{DALFactory@{DALFactory}!CreateDatabase@{CreateDatabase}}
+\index{CreateDatabase@{CreateDatabase}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateDatabase()}{CreateDatabase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} Create\+Database (\begin{DoxyParamCaption}\item[{string}]{connection\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Method that creates the Database connection with the connection\+String provided as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a6b95d8a185cef96b5e24d6c44eb35216}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a6b95d8a185cef96b5e24d6c44eb35216}} 
+\index{DALFactory@{DALFactory}!CreateFileAccess@{CreateFileAccess}}
+\index{CreateFileAccess@{CreateFileAccess}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateFileAccess()}{CreateFileAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} Create\+File\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Method that sets the start folder file path from the connection\+String provided in the Config file 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5291fccf2c291a18b7987b07ff1d531a}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5291fccf2c291a18b7987b07ff1d531a}} 
+\index{DALFactory@{DALFactory}!CreateFileAccess@{CreateFileAccess}}
+\index{CreateFileAccess@{CreateFileAccess}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateFileAccess()}{CreateFileAccess()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} Create\+File\+Access (\begin{DoxyParamCaption}\item[{string}]{connection\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Method that sets the start folder file path from the connection\+String provided as a parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a3f56e806a891c811f4274d953a324d3e}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a3f56e806a891c811f4274d953a324d3e}} 
+\index{DALFactory@{DALFactory}!CreateTourItemDAO@{CreateTourItemDAO}}
+\index{CreateTourItemDAO@{CreateTourItemDAO}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateTourItemDAO()}{CreateTourItemDAO()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{ITour\+DAO}} Create\+Tour\+Item\+DAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Method that creates a tour item according to chosen handling method. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9034f6f163f076811a6ef5d05ee63ed1}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9034f6f163f076811a6ef5d05ee63ed1}} 
+\index{DALFactory@{DALFactory}!CreateTourLogDAO@{CreateTourLogDAO}}
+\index{CreateTourLogDAO@{CreateTourLogDAO}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{CreateTourLogDAO()}{CreateTourLogDAO()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO}{ILog\+DAO}} Create\+Tour\+Log\+DAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Method that creates a tour log according to chosen handling method. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9aec7a2032523cba0e3a36cdcf3c4d96}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a9aec7a2032523cba0e3a36cdcf3c4d96}} 
+\index{DALFactory@{DALFactory}!GetDatabase@{GetDatabase}}
+\index{GetDatabase@{GetDatabase}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{GetDatabase()}{GetDatabase()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} Get\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Singleton of Database 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a989e3d456ac279de8882ceac4ab02fe5}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a989e3d456ac279de8882ceac4ab02fe5}} 
+\index{DALFactory@{DALFactory}!GetFileAccess@{GetFileAccess}}
+\index{GetFileAccess@{GetFileAccess}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{GetFileAccess()}{GetFileAccess()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} Get\+File\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Singleton of Filesystem access. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a03a54be1da23db5acb7abe5af8bb331e}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a03a54be1da23db5acb7abe5af8bb331e}} 
+\index{DALFactory@{DALFactory}!assemblyName@{assemblyName}}
+\index{assemblyName@{assemblyName}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{assemblyName}{assemblyName}}
+{\footnotesize\ttfamily string assembly\+Name\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_ac2b5619515c94fe06dc4754d836b39a5}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_ac2b5619515c94fe06dc4754d836b39a5}} 
+\index{DALFactory@{DALFactory}!AssemblyObject@{AssemblyObject}}
+\index{AssemblyObject@{AssemblyObject}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{AssemblyObject}{AssemblyObject}}
+{\footnotesize\ttfamily Assembly Assembly\+Object\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a685db1d325acdf02357c3f66dd61ab0d}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a685db1d325acdf02357c3f66dd61ab0d}} 
+\index{DALFactory@{DALFactory}!database@{database}}
+\index{database@{database}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{database}{database}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} database\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0bc27c58dd17ea6d4910f1d490f7802b}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a0bc27c58dd17ea6d4910f1d490f7802b}} 
+\index{DALFactory@{DALFactory}!fileAccess@{fileAccess}}
+\index{fileAccess@{fileAccess}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{fileAccess}{fileAccess}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} file\+Access\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5507d2c4de600ac19e549a5e3d05a66e}\label{classTourPlanner_1_1DAL_1_1Common_1_1DALFactory_a5507d2c4de600ac19e549a5e3d05a66e}} 
+\index{DALFactory@{DALFactory}!useFileSystem@{useFileSystem}}
+\index{useFileSystem@{useFileSystem}!DALFactory@{DALFactory}}
+\doxysubsubsection{\texorpdfstring{useFileSystem}{useFileSystem}}
+{\footnotesize\ttfamily bool use\+File\+System\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL/\+Common/\mbox{\hyperlink{DALFactory_8cs}{DALFactory.\+cs}}\end{DoxyCompactItemize}

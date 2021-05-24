@@ -1,0 +1,262 @@
+\hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}{}\doxysection{Log\+Postgres\+DAO}
+\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}\index{LogPostgresDAO@{LogPostgresDAO}}
+
+
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}{Log\+Postgres\+DAO}} class that is responsible for database interaction regarding tour logs.  
+
+
+Inheritance diagram for Log\+Postgres\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9fb86d465987b8365b05ddf5e4e0938d}{Log\+Postgres\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of class that takes no arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a18f2ea80255fbde69ad53f6419599864}{Log\+Postgres\+DAO}} (\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a685db1d325acdf02357c3f66dd61ab0d}{database}}, \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{DAO.\+ITour\+DAO}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ab5fd4246a345fb2af9030b7163feb7db}{tour\+DAO}})
+\begin{DoxyCompactList}\small\item\em Constructor of class that takes database object as a parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a640d33be5bd26be6d146cceea257f15e}{Add\+New\+Item\+Log}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Log\+Item, string date, string total\+Time, string report, int distance, int rating, int average\+Speed, int max\+Speed, int min\+Speed, int average\+Step\+Count, int burnt\+Calories)
+\begin{DoxyCompactList}\small\item\em Method that is responsible for inserting a tour log item into the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98e8fd56fd8d84f3ad00790fa0b4bfe5}{Add\+New\+Item\+Log}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}{log}})
+\begin{DoxyCompactList}\small\item\em Method that adds a new tour log with a tourlog item as parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98ee190c39388db426ba6e3aff54f82f}{Find\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Method that finds a tour log by id from the database. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_af187123f1a6520ac85551f5070cbb0cb}{Get\+Logs\+For\+Tour}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Item)
+\begin{DoxyCompactList}\small\item\em Method that gets all logs for a tour from the database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_aa70946087f1528103c1b59dc87bb421f}{Query\+Logs\+From\+Db}} (Db\+Command command)
+\begin{DoxyCompactList}\small\item\em Method that adds tour logs from the database into the local list of tour logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a685db1d325acdf02357c3f66dd61ab0d}{database}}
+\item 
+\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{DAO.\+ITour\+DAO}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ab5fd4246a345fb2af9030b7163feb7db}{tour\+DAO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly log4net.\+ILog \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}{log}} = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\item 
+const string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a73da9b2ec5f954f43b45234ee9009600}{SQL\+\_\+\+FIND\+\_\+\+BY\+\_\+\+ID}} = \char`\"{}SELECT $\ast$ FROM public.\textbackslash{}\char`\"{}Tour\+Log\textbackslash{}\char`\"{} WHERE \textbackslash{}\char`\"{}id\textbackslash{}\char`\"{} = @id;\char`\"{}
+\item 
+const string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ac5ba8add3dfa74c137790712daa5bf37}{SQL\+\_\+\+FIND\+\_\+\+BY\+\_\+\+TOUR\+\_\+\+ID}} = \char`\"{}SELECT $\ast$ FROM public.\textbackslash{}\char`\"{}Tour\+Log\textbackslash{}\char`\"{} WHERE \textbackslash{}\char`\"{}tourid\textbackslash{}\char`\"{} = @tour\+Id;\char`\"{}
+\item 
+const string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9ba7b622961c0adac69da8168bd2769a}{SQL\+\_\+\+INSERT\+\_\+\+NEW\+\_\+\+LOG}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}{Log\+Postgres\+DAO}} class that is responsible for database interaction regarding tour logs. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9fb86d465987b8365b05ddf5e4e0938d}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9fb86d465987b8365b05ddf5e4e0938d}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!LogPostgresDAO@{LogPostgresDAO}}
+\index{LogPostgresDAO@{LogPostgresDAO}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{LogPostgresDAO()}{LogPostgresDAO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}{Log\+Postgres\+DAO}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of class that takes no arguments. 
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a18f2ea80255fbde69ad53f6419599864}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a18f2ea80255fbde69ad53f6419599864}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!LogPostgresDAO@{LogPostgresDAO}}
+\index{LogPostgresDAO@{LogPostgresDAO}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{LogPostgresDAO()}{LogPostgresDAO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO}{Log\+Postgres\+DAO}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}}}]{database,  }\item[{\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{DAO.\+ITour\+DAO}}}]{tour\+DAO }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of class that takes database object as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+{\em tour\+DAO} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a640d33be5bd26be6d146cceea257f15e}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a640d33be5bd26be6d146cceea257f15e}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!AddNewItemLog@{AddNewItemLog}}
+\index{AddNewItemLog@{AddNewItemLog}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{AddNewItemLog()}{AddNewItemLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Add\+New\+Item\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Log\+Item,  }\item[{string}]{date,  }\item[{string}]{total\+Time,  }\item[{string}]{report,  }\item[{int}]{distance,  }\item[{int}]{rating,  }\item[{int}]{average\+Speed,  }\item[{int}]{max\+Speed,  }\item[{int}]{min\+Speed,  }\item[{int}]{average\+Step\+Count,  }\item[{int}]{burnt\+Calories }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that is responsible for inserting a tour log item into the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Log\+Item} & \\
+\hline
+{\em date} & \\
+\hline
+{\em total\+Time} & \\
+\hline
+{\em report} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em average\+Speed} & \\
+\hline
+{\em max\+Speed} & \\
+\hline
+{\em min\+Speed} & \\
+\hline
+{\em average\+Step\+Count} & \\
+\hline
+{\em burnt\+Calories} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a640d33be5bd26be6d146cceea257f15e}{ILog\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98e8fd56fd8d84f3ad00790fa0b4bfe5}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98e8fd56fd8d84f3ad00790fa0b4bfe5}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!AddNewItemLog@{AddNewItemLog}}
+\index{AddNewItemLog@{AddNewItemLog}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{AddNewItemLog()}{AddNewItemLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Add\+New\+Item\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that adds a new tour log with a tourlog item as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98ee190c39388db426ba6e3aff54f82f}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98ee190c39388db426ba6e3aff54f82f}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!FindById@{FindById}}
+\index{FindById@{FindById}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{FindById()}{FindById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Find\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that finds a tour log by id from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a98ee190c39388db426ba6e3aff54f82f}{ILog\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_af187123f1a6520ac85551f5070cbb0cb}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_af187123f1a6520ac85551f5070cbb0cb}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!GetLogsForTour@{GetLogsForTour}}
+\index{GetLogsForTour@{GetLogsForTour}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{GetLogsForTour()}{GetLogsForTour()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ Get\+Logs\+For\+Tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that gets all logs for a tour from the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_af187123f1a6520ac85551f5070cbb0cb}{ILog\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_aa70946087f1528103c1b59dc87bb421f}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_aa70946087f1528103c1b59dc87bb421f}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!QueryLogsFromDb@{QueryLogsFromDb}}
+\index{QueryLogsFromDb@{QueryLogsFromDb}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{QueryLogsFromDb()}{QueryLogsFromDb()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ Query\+Logs\+From\+Db (\begin{DoxyParamCaption}\item[{Db\+Command}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that adds tour logs from the database into the local list of tour logs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a685db1d325acdf02357c3f66dd61ab0d}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a685db1d325acdf02357c3f66dd61ab0d}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!database@{database}}
+\index{database@{database}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{database}{database}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{IDatabase}} database\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!log@{log}}
+\index{log@{log}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily readonly log4net.\+ILog log = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a73da9b2ec5f954f43b45234ee9009600}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a73da9b2ec5f954f43b45234ee9009600}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!SQL\_FIND\_BY\_ID@{SQL\_FIND\_BY\_ID}}
+\index{SQL\_FIND\_BY\_ID@{SQL\_FIND\_BY\_ID}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{SQL\_FIND\_BY\_ID}{SQL\_FIND\_BY\_ID}}
+{\footnotesize\ttfamily const string SQL\+\_\+\+FIND\+\_\+\+BY\+\_\+\+ID = \char`\"{}SELECT $\ast$ FROM public.\textbackslash{}\char`\"{}Tour\+Log\textbackslash{}\char`\"{} WHERE \textbackslash{}\char`\"{}id\textbackslash{}\char`\"{} = @id;\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ac5ba8add3dfa74c137790712daa5bf37}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ac5ba8add3dfa74c137790712daa5bf37}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!SQL\_FIND\_BY\_TOUR\_ID@{SQL\_FIND\_BY\_TOUR\_ID}}
+\index{SQL\_FIND\_BY\_TOUR\_ID@{SQL\_FIND\_BY\_TOUR\_ID}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{SQL\_FIND\_BY\_TOUR\_ID}{SQL\_FIND\_BY\_TOUR\_ID}}
+{\footnotesize\ttfamily const string SQL\+\_\+\+FIND\+\_\+\+BY\+\_\+\+TOUR\+\_\+\+ID = \char`\"{}SELECT $\ast$ FROM public.\textbackslash{}\char`\"{}Tour\+Log\textbackslash{}\char`\"{} WHERE \textbackslash{}\char`\"{}tourid\textbackslash{}\char`\"{} = @tour\+Id;\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9ba7b622961c0adac69da8168bd2769a}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a9ba7b622961c0adac69da8168bd2769a}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!SQL\_INSERT\_NEW\_LOG@{SQL\_INSERT\_NEW\_LOG}}
+\index{SQL\_INSERT\_NEW\_LOG@{SQL\_INSERT\_NEW\_LOG}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{SQL\_INSERT\_NEW\_LOG}{SQL\_INSERT\_NEW\_LOG}}
+{\footnotesize\ttfamily const string SQL\+\_\+\+INSERT\+\_\+\+NEW\+\_\+\+LOG\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"{}INSERT INTO public.\(\backslash\)"{}TourLog\(\backslash\)"{}"{}} +}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}(tourid, date, totaltime, report,  distance,  rating, averagespeed,  maxspeed,  minspeed,  averagestepcount,  burntcalories)"{}} +}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}VALUES(@tourId, @date, @totalTime, @report, @distance, @rating, @averageSpeed,@maxSpeed,@minSpeed,@averageStepCount,@burntCalories);"{}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ab5fd4246a345fb2af9030b7163feb7db}\label{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_ab5fd4246a345fb2af9030b7163feb7db}} 
+\index{LogPostgresDAO@{LogPostgresDAO}!tourDAO@{tourDAO}}
+\index{tourDAO@{tourDAO}!LogPostgresDAO@{LogPostgresDAO}}
+\doxysubsubsection{\texorpdfstring{tourDAO}{tourDAO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{DAO.\+ITour\+DAO}} tour\+DAO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL.\+Postgre\+SQLServer/\mbox{\hyperlink{LogPostgresDAO_8cs}{Log\+Postgres\+DAO.\+cs}}\end{DoxyCompactItemize}

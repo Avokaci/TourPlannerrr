@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['namegenerator_315',['NameGenerator',['../class_tour_planner_1_1_b_l_1_1_name_generator.html',1,'TourPlanner::BL']]]
+  ['namegenerator_360',['NameGenerator',['../classTourPlanner_1_1BL_1_1NameGenerator.html',1,'TourPlanner::BL']]],
+  ['namegeneratormock_361',['NameGeneratorMOCK',['../classTourPlanner_1_1Test_1_1NameGeneratorMOCK.html',1,'TourPlanner::Test']]]
 ];

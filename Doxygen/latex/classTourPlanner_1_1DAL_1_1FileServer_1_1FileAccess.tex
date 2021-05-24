@@ -1,0 +1,295 @@
+\hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{}\doxysection{File\+Access}
+\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}\index{FileAccess@{FileAccess}}
+
+
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{File\+Access}} class, which is responsible for all the interaction with the filesystem. The purpose of this class is to get file infos, get the full path of a file where a object is saved in the filesystem, creating a new tour file, creating a new log file, getting all files, searching in the filesystem for a specific file, getting a file text and creating a image for a tour via integration of the mapquest API.  
+
+
+Inheritance diagram for File\+Access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ad008d2ab96596e88f07b69eb03db1601}{File\+Access}} (string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a1c69c4c5b46f42f5f300c0355624af94}{file\+Path}})
+\begin{DoxyCompactList}\small\item\em Constructor of the \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{File\+Access}} class which takes a file\+Path as a parameter. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}{Create\+Image}} (string from, string to, string route\+Information)
+\begin{DoxyCompactList}\small\item\em Method that is responsible for creating an image from the provided start and end location via integration of the Map\+Quest API. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a652a93a907e3abfdc80cfe08f54b79a9}{Create\+New\+Log\+File}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Log\+Item, string date, string total\+Time, string report, int distance, int rating, int average\+Speed, int max\+Speed, int min\+Speed, int average\+Step\+Count, int burnt\+Calories)
+\begin{DoxyCompactList}\small\item\em Method that creates a new tour log file in the filesystem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a8187815cdb64789599da5dc3c611bdd6}{Create\+New\+Tour\+File}} (string name, string description, string from, string to, string route\+Information, int distance)
+\begin{DoxyCompactList}\small\item\em Method that creates a new tour file in the filesystem. \end{DoxyCompactList}\item 
+IEnumerable$<$ File\+Info $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a7fc1d79783bc6cca621784add7346480}{Get\+All\+Files}} (\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}} search\+Type)
+\begin{DoxyCompactList}\small\item\em Method that retrieves all the all files in the filesystem. \end{DoxyCompactList}\item 
+IEnumerable$<$ File\+Info $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6d43e16707de31ea9dc59f1b07c757f}{Search\+Files}} (string search\+Term, \mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}} search\+Type)
+\begin{DoxyCompactList}\small\item\em Method that allows for searching for a specific searchterm and searchtype \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ File\+Info $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_aa852e4628c750cda76840bc8a7841179}{Get\+File\+Infos}} (string start\+Folder, \mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}} search\+Type)
+\begin{DoxyCompactList}\small\item\em Method to get the file infos of a specific file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a4e5374d8142dba2112e0a374a2fcb67a}{Get\+File\+Text}} (File\+Info file)
+\begin{DoxyCompactList}\small\item\em Method that gets the text content of a file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a97b6292aa6e5a6d76eaa6388fbc5aa49}{Get\+Full\+Path}} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Method that returns the fullpath of a file by its filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a1c69c4c5b46f42f5f300c0355624af94}{file\+Path}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly log4net.\+ILog \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6c6142b8525b2f4ac6ee6e003b3106f}{log}} = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{File\+Access}} class, which is responsible for all the interaction with the filesystem. The purpose of this class is to get file infos, get the full path of a file where a object is saved in the filesystem, creating a new tour file, creating a new log file, getting all files, searching in the filesystem for a specific file, getting a file text and creating a image for a tour via integration of the mapquest API. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ad008d2ab96596e88f07b69eb03db1601}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ad008d2ab96596e88f07b69eb03db1601}} 
+\index{FileAccess@{FileAccess}!FileAccess@{FileAccess}}
+\index{FileAccess@{FileAccess}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{FileAccess()}{FileAccess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{File\+Access}} (\begin{DoxyParamCaption}\item[{string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of the \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess}{File\+Access}} class which takes a file\+Path as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}} 
+\index{FileAccess@{FileAccess}!CreateImage@{CreateImage}}
+\index{CreateImage@{CreateImage}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateImage()}{CreateImage()}}
+{\footnotesize\ttfamily string Create\+Image (\begin{DoxyParamCaption}\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that is responsible for creating an image from the provided start and end location via integration of the Map\+Quest API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}{IFile\+Access}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a652a93a907e3abfdc80cfe08f54b79a9}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a652a93a907e3abfdc80cfe08f54b79a9}} 
+\index{FileAccess@{FileAccess}!CreateNewLogFile@{CreateNewLogFile}}
+\index{CreateNewLogFile@{CreateNewLogFile}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateNewLogFile()}{CreateNewLogFile()}}
+{\footnotesize\ttfamily int Create\+New\+Log\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Log\+Item,  }\item[{string}]{date,  }\item[{string}]{total\+Time,  }\item[{string}]{report,  }\item[{int}]{distance,  }\item[{int}]{rating,  }\item[{int}]{average\+Speed,  }\item[{int}]{max\+Speed,  }\item[{int}]{min\+Speed,  }\item[{int}]{average\+Step\+Count,  }\item[{int}]{burnt\+Calories }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that creates a new tour log file in the filesystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Log\+Item} & \\
+\hline
+{\em date} & \\
+\hline
+{\em total\+Time} & \\
+\hline
+{\em report} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em average\+Speed} & \\
+\hline
+{\em max\+Speed} & \\
+\hline
+{\em min\+Speed} & \\
+\hline
+{\em average\+Step\+Count} & \\
+\hline
+{\em burnt\+Calories} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a652a93a907e3abfdc80cfe08f54b79a9}{IFile\+Access}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a8187815cdb64789599da5dc3c611bdd6}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a8187815cdb64789599da5dc3c611bdd6}} 
+\index{FileAccess@{FileAccess}!CreateNewTourFile@{CreateNewTourFile}}
+\index{CreateNewTourFile@{CreateNewTourFile}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateNewTourFile()}{CreateNewTourFile()}}
+{\footnotesize\ttfamily int Create\+New\+Tour\+File (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information,  }\item[{int}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that creates a new tour file in the filesystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a8187815cdb64789599da5dc3c611bdd6}{IFile\+Access}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a7fc1d79783bc6cca621784add7346480}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a7fc1d79783bc6cca621784add7346480}} 
+\index{FileAccess@{FileAccess}!GetAllFiles@{GetAllFiles}}
+\index{GetAllFiles@{GetAllFiles}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{GetAllFiles()}{GetAllFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$File\+Info$>$ Get\+All\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}}}]{search\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that retrieves all the all files in the filesystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a7fc1d79783bc6cca621784add7346480}{IFile\+Access}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_aa852e4628c750cda76840bc8a7841179}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_aa852e4628c750cda76840bc8a7841179}} 
+\index{FileAccess@{FileAccess}!GetFileInfos@{GetFileInfos}}
+\index{GetFileInfos@{GetFileInfos}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{GetFileInfos()}{GetFileInfos()}}
+{\footnotesize\ttfamily IEnumerable$<$File\+Info$>$ Get\+File\+Infos (\begin{DoxyParamCaption}\item[{string}]{start\+Folder,  }\item[{\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}}}]{search\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method to get the file infos of a specific file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Folder} & \\
+\hline
+{\em search\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a4e5374d8142dba2112e0a374a2fcb67a}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a4e5374d8142dba2112e0a374a2fcb67a}} 
+\index{FileAccess@{FileAccess}!GetFileText@{GetFileText}}
+\index{GetFileText@{GetFileText}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{GetFileText()}{GetFileText()}}
+{\footnotesize\ttfamily string Get\+File\+Text (\begin{DoxyParamCaption}\item[{File\+Info}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that gets the text content of a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a97b6292aa6e5a6d76eaa6388fbc5aa49}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a97b6292aa6e5a6d76eaa6388fbc5aa49}} 
+\index{FileAccess@{FileAccess}!GetFullPath@{GetFullPath}}
+\index{GetFullPath@{GetFullPath}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{GetFullPath()}{GetFullPath()}}
+{\footnotesize\ttfamily string Get\+Full\+Path (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that returns the fullpath of a file by its filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6d43e16707de31ea9dc59f1b07c757f}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6d43e16707de31ea9dc59f1b07c757f}} 
+\index{FileAccess@{FileAccess}!SearchFiles@{SearchFiles}}
+\index{SearchFiles@{SearchFiles}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{SearchFiles()}{SearchFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$File\+Info$>$ Search\+Files (\begin{DoxyParamCaption}\item[{string}]{search\+Term,  }\item[{\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}}}]{search\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that allows for searching for a specific searchterm and searchtype 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Term} & \\
+\hline
+{\em search\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_ae6d43e16707de31ea9dc59f1b07c757f}{IFile\+Access}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a1c69c4c5b46f42f5f300c0355624af94}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a1c69c4c5b46f42f5f300c0355624af94}} 
+\index{FileAccess@{FileAccess}!filePath@{filePath}}
+\index{filePath@{filePath}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{filePath}{filePath}}
+{\footnotesize\ttfamily string file\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6c6142b8525b2f4ac6ee6e003b3106f}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6c6142b8525b2f4ac6ee6e003b3106f}} 
+\index{FileAccess@{FileAccess}!log@{log}}
+\index{log@{log}!FileAccess@{FileAccess}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily readonly log4net.\+ILog log = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL.\+File\+Server/\mbox{\hyperlink{FileAccess_8cs}{File\+Access.\+cs}}\end{DoxyCompactItemize}

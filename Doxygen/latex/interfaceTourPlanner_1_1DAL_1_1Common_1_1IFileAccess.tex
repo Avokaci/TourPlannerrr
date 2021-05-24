@@ -1,0 +1,169 @@
+\hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{}\doxysection{IFile\+Access}
+\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}\index{IFileAccess@{IFileAccess}}
+
+
+Interface that creates the Method heads for the interaction with the filesystem.  
+
+
+Inheritance diagram for IFile\+Access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}{Create\+Image}} (string from, string to, string route\+Information)
+\item 
+int \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a652a93a907e3abfdc80cfe08f54b79a9}{Create\+New\+Log\+File}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Log\+Item, string date, string total\+Time, string report, int distance, int rating, int average\+Speed, int max\+Speed, int min\+Speed, int average\+Step\+Count, int burnt\+Calories)
+\begin{DoxyCompactList}\small\item\em Method that creates a new tour log file with the tour log attributes as a parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a8187815cdb64789599da5dc3c611bdd6}{Create\+New\+Tour\+File}} (string name, string description, string from, string to, string route\+Information, int distance)
+\begin{DoxyCompactList}\small\item\em Method that creates a new tour file with the tour attributes as a parameter. \end{DoxyCompactList}\item 
+IEnumerable$<$ File\+Info $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a7fc1d79783bc6cca621784add7346480}{Get\+All\+Files}} (\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}} search\+Type)
+\begin{DoxyCompactList}\small\item\em Method to retrieve all files from the filesystem \end{DoxyCompactList}\item 
+IEnumerable$<$ File\+Info $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_ae6d43e16707de31ea9dc59f1b07c757f}{Search\+Files}} (string search\+Term, \mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}} search\+Type)
+\begin{DoxyCompactList}\small\item\em Method that allows for the searching of specific files in the filesystem via searchterm and searchtype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that creates the Method heads for the interaction with the filesystem. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}} 
+\index{IFileAccess@{IFileAccess}!CreateImage@{CreateImage}}
+\index{CreateImage@{CreateImage}!IFileAccess@{IFileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateImage()}{CreateImage()}}
+{\footnotesize\ttfamily string Create\+Image (\begin{DoxyParamCaption}\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a34c1a63e3a83afb1337f74dc6c69fb03}{File\+Access}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a652a93a907e3abfdc80cfe08f54b79a9}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a652a93a907e3abfdc80cfe08f54b79a9}} 
+\index{IFileAccess@{IFileAccess}!CreateNewLogFile@{CreateNewLogFile}}
+\index{CreateNewLogFile@{CreateNewLogFile}!IFileAccess@{IFileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateNewLogFile()}{CreateNewLogFile()}}
+{\footnotesize\ttfamily int Create\+New\+Log\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Log\+Item,  }\item[{string}]{date,  }\item[{string}]{total\+Time,  }\item[{string}]{report,  }\item[{int}]{distance,  }\item[{int}]{rating,  }\item[{int}]{average\+Speed,  }\item[{int}]{max\+Speed,  }\item[{int}]{min\+Speed,  }\item[{int}]{average\+Step\+Count,  }\item[{int}]{burnt\+Calories }\end{DoxyParamCaption})}
+
+
+
+Method that creates a new tour log file with the tour log attributes as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Log\+Item} & \\
+\hline
+{\em date} & \\
+\hline
+{\em total\+Time} & \\
+\hline
+{\em report} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em average\+Speed} & \\
+\hline
+{\em max\+Speed} & \\
+\hline
+{\em min\+Speed} & \\
+\hline
+{\em average\+Step\+Count} & \\
+\hline
+{\em burnt\+Calories} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a652a93a907e3abfdc80cfe08f54b79a9}{File\+Access}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a8187815cdb64789599da5dc3c611bdd6}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a8187815cdb64789599da5dc3c611bdd6}} 
+\index{IFileAccess@{IFileAccess}!CreateNewTourFile@{CreateNewTourFile}}
+\index{CreateNewTourFile@{CreateNewTourFile}!IFileAccess@{IFileAccess}}
+\doxysubsubsection{\texorpdfstring{CreateNewTourFile()}{CreateNewTourFile()}}
+{\footnotesize\ttfamily int Create\+New\+Tour\+File (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Method that creates a new tour file with the tour attributes as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a8187815cdb64789599da5dc3c611bdd6}{File\+Access}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a7fc1d79783bc6cca621784add7346480}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_a7fc1d79783bc6cca621784add7346480}} 
+\index{IFileAccess@{IFileAccess}!GetAllFiles@{GetAllFiles}}
+\index{GetAllFiles@{GetAllFiles}!IFileAccess@{IFileAccess}}
+\doxysubsubsection{\texorpdfstring{GetAllFiles()}{GetAllFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$File\+Info$>$ Get\+All\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}}}]{search\+Type }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve all files from the filesystem 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_a7fc1d79783bc6cca621784add7346480}{File\+Access}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_ae6d43e16707de31ea9dc59f1b07c757f}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess_ae6d43e16707de31ea9dc59f1b07c757f}} 
+\index{IFileAccess@{IFileAccess}!SearchFiles@{SearchFiles}}
+\index{SearchFiles@{SearchFiles}!IFileAccess@{IFileAccess}}
+\doxysubsubsection{\texorpdfstring{SearchFiles()}{SearchFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$File\+Info$>$ Search\+Files (\begin{DoxyParamCaption}\item[{string}]{search\+Term,  }\item[{\mbox{\hyperlink{namespaceTourPlanner_1_1Models_a1499e9f8a76cb81b43b7a4b0dbe7e44a}{Media\+Type}}}]{search\+Type }\end{DoxyParamCaption})}
+
+
+
+Method that allows for the searching of specific files in the filesystem via searchterm and searchtype. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Term} & \\
+\hline
+{\em search\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1FileAccess_ae6d43e16707de31ea9dc59f1b07c757f}{File\+Access}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL/\+Common/\mbox{\hyperlink{IFileAccess_8cs}{IFile\+Access.\+cs}}\end{DoxyCompactItemize}

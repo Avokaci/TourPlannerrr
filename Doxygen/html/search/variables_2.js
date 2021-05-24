@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['burntcalories_485',['burntCalories',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_log_view_model.html#a97c3098a0cfffa5bd1dbb518308685d4',1,'TourPlanner.UI.ViewModels.AddLogViewModel.burntCalories()'],['../class_tour_planner_1_1_models_1_1_tour_log.html#aa82aa6ec6f897c71c867d638013869b7',1,'TourPlanner.Models.TourLog.burntCalories()']]]
+  ['burntcalories_570',['burntCalories',['../classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel.html#a3a2d63039b3c4c329528ac3ab8f9af08',1,'TourPlanner.UI.ViewModels.AddLogViewModel.burntCalories()'],['../classTourPlanner_1_1Models_1_1TourLog.html#a3a2d63039b3c4c329528ac3ab8f9af08',1,'TourPlanner.Models.TourLog.burntCalories()']]]
 ];

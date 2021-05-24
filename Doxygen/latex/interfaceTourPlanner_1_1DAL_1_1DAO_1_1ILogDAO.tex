@@ -1,0 +1,121 @@
+\hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO}{}\doxysection{ILog\+DAO}
+\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO}\index{ILogDAO@{ILogDAO}}
+
+
+Interface that defines the Methods that should be provided for handling Tour Log DAOs  
+
+
+Inheritance diagram for ILog\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a640d33be5bd26be6d146cceea257f15e}{Add\+New\+Item\+Log}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Log\+Item, string date, string total\+Time, string report, int distance, int rating, int average\+Speed, int max\+Speed, int min\+Speed, int average\+Step\+Count, int burnt\+Calories)
+\begin{DoxyCompactList}\small\item\em Method that adds a new tour log item to the system of your choice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a98ee190c39388db426ba6e3aff54f82f}{Find\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Method that returns an item by its id \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_af187123f1a6520ac85551f5070cbb0cb}{Get\+Logs\+For\+Tour}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Item)
+\begin{DoxyCompactList}\small\item\em Method that returns all tour logs of a tour from the system of your choice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that defines the Methods that should be provided for handling Tour Log DAOs 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a640d33be5bd26be6d146cceea257f15e}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a640d33be5bd26be6d146cceea257f15e}} 
+\index{ILogDAO@{ILogDAO}!AddNewItemLog@{AddNewItemLog}}
+\index{AddNewItemLog@{AddNewItemLog}!ILogDAO@{ILogDAO}}
+\doxysubsubsection{\texorpdfstring{AddNewItemLog()}{AddNewItemLog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Add\+New\+Item\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Log\+Item,  }\item[{string}]{date,  }\item[{string}]{total\+Time,  }\item[{string}]{report,  }\item[{int}]{distance,  }\item[{int}]{rating,  }\item[{int}]{average\+Speed,  }\item[{int}]{max\+Speed,  }\item[{int}]{min\+Speed,  }\item[{int}]{average\+Step\+Count,  }\item[{int}]{burnt\+Calories }\end{DoxyParamCaption})}
+
+
+
+Method that adds a new tour log item to the system of your choice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Log\+Item} & \\
+\hline
+{\em date} & \\
+\hline
+{\em total\+Time} & \\
+\hline
+{\em report} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em average\+Speed} & \\
+\hline
+{\em max\+Speed} & \\
+\hline
+{\em min\+Speed} & \\
+\hline
+{\em average\+Step\+Count} & \\
+\hline
+{\em burnt\+Calories} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a640d33be5bd26be6d146cceea257f15e}{Log\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourLogFileDAO_a640d33be5bd26be6d146cceea257f15e}{Tour\+Log\+File\+DAO}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a98ee190c39388db426ba6e3aff54f82f}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_a98ee190c39388db426ba6e3aff54f82f}} 
+\index{ILogDAO@{ILogDAO}!FindById@{FindById}}
+\index{FindById@{FindById}!ILogDAO@{ILogDAO}}
+\doxysubsubsection{\texorpdfstring{FindById()}{FindById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Find\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Method that returns an item by its id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_a98ee190c39388db426ba6e3aff54f82f}{Log\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourLogFileDAO_a98ee190c39388db426ba6e3aff54f82f}{Tour\+Log\+File\+DAO}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_af187123f1a6520ac85551f5070cbb0cb}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ILogDAO_af187123f1a6520ac85551f5070cbb0cb}} 
+\index{ILogDAO@{ILogDAO}!GetLogsForTour@{GetLogsForTour}}
+\index{GetLogsForTour@{GetLogsForTour}!ILogDAO@{ILogDAO}}
+\doxysubsubsection{\texorpdfstring{GetLogsForTour()}{GetLogsForTour()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ Get\+Logs\+For\+Tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Item }\end{DoxyParamCaption})}
+
+
+
+Method that returns all tour logs of a tour from the system of your choice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO_af187123f1a6520ac85551f5070cbb0cb}{Log\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourLogFileDAO_af187123f1a6520ac85551f5070cbb0cb}{Tour\+Log\+File\+DAO}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL/\+DAO/\mbox{\hyperlink{ILogDAO_8cs}{ILog\+DAO.\+cs}}\end{DoxyCompactItemize}

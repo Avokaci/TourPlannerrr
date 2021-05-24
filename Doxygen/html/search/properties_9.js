@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['popupaddlog_585',['PopUpAddLog',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#a8316997b16c3d3dd82d608b114ae7735',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['popupaddtour_586',['PopUpAddTour',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#a0db554b035a42ea1e12f6a119a3deccc',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['popupchangelog_587',['PopUpChangeLog',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#ae6058c99985960ad7e7a0fed5fe1bcfe',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['popupchangetour_588',['PopUpChangeTour',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#ad5b1029df3418fce09e20afbdf96f86e',1,'TourPlanner::UI::ViewModels::MainViewModel']]]
+  ['maxspeed_673',['MaxSpeed',['../classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel.html#af6439dce73ed078133206dec3a25d051',1,'TourPlanner.UI.ViewModels.AddLogViewModel.MaxSpeed()'],['../classTourPlanner_1_1Models_1_1TourLog.html#af6439dce73ed078133206dec3a25d051',1,'TourPlanner.Models.TourLog.MaxSpeed()']]],
+  ['minspeed_674',['MinSpeed',['../classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel.html#a011a69bebcf5408ad49a080d1a550af3',1,'TourPlanner.UI.ViewModels.AddLogViewModel.MinSpeed()'],['../classTourPlanner_1_1Models_1_1TourLog.html#a011a69bebcf5408ad49a080d1a550af3',1,'TourPlanner.Models.TourLog.MinSpeed()']]],
+  ['myfiltereditems_675',['MyFilteredItems',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#aa559098aa49dcd950731807c794f13f9',1,'TourPlanner::UI::ViewModels::MainViewModel']]]
 ];

@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['test1_471',['Test1',['../class_tour_planner_1_1_test_1_1_tests.html#a2049e1b85f91700a895a3c64caa4871a',1,'TourPlanner::Test::Tests']]],
-  ['tour_472',['Tour',['../class_tour_planner_1_1_models_1_1_tour.html#a718816b6f2c2482572d80ef060f05bac',1,'TourPlanner::Models::Tour']]],
-  ['touritemfiledao_473',['TourItemFileDAO',['../class_tour_planner_1_1_d_a_l_1_1_file_server_1_1_tour_item_file_d_a_o.html#a785c22a57302751843aacfa8e37f4df4',1,'TourPlanner::DAL::FileServer::TourItemFileDAO']]],
-  ['tourlog_474',['TourLog',['../class_tour_planner_1_1_models_1_1_tour_log.html#a28abeac36116502ec5c80262c24af633',1,'TourPlanner::Models::TourLog']]],
-  ['tourlogfiledao_475',['TourLogFileDAO',['../class_tour_planner_1_1_d_a_l_1_1_file_server_1_1_tour_log_file_d_a_o.html#a3dc65dc6187697dcb04edbd7646daba4',1,'TourPlanner::DAL::FileServer::TourLogFileDAO']]],
-  ['tourpostgresdao_476',['TourPostgresDAO',['../class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_tour_postgres_d_a_o.html#a1c7aa2e3fc3e9bb87f4247d2dbd56e56',1,'TourPlanner.DAL.PostgreSQLServer.TourPostgresDAO.TourPostgresDAO()'],['../class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_tour_postgres_d_a_o.html#a0f4bc24eb8d9901b9651aea0eeb65d5f',1,'TourPlanner.DAL.PostgreSQLServer.TourPostgresDAO.TourPostgresDAO(IDatabase database)']]]
+  ['tour_551',['Tour',['../classTourPlanner_1_1Models_1_1Tour.html#ad2ea61b0b06bcb3a094b128eb8a6e77f',1,'TourPlanner::Models::Tour']]],
+  ['touritemfiledao_552',['TourItemFileDAO',['../classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO.html#abb6d19079e09044cbb0050099dcf853d',1,'TourPlanner::DAL::FileServer::TourItemFileDAO']]],
+  ['tourlog_553',['TourLog',['../classTourPlanner_1_1Models_1_1TourLog.html#aabcdbb6027d3fa985693e56c7858e29c',1,'TourPlanner::Models::TourLog']]],
+  ['tourlogfiledao_554',['TourLogFileDAO',['../classTourPlanner_1_1DAL_1_1FileServer_1_1TourLogFileDAO.html#aa52d3adea4ff7f8fc066503f49204292',1,'TourPlanner::DAL::FileServer::TourLogFileDAO']]],
+  ['tourpostgresdao_555',['TourPostgresDAO',['../classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO.html#a8ad3290adcbf8566b9a4bf1ef6768c85',1,'TourPlanner.DAL.PostgreSQLServer.TourPostgresDAO.TourPostgresDAO()'],['../classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO.html#a796e77594f1f385492dca0b6e716514f',1,'TourPlanner.DAL.PostgreSQLServer.TourPostgresDAO.TourPostgresDAO(IDatabase database)']]],
+  ['tourreport_556',['TourReport',['../classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport.html#a31c0a8ca65b496c7bb44d17a4ed397f2',1,'TourPlanner::BL::QuestPDF::TourReport']]],
+  ['tourreportcreationimagepathinvalidfailure_557',['TourReportCreationImagePathInvalidFailure',['../classTourPlanner_1_1Test_1_1Tests.html#a63e346e9b011079b8a6d049af7502407',1,'TourPlanner::Test::Tests']]],
+  ['tourreportcreationsuccess_558',['TourReportCreationSuccess',['../classTourPlanner_1_1Test_1_1Tests.html#a920c70d288d995c942083f91d5d77244',1,'TourPlanner::Test::Tests']]],
+  ['tourreportcreationwihtoutlogssuccess_559',['TourReportCreationWihtoutLogsSuccess',['../classTourPlanner_1_1Test_1_1Tests.html#af39d1075e57537be8ba645902fe3ad6c',1,'TourPlanner::Test::Tests']]],
+  ['tourreportmock_560',['TourReportMOCK',['../classTourPlanner_1_1Test_1_1TourReportMOCK.html#af174435514e57ab9554ed36b039ca311',1,'TourPlanner::Test::TourReportMOCK']]]
 ];

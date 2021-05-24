@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['to_595',['To',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_tour_view_model.html#a1b4293ae54847fe9bb8a49ed0d5e2639',1,'TourPlanner.UI.ViewModels.AddTourViewModel.To()'],['../class_tour_planner_1_1_models_1_1_tour.html#a533d494d970d935b316034130e4aca1a',1,'TourPlanner.Models.Tour.To()']]],
-  ['totaltime_596',['TotalTime',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_log_view_model.html#a4f31a6f4768be29713d838d4f0b7a277',1,'TourPlanner.UI.ViewModels.AddLogViewModel.TotalTime()'],['../class_tour_planner_1_1_models_1_1_tour_log.html#ae00dfcd861dc289933407707058cdc69',1,'TourPlanner.Models.TourLog.TotalTime()']]],
-  ['tour_597',['Tour',['../class_tour_planner_1_1_models_1_1_export_object.html#ac8bd92452390a57fa6f7bfaee185b6a8',1,'TourPlanner::Models::ExportObject']]],
-  ['tourlogitem_598',['TourLogItem',['../class_tour_planner_1_1_models_1_1_tour_log.html#ade7d2379220d2e8c7f38ec5ef58e1b33',1,'TourPlanner::Models::TourLog']]],
-  ['tourlogs_599',['TourLogs',['../class_tour_planner_1_1_models_1_1_export_object.html#aecf66aa11a7c7ac59ef6b03b98057bc2',1,'TourPlanner::Models::ExportObject']]],
-  ['tours_600',['Tours',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_tour_view_model.html#abe1c77d1ada4a411803d81dabbaf2b6c',1,'TourPlanner.UI.ViewModels.AddTourViewModel.Tours()'],['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_change_tour_view_model.html#a61a3ef7161dee554c7d1e68ace374bb8',1,'TourPlanner.UI.ViewModels.ChangeTourViewModel.Tours()'],['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#aacd64b15bf1c8e6175c3a090ea7210dc',1,'TourPlanner.UI.ViewModels.MainViewModel.Tours()']]]
+  ['randomgenerateitemcommand_681',['RandomGenerateItemCommand',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#a3de6a91c080d725aad8759ba0b17d6f1',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['randomgeneratelogcommand_682',['RandomGenerateLogCommand',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#a81878aeee226bdd8f28b190b18587c90',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['rating_683',['Rating',['../classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel.html#a355f74d0eb325f70f46abe55f184f104',1,'TourPlanner.UI.ViewModels.AddLogViewModel.Rating()'],['../classTourPlanner_1_1Models_1_1TourLog.html#a355f74d0eb325f70f46abe55f184f104',1,'TourPlanner.Models.TourLog.Rating()']]],
+  ['report_684',['Report',['../classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel.html#acfe105ff0305f2e60bacd0da69c6eb52',1,'TourPlanner.UI.ViewModels.AddLogViewModel.Report()'],['../classTourPlanner_1_1Models_1_1TourLog.html#acfe105ff0305f2e60bacd0da69c6eb52',1,'TourPlanner.Models.TourLog.Report()']]],
+  ['routeinformation_685',['RouteInformation',['../classTourPlanner_1_1Models_1_1Tour.html#a081c5ba0d3b565042ec2274a5fcd35ce',1,'TourPlanner::Models::Tour']]]
 ];

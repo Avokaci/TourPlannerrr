@@ -1,0 +1,565 @@
+\hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{}\doxysection{Main\+View\+Model}
+\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}\index{MainViewModel@{MainViewModel}}
+
+
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{Main\+View\+Model}} class which serves as the View\+Model for the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. It allows for the creation, deletion and modification of tours and logs for the tours. Furthermore it allows for import and export of tours and logs from and into a file. And lets the user generate a report of a tour with its corresponding logs.  
+
+
+Inheritance diagram for Main\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a163e05038ead462337054512b879133f}{Main\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{Main\+View\+Model}} class that accesses Singleton instance of the Items. Also initalizes Listbox and Datagrid in \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}} and fills them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5a7a99bd7733f0c645277f82d87ce743}{Generate\+Report}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to generate a pdf report of an existing tour with its image and tour logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel}{Add\+Log\+View\+Model}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefee9af3c0e35797fc224ec770777c4f}{add\+Log\+View\+Model}}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1AddTourViewModel}{Add\+Tour\+View\+Model}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0452b0d8f8ed57b0b3478d1464e6e7ea}{add\+Tour\+View\+Model}}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1ChangeLogViewModel}{Change\+Log\+View\+Model}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a63c54906c58fb59bcca1b5bc5c7bfa49}{change\+Log\+View\+Model}}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1ChangeTourViewModel}{Change\+Tour\+View\+Model}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae02ab3b5ff931c20e95f45882c7458e8}{change\+Tour\+View\+Model}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a989318daaae49d3f3213d1684219cce6}{Current\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Image\+Source \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9ef180fdef5ccb648f1eff49c102a934}{Current\+Item\+Image\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a359808a80a9116685152d1b4b16da078}{Current\+Log}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a064c82ab348796ae6432cf52d2b711fb}{Export\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ab9e21b99019ca2252b5be2c1f6cea1fc}{Generate\+Report\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a4116e0d3581b8f86991e3ffc7b0f64d5}{Import\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3ae357ec097a257a0f762514d8386a97}{Logs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa559098aa49dcd950731807c794f13f9}{My\+Filtered\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5c500b577b663f08aa3339e8dd4f1d09}{Pop\+Up\+Add\+Log}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a8b27fbd896b153ffebf79fc7fec942fe}{Pop\+Up\+Add\+Tour}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5931fcdcdd20eb2800ecae71cbb839cd}{Pop\+Up\+Change\+Log}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a719a392b8a04a1f9d8486bd037466e07}{Pop\+Up\+Change\+Tour}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3de6a91c080d725aad8759ba0b17d6f1}{Random\+Generate\+Item\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a81878aeee226bdd8f28b190b18587c90}{Random\+Generate\+Log\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae2caa7b0ee748d47e0008e3f34bcb9ef}{Search\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a47a52da22612874eb45275c74195331d}{Tours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad056bf1773a6cb5c52cf432896fdf7c5}{Export}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to exports tours and their corresponding tour logs from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeb47fe2502fe6f8e26743e3271dfa6e8}{Fill\+Data\+Grid}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} cur\+Item)
+\begin{DoxyCompactList}\small\item\em Method that fills the data grid with the corresponding tour log data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a255d9527fd3bad36ddc9cbc9f789df7f}{Fill\+List\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Method that fills the listbox with the corresponding tour data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac42d25a5cf36923a1ed557bbecca8257}{Import}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to import tours and their corresponding tour logs from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a2595f453d34db86ebebb6a6b5f78a165}{Init\+Data\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Method that initializes the Data Grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5ae782b0126f5450cf0a19516452be5d}{Init\+List\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Method that initializes the List Box \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad2a55081e73e87d0e92eca6e1ccd6b67}{Open\+Add\+Log\+Window}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method that opens a new window to add a log to an existing tour. Gets the selected tour in the listbox as a parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeeb3f8df6678e2e739253cac3f9f162c}{Open\+Add\+Tour\+Window}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method that opens a new window to add tours. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a586b800e9abde0f1c30906f3c6fbb3c5}{Open\+Change\+Log\+Window}} (object command\+Parameter)
+\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa391ec08e790ae47bdee7b562d6ad753}{Open\+Change\+Tour\+Window}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method that opens a new window to change an existing tour. Gets the selected tour in the listbox as a parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a43b2cb6655df0727aad8cf61e7dfb76b}{Random\+Generate\+Item}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to generate a random Tour item, via button press on the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a86c1e8deb8903921dc48628775a08046}{Random\+Generate\+Log}} (object command\+Parameter)
+\begin{DoxyCompactList}\small\item\em Method to generate a random Tour Log , via button press on the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5b534eaa3bf2a9d5d9118f128ab75543}{current\+Item}}
+\item 
+Image\+Source \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac52a5e5634a307175ff9ac42934b6559}{current\+Item\+Image\+Source}}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a98ac1d6de1a2441b396802640c06abb1}{current\+Log}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad52caf8ce5afb35f561d9042868b4f27}{export\+Command}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a288941101e33fd3ebf390ad7e12106e7}{generate\+Report\+Command}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a7f3925f61729dd637c5a0be77efd4cdb}{import\+Command}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac017620c74961b2b47c48c9831c6f30e}{logs}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9542b1b1cd50bee7f6c2180a049c0362}{pop\+Up\+Add\+Log}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad434f4ebd024a765bf40dd93f04d9397}{pop\+Up\+Add\+Tour}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefc901c3a9bef4615aed401c3c2ae206}{pop\+Up\+Change\+Log}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a72207218162e1810242362bfb0ef2164}{pop\+Up\+Change\+Tour}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aff257e60936276622660ff350f7264c5}{random\+Generate\+Item\+Command}}
+\item 
+ICommand \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a1026388df69ef008cccff8a2239d1a2d}{random\+Generate\+Log\+Command}}
+\item 
+string \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a110ae36a95ccd6774ecdb7fea4ee653c}{search\+Command}}
+\item 
+\mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}{ITour\+Planner\+Factory}} \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0f030f04baebe3873126413d1a6122ad}{tour\+Planner\+Factory}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a6356a905af15a0299a54b8e08946c1d1}{tours}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly log4net.\+ILog \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae6c6142b8525b2f4ac6ee6e003b3106f}{log}} = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{Main\+View\+Model}} class which serves as the View\+Model for the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. It allows for the creation, deletion and modification of tours and logs for the tours. Furthermore it allows for import and export of tours and logs from and into a file. And lets the user generate a report of a tour with its corresponding logs. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a163e05038ead462337054512b879133f}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a163e05038ead462337054512b879133f}} 
+\index{MainViewModel@{MainViewModel}!MainViewModel@{MainViewModel}}
+\index{MainViewModel@{MainViewModel}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{MainViewModel()}{MainViewModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{Main\+View\+Model}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel}{Main\+View\+Model}} class that accesses Singleton instance of the Items. Also initalizes Listbox and Datagrid in \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}} and fills them. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad056bf1773a6cb5c52cf432896fdf7c5}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad056bf1773a6cb5c52cf432896fdf7c5}} 
+\index{MainViewModel@{MainViewModel}!Export@{Export}}
+\index{Export@{Export}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}}
+{\footnotesize\ttfamily void Export (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method to exports tours and their corresponding tour logs from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeb47fe2502fe6f8e26743e3271dfa6e8}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeb47fe2502fe6f8e26743e3271dfa6e8}} 
+\index{MainViewModel@{MainViewModel}!FillDataGrid@{FillDataGrid}}
+\index{FillDataGrid@{FillDataGrid}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{FillDataGrid()}{FillDataGrid()}}
+{\footnotesize\ttfamily void Fill\+Data\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{cur\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that fills the data grid with the corresponding tour log data. 
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a255d9527fd3bad36ddc9cbc9f789df7f}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a255d9527fd3bad36ddc9cbc9f789df7f}} 
+\index{MainViewModel@{MainViewModel}!FillListBox@{FillListBox}}
+\index{FillListBox@{FillListBox}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{FillListBox()}{FillListBox()}}
+{\footnotesize\ttfamily void Fill\+List\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that fills the listbox with the corresponding tour data. 
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5a7a99bd7733f0c645277f82d87ce743}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5a7a99bd7733f0c645277f82d87ce743}} 
+\index{MainViewModel@{MainViewModel}!GenerateReport@{GenerateReport}}
+\index{GenerateReport@{GenerateReport}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{GenerateReport()}{GenerateReport()}}
+{\footnotesize\ttfamily void Generate\+Report (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to generate a pdf report of an existing tour with its image and tour logs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac42d25a5cf36923a1ed557bbecca8257}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac42d25a5cf36923a1ed557bbecca8257}} 
+\index{MainViewModel@{MainViewModel}!Import@{Import}}
+\index{Import@{Import}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}}
+{\footnotesize\ttfamily void Import (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method to import tours and their corresponding tour logs from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a2595f453d34db86ebebb6a6b5f78a165}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a2595f453d34db86ebebb6a6b5f78a165}} 
+\index{MainViewModel@{MainViewModel}!InitDataGrid@{InitDataGrid}}
+\index{InitDataGrid@{InitDataGrid}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{InitDataGrid()}{InitDataGrid()}}
+{\footnotesize\ttfamily void Init\+Data\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that initializes the Data Grid 
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5ae782b0126f5450cf0a19516452be5d}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5ae782b0126f5450cf0a19516452be5d}} 
+\index{MainViewModel@{MainViewModel}!InitListBox@{InitListBox}}
+\index{InitListBox@{InitListBox}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{InitListBox()}{InitListBox()}}
+{\footnotesize\ttfamily void Init\+List\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that initializes the List Box 
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad2a55081e73e87d0e92eca6e1ccd6b67}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad2a55081e73e87d0e92eca6e1ccd6b67}} 
+\index{MainViewModel@{MainViewModel}!OpenAddLogWindow@{OpenAddLogWindow}}
+\index{OpenAddLogWindow@{OpenAddLogWindow}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{OpenAddLogWindow()}{OpenAddLogWindow()}}
+{\footnotesize\ttfamily void Open\+Add\+Log\+Window (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that opens a new window to add a log to an existing tour. Gets the selected tour in the listbox as a parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeeb3f8df6678e2e739253cac3f9f162c}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aeeb3f8df6678e2e739253cac3f9f162c}} 
+\index{MainViewModel@{MainViewModel}!OpenAddTourWindow@{OpenAddTourWindow}}
+\index{OpenAddTourWindow@{OpenAddTourWindow}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{OpenAddTourWindow()}{OpenAddTourWindow()}}
+{\footnotesize\ttfamily void Open\+Add\+Tour\+Window (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that opens a new window to add tours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a586b800e9abde0f1c30906f3c6fbb3c5}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a586b800e9abde0f1c30906f3c6fbb3c5}} 
+\index{MainViewModel@{MainViewModel}!OpenChangeLogWindow@{OpenChangeLogWindow}}
+\index{OpenChangeLogWindow@{OpenChangeLogWindow}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{OpenChangeLogWindow()}{OpenChangeLogWindow()}}
+{\footnotesize\ttfamily void Open\+Change\+Log\+Window (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+
+
+Method that opens a new window to change an existing log. Gets the selected Log in the listbox as a parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa391ec08e790ae47bdee7b562d6ad753}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa391ec08e790ae47bdee7b562d6ad753}} 
+\index{MainViewModel@{MainViewModel}!OpenChangeTourWindow@{OpenChangeTourWindow}}
+\index{OpenChangeTourWindow@{OpenChangeTourWindow}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{OpenChangeTourWindow()}{OpenChangeTourWindow()}}
+{\footnotesize\ttfamily void Open\+Change\+Tour\+Window (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that opens a new window to change an existing tour. Gets the selected tour in the listbox as a parameter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a43b2cb6655df0727aad8cf61e7dfb76b}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a43b2cb6655df0727aad8cf61e7dfb76b}} 
+\index{MainViewModel@{MainViewModel}!RandomGenerateItem@{RandomGenerateItem}}
+\index{RandomGenerateItem@{RandomGenerateItem}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{RandomGenerateItem()}{RandomGenerateItem()}}
+{\footnotesize\ttfamily void Random\+Generate\+Item (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method to generate a random Tour item, via button press on the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a86c1e8deb8903921dc48628775a08046}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a86c1e8deb8903921dc48628775a08046}} 
+\index{MainViewModel@{MainViewModel}!RandomGenerateLog@{RandomGenerateLog}}
+\index{RandomGenerateLog@{RandomGenerateLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{RandomGenerateLog()}{RandomGenerateLog()}}
+{\footnotesize\ttfamily void Random\+Generate\+Log (\begin{DoxyParamCaption}\item[{object}]{command\+Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method to generate a random Tour Log , via button press on the \mbox{\hyperlink{classTourPlanner_1_1MainWindow}{Main\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Parameter} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefee9af3c0e35797fc224ec770777c4f}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefee9af3c0e35797fc224ec770777c4f}} 
+\index{MainViewModel@{MainViewModel}!addLogViewModel@{addLogViewModel}}
+\index{addLogViewModel@{addLogViewModel}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{addLogViewModel}{addLogViewModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1AddLogViewModel}{Add\+Log\+View\+Model}} add\+Log\+View\+Model}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0452b0d8f8ed57b0b3478d1464e6e7ea}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0452b0d8f8ed57b0b3478d1464e6e7ea}} 
+\index{MainViewModel@{MainViewModel}!addTourViewModel@{addTourViewModel}}
+\index{addTourViewModel@{addTourViewModel}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{addTourViewModel}{addTourViewModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1AddTourViewModel}{Add\+Tour\+View\+Model}} add\+Tour\+View\+Model}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a63c54906c58fb59bcca1b5bc5c7bfa49}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a63c54906c58fb59bcca1b5bc5c7bfa49}} 
+\index{MainViewModel@{MainViewModel}!changeLogViewModel@{changeLogViewModel}}
+\index{changeLogViewModel@{changeLogViewModel}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{changeLogViewModel}{changeLogViewModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1ChangeLogViewModel}{Change\+Log\+View\+Model}} change\+Log\+View\+Model}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae02ab3b5ff931c20e95f45882c7458e8}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae02ab3b5ff931c20e95f45882c7458e8}} 
+\index{MainViewModel@{MainViewModel}!changeTourViewModel@{changeTourViewModel}}
+\index{changeTourViewModel@{changeTourViewModel}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{changeTourViewModel}{changeTourViewModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1ChangeTourViewModel}{Change\+Tour\+View\+Model}} change\+Tour\+View\+Model}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5b534eaa3bf2a9d5d9118f128ab75543}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5b534eaa3bf2a9d5d9118f128ab75543}} 
+\index{MainViewModel@{MainViewModel}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{currentItem}{currentItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} current\+Item\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac52a5e5634a307175ff9ac42934b6559}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac52a5e5634a307175ff9ac42934b6559}} 
+\index{MainViewModel@{MainViewModel}!currentItemImageSource@{currentItemImageSource}}
+\index{currentItemImageSource@{currentItemImageSource}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{currentItemImageSource}{currentItemImageSource}}
+{\footnotesize\ttfamily Image\+Source current\+Item\+Image\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a98ac1d6de1a2441b396802640c06abb1}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a98ac1d6de1a2441b396802640c06abb1}} 
+\index{MainViewModel@{MainViewModel}!currentLog@{currentLog}}
+\index{currentLog@{currentLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{currentLog}{currentLog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} current\+Log\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad52caf8ce5afb35f561d9042868b4f27}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad52caf8ce5afb35f561d9042868b4f27}} 
+\index{MainViewModel@{MainViewModel}!exportCommand@{exportCommand}}
+\index{exportCommand@{exportCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{exportCommand}{exportCommand}}
+{\footnotesize\ttfamily ICommand export\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a288941101e33fd3ebf390ad7e12106e7}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a288941101e33fd3ebf390ad7e12106e7}} 
+\index{MainViewModel@{MainViewModel}!generateReportCommand@{generateReportCommand}}
+\index{generateReportCommand@{generateReportCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{generateReportCommand}{generateReportCommand}}
+{\footnotesize\ttfamily ICommand generate\+Report\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a7f3925f61729dd637c5a0be77efd4cdb}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a7f3925f61729dd637c5a0be77efd4cdb}} 
+\index{MainViewModel@{MainViewModel}!importCommand@{importCommand}}
+\index{importCommand@{importCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{importCommand}{importCommand}}
+{\footnotesize\ttfamily ICommand import\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae6c6142b8525b2f4ac6ee6e003b3106f}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae6c6142b8525b2f4ac6ee6e003b3106f}} 
+\index{MainViewModel@{MainViewModel}!log@{log}}
+\index{log@{log}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily readonly log4net.\+ILog log = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac017620c74961b2b47c48c9831c6f30e}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ac017620c74961b2b47c48c9831c6f30e}} 
+\index{MainViewModel@{MainViewModel}!logs@{logs}}
+\index{logs@{logs}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{logs}{logs}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ logs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9542b1b1cd50bee7f6c2180a049c0362}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9542b1b1cd50bee7f6c2180a049c0362}} 
+\index{MainViewModel@{MainViewModel}!popUpAddLog@{popUpAddLog}}
+\index{popUpAddLog@{popUpAddLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{popUpAddLog}{popUpAddLog}}
+{\footnotesize\ttfamily ICommand pop\+Up\+Add\+Log\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad434f4ebd024a765bf40dd93f04d9397}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ad434f4ebd024a765bf40dd93f04d9397}} 
+\index{MainViewModel@{MainViewModel}!popUpAddTour@{popUpAddTour}}
+\index{popUpAddTour@{popUpAddTour}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{popUpAddTour}{popUpAddTour}}
+{\footnotesize\ttfamily ICommand pop\+Up\+Add\+Tour\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefc901c3a9bef4615aed401c3c2ae206}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aefc901c3a9bef4615aed401c3c2ae206}} 
+\index{MainViewModel@{MainViewModel}!popUpChangeLog@{popUpChangeLog}}
+\index{popUpChangeLog@{popUpChangeLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{popUpChangeLog}{popUpChangeLog}}
+{\footnotesize\ttfamily ICommand pop\+Up\+Change\+Log\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a72207218162e1810242362bfb0ef2164}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a72207218162e1810242362bfb0ef2164}} 
+\index{MainViewModel@{MainViewModel}!popUpChangeTour@{popUpChangeTour}}
+\index{popUpChangeTour@{popUpChangeTour}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{popUpChangeTour}{popUpChangeTour}}
+{\footnotesize\ttfamily ICommand pop\+Up\+Change\+Tour\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aff257e60936276622660ff350f7264c5}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aff257e60936276622660ff350f7264c5}} 
+\index{MainViewModel@{MainViewModel}!randomGenerateItemCommand@{randomGenerateItemCommand}}
+\index{randomGenerateItemCommand@{randomGenerateItemCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{randomGenerateItemCommand}{randomGenerateItemCommand}}
+{\footnotesize\ttfamily ICommand random\+Generate\+Item\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a1026388df69ef008cccff8a2239d1a2d}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a1026388df69ef008cccff8a2239d1a2d}} 
+\index{MainViewModel@{MainViewModel}!randomGenerateLogCommand@{randomGenerateLogCommand}}
+\index{randomGenerateLogCommand@{randomGenerateLogCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{randomGenerateLogCommand}{randomGenerateLogCommand}}
+{\footnotesize\ttfamily ICommand random\+Generate\+Log\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a110ae36a95ccd6774ecdb7fea4ee653c}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a110ae36a95ccd6774ecdb7fea4ee653c}} 
+\index{MainViewModel@{MainViewModel}!searchCommand@{searchCommand}}
+\index{searchCommand@{searchCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{searchCommand}{searchCommand}}
+{\footnotesize\ttfamily string search\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0f030f04baebe3873126413d1a6122ad}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a0f030f04baebe3873126413d1a6122ad}} 
+\index{MainViewModel@{MainViewModel}!tourPlannerFactory@{tourPlannerFactory}}
+\index{tourPlannerFactory@{tourPlannerFactory}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{tourPlannerFactory}{tourPlannerFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}{ITour\+Planner\+Factory}} tour\+Planner\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a6356a905af15a0299a54b8e08946c1d1}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a6356a905af15a0299a54b8e08946c1d1}} 
+\index{MainViewModel@{MainViewModel}!tours@{tours}}
+\index{tours@{tours}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{tours}{tours}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ tours\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a989318daaae49d3f3213d1684219cce6}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a989318daaae49d3f3213d1684219cce6}} 
+\index{MainViewModel@{MainViewModel}!CurrentItem@{CurrentItem}}
+\index{CurrentItem@{CurrentItem}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{CurrentItem}{CurrentItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Current\+Item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9ef180fdef5ccb648f1eff49c102a934}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a9ef180fdef5ccb648f1eff49c102a934}} 
+\index{MainViewModel@{MainViewModel}!CurrentItemImageSource@{CurrentItemImageSource}}
+\index{CurrentItemImageSource@{CurrentItemImageSource}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{CurrentItemImageSource}{CurrentItemImageSource}}
+{\footnotesize\ttfamily Image\+Source Current\+Item\+Image\+Source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a359808a80a9116685152d1b4b16da078}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a359808a80a9116685152d1b4b16da078}} 
+\index{MainViewModel@{MainViewModel}!CurrentLog@{CurrentLog}}
+\index{CurrentLog@{CurrentLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{CurrentLog}{CurrentLog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Current\+Log\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a064c82ab348796ae6432cf52d2b711fb}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a064c82ab348796ae6432cf52d2b711fb}} 
+\index{MainViewModel@{MainViewModel}!ExportCommand@{ExportCommand}}
+\index{ExportCommand@{ExportCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{ExportCommand}{ExportCommand}}
+{\footnotesize\ttfamily ICommand Export\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ab9e21b99019ca2252b5be2c1f6cea1fc}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ab9e21b99019ca2252b5be2c1f6cea1fc}} 
+\index{MainViewModel@{MainViewModel}!GenerateReportCommand@{GenerateReportCommand}}
+\index{GenerateReportCommand@{GenerateReportCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{GenerateReportCommand}{GenerateReportCommand}}
+{\footnotesize\ttfamily ICommand Generate\+Report\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a4116e0d3581b8f86991e3ffc7b0f64d5}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a4116e0d3581b8f86991e3ffc7b0f64d5}} 
+\index{MainViewModel@{MainViewModel}!ImportCommand@{ImportCommand}}
+\index{ImportCommand@{ImportCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{ImportCommand}{ImportCommand}}
+{\footnotesize\ttfamily ICommand Import\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3ae357ec097a257a0f762514d8386a97}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3ae357ec097a257a0f762514d8386a97}} 
+\index{MainViewModel@{MainViewModel}!Logs@{Logs}}
+\index{Logs@{Logs}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{Logs}{Logs}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ Logs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa559098aa49dcd950731807c794f13f9}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_aa559098aa49dcd950731807c794f13f9}} 
+\index{MainViewModel@{MainViewModel}!MyFilteredItems@{MyFilteredItems}}
+\index{MyFilteredItems@{MyFilteredItems}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{MyFilteredItems}{MyFilteredItems}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ My\+Filtered\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5c500b577b663f08aa3339e8dd4f1d09}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5c500b577b663f08aa3339e8dd4f1d09}} 
+\index{MainViewModel@{MainViewModel}!PopUpAddLog@{PopUpAddLog}}
+\index{PopUpAddLog@{PopUpAddLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{PopUpAddLog}{PopUpAddLog}}
+{\footnotesize\ttfamily ICommand Pop\+Up\+Add\+Log\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a8b27fbd896b153ffebf79fc7fec942fe}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a8b27fbd896b153ffebf79fc7fec942fe}} 
+\index{MainViewModel@{MainViewModel}!PopUpAddTour@{PopUpAddTour}}
+\index{PopUpAddTour@{PopUpAddTour}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{PopUpAddTour}{PopUpAddTour}}
+{\footnotesize\ttfamily ICommand Pop\+Up\+Add\+Tour\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5931fcdcdd20eb2800ecae71cbb839cd}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a5931fcdcdd20eb2800ecae71cbb839cd}} 
+\index{MainViewModel@{MainViewModel}!PopUpChangeLog@{PopUpChangeLog}}
+\index{PopUpChangeLog@{PopUpChangeLog}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{PopUpChangeLog}{PopUpChangeLog}}
+{\footnotesize\ttfamily ICommand Pop\+Up\+Change\+Log\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a719a392b8a04a1f9d8486bd037466e07}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a719a392b8a04a1f9d8486bd037466e07}} 
+\index{MainViewModel@{MainViewModel}!PopUpChangeTour@{PopUpChangeTour}}
+\index{PopUpChangeTour@{PopUpChangeTour}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{PopUpChangeTour}{PopUpChangeTour}}
+{\footnotesize\ttfamily ICommand Pop\+Up\+Change\+Tour\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3de6a91c080d725aad8759ba0b17d6f1}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a3de6a91c080d725aad8759ba0b17d6f1}} 
+\index{MainViewModel@{MainViewModel}!RandomGenerateItemCommand@{RandomGenerateItemCommand}}
+\index{RandomGenerateItemCommand@{RandomGenerateItemCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{RandomGenerateItemCommand}{RandomGenerateItemCommand}}
+{\footnotesize\ttfamily ICommand Random\+Generate\+Item\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a81878aeee226bdd8f28b190b18587c90}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a81878aeee226bdd8f28b190b18587c90}} 
+\index{MainViewModel@{MainViewModel}!RandomGenerateLogCommand@{RandomGenerateLogCommand}}
+\index{RandomGenerateLogCommand@{RandomGenerateLogCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{RandomGenerateLogCommand}{RandomGenerateLogCommand}}
+{\footnotesize\ttfamily ICommand Random\+Generate\+Log\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae2caa7b0ee748d47e0008e3f34bcb9ef}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_ae2caa7b0ee748d47e0008e3f34bcb9ef}} 
+\index{MainViewModel@{MainViewModel}!SearchCommand@{SearchCommand}}
+\index{SearchCommand@{SearchCommand}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{SearchCommand}{SearchCommand}}
+{\footnotesize\ttfamily string Search\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a47a52da22612874eb45275c74195331d}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel_a47a52da22612874eb45275c74195331d}} 
+\index{MainViewModel@{MainViewModel}!Tours@{Tours}}
+\index{Tours@{Tours}!MainViewModel@{MainViewModel}}
+\doxysubsubsection{\texorpdfstring{Tours}{Tours}}
+{\footnotesize\ttfamily Observable\+Collection$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Tours\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner/\+View\+Models/\mbox{\hyperlink{MainViewModel_8cs}{Main\+View\+Model.\+cs}}\end{DoxyCompactItemize}

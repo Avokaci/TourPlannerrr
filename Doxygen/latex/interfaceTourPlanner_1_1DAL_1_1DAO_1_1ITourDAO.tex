@@ -1,0 +1,106 @@
+\hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}{}\doxysection{ITour\+DAO}
+\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}\index{ITourDAO@{ITourDAO}}
+
+
+Interface that defines the Methods that should be provided for handling Tour DAOs  
+
+
+Inheritance diagram for ITour\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_ae634f546cae4e9878123752b5c5ba6e1}{Add\+New\+Item}} (string name, string description, string from, string to, string route\+Information, int distance)
+\begin{DoxyCompactList}\small\item\em Method that adds a new tour item to the system of your choice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a949b11e8362ccdb56c6524a521cbdb96}{Find\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Method that returns an item by its id \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a45f19124513d730ceadb923dfc255f51}{Get\+Tours}} ()
+\begin{DoxyCompactList}\small\item\em Method that returns all Tours from the system of your choice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that defines the Methods that should be provided for handling Tour DAOs 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_ae634f546cae4e9878123752b5c5ba6e1}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_ae634f546cae4e9878123752b5c5ba6e1}} 
+\index{ITourDAO@{ITourDAO}!AddNewItem@{AddNewItem}}
+\index{AddNewItem@{AddNewItem}!ITourDAO@{ITourDAO}}
+\doxysubsubsection{\texorpdfstring{AddNewItem()}{AddNewItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Add\+New\+Item (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Method that adds a new tour item to the system of your choice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO_ae634f546cae4e9878123752b5c5ba6e1}{Tour\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae634f546cae4e9878123752b5c5ba6e1}{Tour\+Item\+File\+DAO}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a949b11e8362ccdb56c6524a521cbdb96}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a949b11e8362ccdb56c6524a521cbdb96}} 
+\index{ITourDAO@{ITourDAO}!FindById@{FindById}}
+\index{FindById@{FindById}!ITourDAO@{ITourDAO}}
+\doxysubsubsection{\texorpdfstring{FindById()}{FindById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Find\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Method that returns an item by its id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO_a949b11e8362ccdb56c6524a521cbdb96}{Tour\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a949b11e8362ccdb56c6524a521cbdb96}{Tour\+Item\+File\+DAO}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a45f19124513d730ceadb923dfc255f51}\label{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a45f19124513d730ceadb923dfc255f51}} 
+\index{ITourDAO@{ITourDAO}!GetTours@{GetTours}}
+\index{GetTours@{GetTours}!ITourDAO@{ITourDAO}}
+\doxysubsubsection{\texorpdfstring{GetTours()}{GetTours()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Get\+Tours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that returns all Tours from the system of your choice. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO_a45f19124513d730ceadb923dfc255f51}{Tour\+Postgres\+DAO}}, and \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45f19124513d730ceadb923dfc255f51}{Tour\+Item\+File\+DAO}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL/\+DAO/\mbox{\hyperlink{ITourDAO_8cs}{ITour\+DAO.\+cs}}\end{DoxyCompactItemize}

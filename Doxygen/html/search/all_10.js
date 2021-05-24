@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['quarytouritemfromfilesystem_196',['QuaryTourItemFromFileSystem',['../class_tour_planner_1_1_d_a_l_1_1_file_server_1_1_tour_item_file_d_a_o.html#a0f78f74b1b5ff997c91cb0a17b116e46',1,'TourPlanner::DAL::FileServer::TourItemFileDAO']]],
-  ['querylogsfromdb_197',['QueryLogsFromDb',['../class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_log_postgres_d_a_o.html#a32308f2051e24b0ad063cbf3f342a6e8',1,'TourPlanner::DAL::PostgreSQLServer::LogPostgresDAO']]],
-  ['querytourlogfromfilesystem_198',['QueryTourLogFromFileSystem',['../class_tour_planner_1_1_d_a_l_1_1_file_server_1_1_tour_log_file_d_a_o.html#af60ffbeb64b5b32f3aa97fefb79c0bbc',1,'TourPlanner::DAL::FileServer::TourLogFileDAO']]],
-  ['querytoursfromdatabase_199',['QueryToursFromDatabase',['../class_tour_planner_1_1_d_a_l_1_1_postgre_s_q_l_server_1_1_tour_postgres_d_a_o.html#a48b28ba23dbc2650a98fec4be4da578d',1,'TourPlanner::DAL::PostgreSQLServer::TourPostgresDAO']]]
+  ['quarytouritemfromfilesystem_232',['QuaryTourItemFromFileSystem',['../classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO.html#a45a506fe3d17e6db55c1534275304754',1,'TourPlanner::DAL::FileServer::TourItemFileDAO']]],
+  ['querylogsfromdb_233',['QueryLogsFromDb',['../classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1LogPostgresDAO.html#aa70946087f1528103c1b59dc87bb421f',1,'TourPlanner::DAL::PostgreSQLServer::LogPostgresDAO']]],
+  ['querytourlogfromfilesystem_234',['QueryTourLogFromFileSystem',['../classTourPlanner_1_1DAL_1_1FileServer_1_1TourLogFileDAO.html#a17f52f1313e89ef99f1fc572b2ebd46c',1,'TourPlanner::DAL::FileServer::TourLogFileDAO']]],
+  ['querytoursfromdatabase_235',['QueryToursFromDatabase',['../classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1TourPostgresDAO.html#a233fa73467bdbfe2e422e77f11ac0302',1,'TourPlanner::DAL::PostgreSQLServer::TourPostgresDAO']]]
 ];

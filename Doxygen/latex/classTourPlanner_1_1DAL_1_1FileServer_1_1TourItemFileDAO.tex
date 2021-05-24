@@ -1,0 +1,169 @@
+\hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{}\doxysection{Tour\+Item\+File\+DAO}
+\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}\index{TourItemFileDAO@{TourItemFileDAO}}
+
+
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{Tour\+Item\+File\+DAO}} class that is responsible for filesystem interaction regarding tours.  
+
+
+Inheritance diagram for Tour\+Item\+File\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_abb6d19079e09044cbb0050099dcf853d}{Tour\+Item\+File\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of class \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{Tour\+Item\+File\+DAO}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae634f546cae4e9878123752b5c5ba6e1}{Add\+New\+Item}} (string name, string description, string from, string to, string route\+Information, int distance)
+\begin{DoxyCompactList}\small\item\em Method to add a new tour item to the filesystem. Takes the attributes of the tour as parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a949b11e8362ccdb56c6524a521cbdb96}{Find\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Method that finds a tour by its id in the filesystem and returns it. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45f19124513d730ceadb923dfc255f51}{Get\+Tours}} ()
+\begin{DoxyCompactList}\small\item\em Method that returns all tours from the filesystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45a506fe3d17e6db55c1534275304754}{Quary\+Tour\+Item\+From\+File\+System}} (IEnumerable$<$ File\+Info $>$found\+Files)
+\begin{DoxyCompactList}\small\item\em Method that creates a tour object from the filesystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a0bc27c58dd17ea6d4910f1d490f7802b}{file\+Access}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly log4net.\+ILog \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}{log}} = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{Tour\+Item\+File\+DAO}} class that is responsible for filesystem interaction regarding tours. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_abb6d19079e09044cbb0050099dcf853d}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_abb6d19079e09044cbb0050099dcf853d}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!TourItemFileDAO@{TourItemFileDAO}}
+\index{TourItemFileDAO@{TourItemFileDAO}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{TourItemFileDAO()}{TourItemFileDAO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{Tour\+Item\+File\+DAO}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of class \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO}{Tour\+Item\+File\+DAO}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae634f546cae4e9878123752b5c5ba6e1}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae634f546cae4e9878123752b5c5ba6e1}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!AddNewItem@{AddNewItem}}
+\index{AddNewItem@{AddNewItem}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{AddNewItem()}{AddNewItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Add\+New\+Item (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information,  }\item[{int}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add a new tour item to the filesystem. Takes the attributes of the tour as parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_ae634f546cae4e9878123752b5c5ba6e1}{ITour\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a949b11e8362ccdb56c6524a521cbdb96}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a949b11e8362ccdb56c6524a521cbdb96}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!FindById@{FindById}}
+\index{FindById@{FindById}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{FindById()}{FindById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Find\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that finds a tour by its id in the filesystem and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a949b11e8362ccdb56c6524a521cbdb96}{ITour\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45f19124513d730ceadb923dfc255f51}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45f19124513d730ceadb923dfc255f51}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!GetTours@{GetTours}}
+\index{GetTours@{GetTours}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{GetTours()}{GetTours()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Get\+Tours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method that returns all tours from the filesystem. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1DAO_1_1ITourDAO_a45f19124513d730ceadb923dfc255f51}{ITour\+DAO}}.
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45a506fe3d17e6db55c1534275304754}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a45a506fe3d17e6db55c1534275304754}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!QuaryTourItemFromFileSystem@{QuaryTourItemFromFileSystem}}
+\index{QuaryTourItemFromFileSystem@{QuaryTourItemFromFileSystem}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{QuaryTourItemFromFileSystem()}{QuaryTourItemFromFileSystem()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Quary\+Tour\+Item\+From\+File\+System (\begin{DoxyParamCaption}\item[{IEnumerable$<$ File\+Info $>$}]{found\+Files }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Method that creates a tour object from the filesystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em found\+Files} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a0bc27c58dd17ea6d4910f1d490f7802b}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_a0bc27c58dd17ea6d4910f1d490f7802b}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!fileAccess@{fileAccess}}
+\index{fileAccess@{fileAccess}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{fileAccess}{fileAccess}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IFileAccess}{IFile\+Access}} file\+Access\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}\label{classTourPlanner_1_1DAL_1_1FileServer_1_1TourItemFileDAO_ae6c6142b8525b2f4ac6ee6e003b3106f}} 
+\index{TourItemFileDAO@{TourItemFileDAO}!log@{log}}
+\index{log@{log}!TourItemFileDAO@{TourItemFileDAO}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily readonly log4net.\+ILog log = log4net.\+Log\+Manager.\+Get\+Logger(System.\+Reflection.\+Method\+Base.\+Get\+Current\+Method().Declaring\+Type)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL.\+File\+Server/\mbox{\hyperlink{TourItemFileDAO_8cs}{Tour\+Item\+File\+DAO.\+cs}}\end{DoxyCompactItemize}

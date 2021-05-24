@@ -1,0 +1,128 @@
+\hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand}{}\doxysection{Relay\+Command}
+\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand}\index{RelayCommand@{RelayCommand}}
+
+
+Class that solves the problem of having to create a new class for each command, because else the commands would not have different Can\+Excecute or Execute methods. To solve that problem there is the Relay\+Commandimplementation that is a command that can be instantiated passing the actions to be executed.  
+
+
+Inheritance diagram for Relay\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a47e68f219c84dbbd3528297f603cb0cc}{Relay\+Command}} (Action$<$ object $>$ execute, Func$<$ object, bool $>$ can\+Execute=null)
+\begin{DoxyCompactList}\small\item\em Method to instantiate a Command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a420b50dc31c8251fd94bd8e9bfc85523}{Can\+Execute}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Method to check if Command is executable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a3f5d68516469baa0b7fab82fd146f2c5}{Execute}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Method to execute Command with the given parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a98bc05ef4c6e1e1e2109a965926a3b00}{Can\+Execute\+Changed}}
+\begin{DoxyCompactList}\small\item\em customized Eventhandler for Can\+Execute\+Changed event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ object, bool $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_af483b7e6242ba727411b014038e76983}{can\+Execute\+Predicate}}
+\item 
+Action$<$ object $>$ \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_acc223daf4a3f8524a582e2bef360f603}{execute\+Action}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that solves the problem of having to create a new class for each command, because else the commands would not have different Can\+Excecute or Execute methods. To solve that problem there is the Relay\+Commandimplementation that is a command that can be instantiated passing the actions to be executed. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a47e68f219c84dbbd3528297f603cb0cc}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a47e68f219c84dbbd3528297f603cb0cc}} 
+\index{RelayCommand@{RelayCommand}!RelayCommand@{RelayCommand}}
+\index{RelayCommand@{RelayCommand}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{RelayCommand()}{RelayCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand}{Relay\+Command}} (\begin{DoxyParamCaption}\item[{Action$<$ object $>$}]{execute,  }\item[{Func$<$ object, bool $>$}]{can\+Execute = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to instantiate a Command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em execute} & \\
+\hline
+{\em can\+Execute} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a420b50dc31c8251fd94bd8e9bfc85523}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a420b50dc31c8251fd94bd8e9bfc85523}} 
+\index{RelayCommand@{RelayCommand}!CanExecute@{CanExecute}}
+\index{CanExecute@{CanExecute}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{CanExecute()}{CanExecute()}}
+{\footnotesize\ttfamily bool Can\+Execute (\begin{DoxyParamCaption}\item[{object}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to check if Command is executable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a3f5d68516469baa0b7fab82fd146f2c5}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a3f5d68516469baa0b7fab82fd146f2c5}} 
+\index{RelayCommand@{RelayCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily void Execute (\begin{DoxyParamCaption}\item[{object}]{parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to execute Command with the given parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_af483b7e6242ba727411b014038e76983}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_af483b7e6242ba727411b014038e76983}} 
+\index{RelayCommand@{RelayCommand}!canExecutePredicate@{canExecutePredicate}}
+\index{canExecutePredicate@{canExecutePredicate}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{canExecutePredicate}{canExecutePredicate}}
+{\footnotesize\ttfamily Func$<$object, bool$>$ can\+Execute\+Predicate\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_acc223daf4a3f8524a582e2bef360f603}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_acc223daf4a3f8524a582e2bef360f603}} 
+\index{RelayCommand@{RelayCommand}!executeAction@{executeAction}}
+\index{executeAction@{executeAction}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{executeAction}{executeAction}}
+{\footnotesize\ttfamily Action$<$object$>$ execute\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a98bc05ef4c6e1e1e2109a965926a3b00}\label{classTourPlanner_1_1UI_1_1ViewModels_1_1RelayCommand_a98bc05ef4c6e1e1e2109a965926a3b00}} 
+\index{RelayCommand@{RelayCommand}!CanExecuteChanged@{CanExecuteChanged}}
+\index{CanExecuteChanged@{CanExecuteChanged}!RelayCommand@{RelayCommand}}
+\doxysubsubsection{\texorpdfstring{CanExecuteChanged}{CanExecuteChanged}}
+{\footnotesize\ttfamily Event\+Handler Can\+Execute\+Changed\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+customized Eventhandler for Can\+Execute\+Changed event. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner/\+View\+Models/\mbox{\hyperlink{RelayCommand_8cs}{Relay\+Command.\+cs}}\end{DoxyCompactItemize}

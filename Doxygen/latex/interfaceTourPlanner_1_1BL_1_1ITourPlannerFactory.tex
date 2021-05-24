@@ -1,0 +1,260 @@
+\hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}{}\doxysection{ITour\+Planner\+Factory}
+\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}\index{ITourPlannerFactory@{ITourPlannerFactory}}
+
+
+Interface to define the structure of the functionalities/methods regarding the tours and tourlogs. Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.  
+
+
+Inheritance diagram for ITour\+Planner\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1f8ea0deaf766ea9d22dbd390bed7717}{Create\+Tour}} (string name, string description, string from, string to, string route\+Information, int distance)
+\begin{DoxyCompactList}\small\item\em Method that creates a tour item with the tour attributes as parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a2fede772a5a3e8f596c9dbda21da318e}{Create\+Tour\+Log}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\+Log\+Item, string date, string total\+Time, string report, int distance, int rating, int average\+Speed, int max\+Speed, int min\+Speed, int average\+Step\+Count, int burnt\+Calories)
+\begin{DoxyCompactList}\small\item\em Method that creates a tour log for a tour item with the tour id and tour log attributes as parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a31cef4ec9ddd45af4b927c3d8a26fdcc}{Export}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour)
+\begin{DoxyCompactList}\small\item\em Method that allows for export of one tour with its tour logs into a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1756ef1bc31298c8083de4605dbe50f3}{Export\+With\+Logs}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour)
+\begin{DoxyCompactList}\small\item\em Method that allows for export of all the tours with their tour logs into a file. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_af02be39d394a66e6d3e412297b7aa97d}{Get\+Logs}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} item)
+\begin{DoxyCompactList}\small\item\em Method to retrieve information about all the tour logs that are appointed to the same tour. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a45f19124513d730ceadb923dfc255f51}{Get\+Tours}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve information about all the tours. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a30a273b7375a95b083c09c6a0ab01af6}{Import}} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Method that allows for import of one tour with its tour logs from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_ac10744c991f56393fdbba7fb333b7219}{Import\+With\+Logs}} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Method that allows for import of all the tour with their tour logs from a file. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} $>$ \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a9dd5a9a8fb4cab15df569d5f94c980ce}{Search}} (string item\+Name, bool case\+Sensitive=false)
+\begin{DoxyCompactList}\small\item\em Method to provide the search function to find a specific tour in a list of tours / in the GUI \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to define the structure of the functionalities/methods regarding the tours and tourlogs. Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1f8ea0deaf766ea9d22dbd390bed7717}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1f8ea0deaf766ea9d22dbd390bed7717}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!CreateTour@{CreateTour}}
+\index{CreateTour@{CreateTour}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{CreateTour()}{CreateTour()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} Create\+Tour (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{description,  }\item[{string}]{from,  }\item[{string}]{to,  }\item[{string}]{route\+Information,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Method that creates a tour item with the tour attributes as parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em route\+Information} & \\
+\hline
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a1f8ea0deaf766ea9d22dbd390bed7717}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a2fede772a5a3e8f596c9dbda21da318e}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a2fede772a5a3e8f596c9dbda21da318e}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!CreateTourLog@{CreateTourLog}}
+\index{CreateTourLog@{CreateTourLog}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{CreateTourLog()}{CreateTourLog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}} Create\+Tour\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour\+Log\+Item,  }\item[{string}]{date,  }\item[{string}]{total\+Time,  }\item[{string}]{report,  }\item[{int}]{distance,  }\item[{int}]{rating,  }\item[{int}]{average\+Speed,  }\item[{int}]{max\+Speed,  }\item[{int}]{min\+Speed,  }\item[{int}]{average\+Step\+Count,  }\item[{int}]{burnt\+Calories }\end{DoxyParamCaption})}
+
+
+
+Method that creates a tour log for a tour item with the tour id and tour log attributes as parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour\+Log\+Item} & \\
+\hline
+{\em date} & \\
+\hline
+{\em total\+Time} & \\
+\hline
+{\em report} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em average\+Speed} & \\
+\hline
+{\em max\+Speed} & \\
+\hline
+{\em min\+Speed} & \\
+\hline
+{\em average\+Step\+Count} & \\
+\hline
+{\em burnt\+Calories} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a2fede772a5a3e8f596c9dbda21da318e}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a31cef4ec9ddd45af4b927c3d8a26fdcc}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a31cef4ec9ddd45af4b927c3d8a26fdcc}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!Export@{Export}}
+\index{Export@{Export}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}}
+{\footnotesize\ttfamily void Export (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour }\end{DoxyParamCaption})}
+
+
+
+Method that allows for export of one tour with its tour logs into a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a31cef4ec9ddd45af4b927c3d8a26fdcc}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1756ef1bc31298c8083de4605dbe50f3}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a1756ef1bc31298c8083de4605dbe50f3}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!ExportWithLogs@{ExportWithLogs}}
+\index{ExportWithLogs@{ExportWithLogs}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{ExportWithLogs()}{ExportWithLogs()}}
+{\footnotesize\ttfamily void Export\+With\+Logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour }\end{DoxyParamCaption})}
+
+
+
+Method that allows for export of all the tours with their tour logs into a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a1756ef1bc31298c8083de4605dbe50f3}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_af02be39d394a66e6d3e412297b7aa97d}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_af02be39d394a66e6d3e412297b7aa97d}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!GetLogs@{GetLogs}}
+\index{GetLogs@{GetLogs}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{GetLogs()}{GetLogs()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1TourLog}{Tour\+Log}}$>$ Get\+Logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{item }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve information about all the tour logs that are appointed to the same tour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_af02be39d394a66e6d3e412297b7aa97d}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a45f19124513d730ceadb923dfc255f51}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a45f19124513d730ceadb923dfc255f51}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!GetTours@{GetTours}}
+\index{GetTours@{GetTours}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{GetTours()}{GetTours()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Get\+Tours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve information about all the tours. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a45f19124513d730ceadb923dfc255f51}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a30a273b7375a95b083c09c6a0ab01af6}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a30a273b7375a95b083c09c6a0ab01af6}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!Import@{Import}}
+\index{Import@{Import}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}}
+{\footnotesize\ttfamily void Import (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Method that allows for import of one tour with its tour logs from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a30a273b7375a95b083c09c6a0ab01af6}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_ac10744c991f56393fdbba7fb333b7219}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_ac10744c991f56393fdbba7fb333b7219}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!ImportWithLogs@{ImportWithLogs}}
+\index{ImportWithLogs@{ImportWithLogs}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{ImportWithLogs()}{ImportWithLogs()}}
+{\footnotesize\ttfamily void Import\+With\+Logs (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Method that allows for import of all the tour with their tour logs from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_ac10744c991f56393fdbba7fb333b7219}{Tour\+Planner\+Factory\+Impl}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a9dd5a9a8fb4cab15df569d5f94c980ce}\label{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory_a9dd5a9a8fb4cab15df569d5f94c980ce}} 
+\index{ITourPlannerFactory@{ITourPlannerFactory}!Search@{Search}}
+\index{Search@{Search}!ITourPlannerFactory@{ITourPlannerFactory}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}$>$ Search (\begin{DoxyParamCaption}\item[{string}]{item\+Name,  }\item[{bool}]{case\+Sensitive = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Method to provide the search function to find a specific tour in a list of tours / in the GUI 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Name} & \\
+\hline
+{\em case\+Sensitive} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1BL_1_1TourPlannerFactoryImpl_a9dd5a9a8fb4cab15df569d5f94c980ce}{Tour\+Planner\+Factory\+Impl}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+BL/\mbox{\hyperlink{ITourPlannerFactory_8cs}{ITour\+Planner\+Factory.\+cs}}\end{DoxyCompactItemize}

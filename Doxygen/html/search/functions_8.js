@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_452',['Main',['../class_tour_planner_1_1_app.html#adb8850c756a0989af9bb3bed7dbc19c2',1,'TourPlanner.App.Main()'],['../class_tour_planner_1_1_app.html#adb8850c756a0989af9bb3bed7dbc19c2',1,'TourPlanner.App.Main()']]],
-  ['mainviewmodel_453',['MainViewModel',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#a9c31ca9ea62b0dbcde6b72e4a427ceda',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['mainwindow_454',['MainWindow',['../class_tour_planner_1_1_main_window.html#a1c7d4252566370ced26996f866164d34',1,'TourPlanner::MainWindow']]]
+  ['main_532',['Main',['../classTourPlanner_1_1App.html#a2e67222db1dca5be5f3731ada487dd0f',1,'TourPlanner.App.Main()'],['../classTourPlanner_1_1App.html#a2e67222db1dca5be5f3731ada487dd0f',1,'TourPlanner.App.Main()']]],
+  ['mainviewmodel_533',['MainViewModel',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#a163e05038ead462337054512b879133f',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['mainwindow_534',['MainWindow',['../classTourPlanner_1_1MainWindow.html#aeb676574b78bda84d687fdcfd65d84a6',1,'TourPlanner::MainWindow']]]
 ];

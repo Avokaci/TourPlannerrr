@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['randomgenerateitemcommand_515',['randomGenerateItemCommand',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#aef02cd17d2e61f26fd96e70babb925ee',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['randomgeneratelogcommand_516',['randomGenerateLogCommand',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#aa19b3319329cfcf14bdaae77a542f573',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
-  ['rating_517',['rating',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_log_view_model.html#a36796d08e04cae87ab6bd31d98f681bb',1,'TourPlanner.UI.ViewModels.AddLogViewModel.rating()'],['../class_tour_planner_1_1_models_1_1_tour_log.html#a0fb2b389866eeb94c899517c14187a1b',1,'TourPlanner.Models.TourLog.rating()']]],
-  ['report_518',['report',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_add_log_view_model.html#a8220f5e11dc221ecaf53950937bc75f7',1,'TourPlanner.UI.ViewModels.AddLogViewModel.report()'],['../class_tour_planner_1_1_models_1_1_tour_log.html#a1be9d24aab89a1a0d2138f955c80cd21',1,'TourPlanner.Models.TourLog.report()']]],
-  ['routeinformation_519',['routeInformation',['../class_tour_planner_1_1_models_1_1_tour.html#a08bcede588488a30aab35739ba9e55f1',1,'TourPlanner::Models::Tour']]]
+  ['popupaddlog_600',['popUpAddLog',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#a9542b1b1cd50bee7f6c2180a049c0362',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['popupaddtour_601',['popUpAddTour',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#ad434f4ebd024a765bf40dd93f04d9397',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['popupchangelog_602',['popUpChangeLog',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#aefc901c3a9bef4615aed401c3c2ae206',1,'TourPlanner::UI::ViewModels::MainViewModel']]],
+  ['popupchangetour_603',['popUpChangeTour',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#a72207218162e1810242362bfb0ef2164',1,'TourPlanner::UI::ViewModels::MainViewModel']]]
 ];

@@ -1,0 +1,181 @@
+\hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}{}\doxysection{IDatabase}
+\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}\index{IDatabase@{IDatabase}}
+
+
+Interface that creates the method heads for the interaction with the database.  
+
+
+Inheritance diagram for IDatabase\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Db\+Command \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a54dc14f14a31d1a3373756171386cc16}{Create\+Command}} (string generic\+Command\+String)
+\begin{DoxyCompactList}\small\item\em Method to create a command that is to be executed in the database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_aaef5c62d96b47e79419093e4897b106d}{Declare\+Parameter}} (Db\+Command command, string name, Db\+Type type)
+\begin{DoxyCompactList}\small\item\em Method to declare the Parameters of a database command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_ad83538d07c671815a5ffda12951aa314}{Define\+Parameter}} (Db\+Command command, string name, Db\+Type type, object value)
+\begin{DoxyCompactList}\small\item\em Method to define the parameters of a database command. \end{DoxyCompactList}\item 
+IData\+Reader \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a5f3bc6c4d324db922d75fd26035920bb}{Execute\+Reader}} (Db\+Command command)
+\begin{DoxyCompactList}\small\item\em Method to execute a database command via Executereader. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a8735312739ff5f9fc301f66e29583917}{Execute\+Scalar}} (Db\+Command command)
+\begin{DoxyCompactList}\small\item\em Method to execute a database command via Execute\+Scalar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_afa538cbd87d58ca67394695c24c4ce8a}{Set\+Parameter}} (Db\+Command command, string name, object value)
+\begin{DoxyCompactList}\small\item\em Method to set the parameters of a database command-\/ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that creates the method heads for the interaction with the database. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a54dc14f14a31d1a3373756171386cc16}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a54dc14f14a31d1a3373756171386cc16}} 
+\index{IDatabase@{IDatabase}!CreateCommand@{CreateCommand}}
+\index{CreateCommand@{CreateCommand}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{CreateCommand()}{CreateCommand()}}
+{\footnotesize\ttfamily Db\+Command Create\+Command (\begin{DoxyParamCaption}\item[{string}]{generic\+Command\+String }\end{DoxyParamCaption})}
+
+
+
+Method to create a command that is to be executed in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em generic\+Command\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_a54dc14f14a31d1a3373756171386cc16}{Database}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_aaef5c62d96b47e79419093e4897b106d}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_aaef5c62d96b47e79419093e4897b106d}} 
+\index{IDatabase@{IDatabase}!DeclareParameter@{DeclareParameter}}
+\index{DeclareParameter@{DeclareParameter}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{DeclareParameter()}{DeclareParameter()}}
+{\footnotesize\ttfamily int Declare\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{Db\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Method to declare the Parameters of a database command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_aaef5c62d96b47e79419093e4897b106d}{Database}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_ad83538d07c671815a5ffda12951aa314}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_ad83538d07c671815a5ffda12951aa314}} 
+\index{IDatabase@{IDatabase}!DefineParameter@{DefineParameter}}
+\index{DefineParameter@{DefineParameter}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{DefineParameter()}{DefineParameter()}}
+{\footnotesize\ttfamily void Define\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{Db\+Type}]{type,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Method to define the parameters of a database command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em type} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_ad83538d07c671815a5ffda12951aa314}{Database}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a5f3bc6c4d324db922d75fd26035920bb}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a5f3bc6c4d324db922d75fd26035920bb}} 
+\index{IDatabase@{IDatabase}!ExecuteReader@{ExecuteReader}}
+\index{ExecuteReader@{ExecuteReader}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{ExecuteReader()}{ExecuteReader()}}
+{\footnotesize\ttfamily IData\+Reader Execute\+Reader (\begin{DoxyParamCaption}\item[{Db\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+Method to execute a database command via Executereader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_a5f3bc6c4d324db922d75fd26035920bb}{Database}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a8735312739ff5f9fc301f66e29583917}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_a8735312739ff5f9fc301f66e29583917}} 
+\index{IDatabase@{IDatabase}!ExecuteScalar@{ExecuteScalar}}
+\index{ExecuteScalar@{ExecuteScalar}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{ExecuteScalar()}{ExecuteScalar()}}
+{\footnotesize\ttfamily int Execute\+Scalar (\begin{DoxyParamCaption}\item[{Db\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+Method to execute a database command via Execute\+Scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_a8735312739ff5f9fc301f66e29583917}{Database}}.
+
+\mbox{\Hypertarget{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_afa538cbd87d58ca67394695c24c4ce8a}\label{interfaceTourPlanner_1_1DAL_1_1Common_1_1IDatabase_afa538cbd87d58ca67394695c24c4ce8a}} 
+\index{IDatabase@{IDatabase}!SetParameter@{SetParameter}}
+\index{SetParameter@{SetParameter}!IDatabase@{IDatabase}}
+\doxysubsubsection{\texorpdfstring{SetParameter()}{SetParameter()}}
+{\footnotesize\ttfamily void Set\+Parameter (\begin{DoxyParamCaption}\item[{Db\+Command}]{command,  }\item[{string}]{name,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Method to set the parameters of a database command-\/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em name} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTourPlanner_1_1DAL_1_1PostgreSQLServer_1_1Database_afa538cbd87d58ca67394695c24c4ce8a}{Database}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+DAL/\+Common/\mbox{\hyperlink{IDatabase_8cs}{IDatabase.\+cs}}\end{DoxyCompactItemize}

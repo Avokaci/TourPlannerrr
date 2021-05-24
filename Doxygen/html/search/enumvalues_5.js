@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['innsbruck_545',['Innsbruck',['../namespace_tour_planner_1_1_models.html#a2e4a0a4d3d5371add29befef5d1dac9ca1ff97f22292e3d91119e867aadcf511b',1,'TourPlanner::Models']]]
+  ['innsbruck_635',['Innsbruck',['../namespaceTourPlanner_1_1Models.html#a762225a23cee166d93caa7ca5e1cf4e7a1ff97f22292e3d91119e867aadcf511b',1,'TourPlanner::Models']]]
 ];

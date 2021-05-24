@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logs_580',['Logs',['../class_tour_planner_1_1_u_i_1_1_view_models_1_1_main_view_model.html#a2be80a59d3ca0db26715d1b870d4db4f',1,'TourPlanner::UI::ViewModels::MainViewModel']]]
+  ['generatereportcommand_669',['GenerateReportCommand',['../classTourPlanner_1_1UI_1_1ViewModels_1_1MainViewModel.html#ab9e21b99019ca2252b5be2c1f6cea1fc',1,'TourPlanner::UI::ViewModels::MainViewModel']]]
 ];

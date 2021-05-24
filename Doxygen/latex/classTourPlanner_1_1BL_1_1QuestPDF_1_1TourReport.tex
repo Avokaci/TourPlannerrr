@@ -1,0 +1,139 @@
+\hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}{}\doxysection{Tour\+Report}
+\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}\index{TourReport@{TourReport}}
+
+
+Class to generate a pdf file of an existing tour with its corresponding tour information, image and tour logs.  
+
+
+Inheritance diagram for Tour\+Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a31c0a8ca65b496c7bb44d17a4ed397f2}{Tour\+Report}} (\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aef560e80e24ff2b98e886ca1a16e638f}{tour}})
+\begin{DoxyCompactList}\small\item\em Constructor of class \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}{Tour\+Report}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_ad92337743f6b507f12c88fccb65cb24e}{Compose}} (IContainer container)
+\begin{DoxyCompactList}\small\item\em method that composes the pdf file with the splitted page components. \end{DoxyCompactList}\item 
+Document\+Metadata \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_af647ce74d21fc975096ea7bd2357dadc}{Get\+Metadata}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aef560e80e24ff2b98e886ca1a16e638f}{tour}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aee4700599fbe713a32e0d515b362cd09}{Compose\+Header}} (IContainer container)
+\begin{DoxyCompactList}\small\item\em method to compose the header \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a94ffff0957ffd3850bbe77c9bb7afe83}{Compose\+Tour\+Logs}} (IContainer container)
+\begin{DoxyCompactList}\small\item\em method to compose the tour logs table and image \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}{ITour\+Planner\+Factory}} \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a0f030f04baebe3873126413d1a6122ad}{tour\+Planner\+Factory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to generate a pdf file of an existing tour with its corresponding tour information, image and tour logs. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a31c0a8ca65b496c7bb44d17a4ed397f2}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a31c0a8ca65b496c7bb44d17a4ed397f2}} 
+\index{TourReport@{TourReport}!TourReport@{TourReport}}
+\index{TourReport@{TourReport}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{TourReport()}{TourReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}{Tour\+Report}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}}}]{tour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of class \mbox{\hyperlink{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport}{Tour\+Report}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tour} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_ad92337743f6b507f12c88fccb65cb24e}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_ad92337743f6b507f12c88fccb65cb24e}} 
+\index{TourReport@{TourReport}!Compose@{Compose}}
+\index{Compose@{Compose}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{Compose()}{Compose()}}
+{\footnotesize\ttfamily void Compose (\begin{DoxyParamCaption}\item[{IContainer}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method that composes the pdf file with the splitted page components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aee4700599fbe713a32e0d515b362cd09}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aee4700599fbe713a32e0d515b362cd09}} 
+\index{TourReport@{TourReport}!ComposeHeader@{ComposeHeader}}
+\index{ComposeHeader@{ComposeHeader}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{ComposeHeader()}{ComposeHeader()}}
+{\footnotesize\ttfamily void Compose\+Header (\begin{DoxyParamCaption}\item[{IContainer}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+method to compose the header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a94ffff0957ffd3850bbe77c9bb7afe83}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a94ffff0957ffd3850bbe77c9bb7afe83}} 
+\index{TourReport@{TourReport}!ComposeTourLogs@{ComposeTourLogs}}
+\index{ComposeTourLogs@{ComposeTourLogs}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{ComposeTourLogs()}{ComposeTourLogs()}}
+{\footnotesize\ttfamily void Compose\+Tour\+Logs (\begin{DoxyParamCaption}\item[{IContainer}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+method to compose the tour logs table and image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_af647ce74d21fc975096ea7bd2357dadc}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_af647ce74d21fc975096ea7bd2357dadc}} 
+\index{TourReport@{TourReport}!GetMetadata@{GetMetadata}}
+\index{GetMetadata@{GetMetadata}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{GetMetadata()}{GetMetadata()}}
+{\footnotesize\ttfamily Document\+Metadata Get\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a0f030f04baebe3873126413d1a6122ad}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_a0f030f04baebe3873126413d1a6122ad}} 
+\index{TourReport@{TourReport}!tourPlannerFactory@{tourPlannerFactory}}
+\index{tourPlannerFactory@{tourPlannerFactory}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{tourPlannerFactory}{tourPlannerFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceTourPlanner_1_1BL_1_1ITourPlannerFactory}{ITour\+Planner\+Factory}} tour\+Planner\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aef560e80e24ff2b98e886ca1a16e638f}\label{classTourPlanner_1_1BL_1_1QuestPDF_1_1TourReport_aef560e80e24ff2b98e886ca1a16e638f}} 
+\index{TourReport@{TourReport}!tour@{tour}}
+\index{tour@{tour}!TourReport@{TourReport}}
+\doxysubsubsection{\texorpdfstring{tour}{tour}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTourPlanner_1_1Models_1_1Tour}{Tour}} tour\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/burak\+\_\+y46me01/\+One\+Drive/\+Desktop/\+Tour\+Plannerrr/\+Tour\+Planner.\+BL/\+Quest\+PDF/\mbox{\hyperlink{TourReport_8cs}{Tour\+Report.\+cs}}\end{DoxyCompactItemize}
